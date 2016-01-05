@@ -1,0 +1,28 @@
+/*-----------------------------------------------------------------------------*\
+ * #GENERIC border-box
+ *
+ * Apply generic border-box to all elements.
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+\*-----------------------------------------------------------------------------*/
+
+
+
+/**
+ * Apply border-box across the entire page.
+ */
+html {
+    box-sizing: border-box;
+}
+
+
+
+/**
+ * Relax the definition a bit, to allow components to override it manually.
+ */
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}

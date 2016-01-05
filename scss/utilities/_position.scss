@@ -1,0 +1,30 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES position
+\*-----------------------------------------------------------------------------*/
+
+
+
+//
+// Local variables.
+//
+$position-values: relative absolute static;
+
+
+
+@each $p in $position-values {
+
+    /**
+     * Utility class for applying a position value of `#{$p}` to an element.
+     */
+    .u-position--#{$p} { position: $p; }
+}
+
+
+
+/**
+ * Quickly move an element to one or more sides.
+ */
+.u-top--0 { top: 0; }
+.u-right--0 { right: 0; }
+.u-bottom--0 { bottom: 0; }
+.u-left--0 { left: 0; }

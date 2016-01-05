@@ -1,0 +1,27 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES color
+\*-----------------------------------------------------------------------------*/
+
+@import '../variables/colors';
+
+
+
+@each $name, $hex-value in $utility-colors {
+
+    // The linter will incorrectly report the interpolation of a variable when applied as a color,
+    // so disable the linter for these lines.
+    //scss-lint:disable VariableForProperty
+
+    /**
+     * Utility class for changing the text color to `#{$hex-value}`.
+     */
+    .u-#{inspect($name)} { color: #{$hex-value}; }
+
+    /**
+     * Utility class for changing the background color to `#{$hex-value}`.
+     */
+    .u-bg--#{inspect($name)} { background-color: #{$hex-value}; }
+
+    // Re-enable the linter for further code.
+    //scss-lint:enable VariableForProperty
+}

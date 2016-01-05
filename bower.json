@@ -1,0 +1,27 @@
+{
+  "name": "zss",
+  "version": "0.1.0",
+  "authors": [
+    "Zicht Online"
+  ],
+  "description": "ZSS is a Sass framework for quickly building web application components.",
+  "main": "zss.css",
+  "keywords": [
+    "css",
+    "zss",
+    "sass",
+    "scss",
+    "zicht"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "zicht-scss-lint": "~1.0.0"
+  }
+}

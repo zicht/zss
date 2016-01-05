@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------- \\
+// #VARIABLES colors
+// ----------------------------------------------------------------------------- //
+
+
+
+//
+// Default colors.
+//
+// 1. Transparent is a variable to prevent typo's.
+//
+$black: #000;
+$white: #fff;
+$transparent: transparent; // [1]
+
+
+
+//
+// Colors that will be used to generate utility classes.
+//
+$utility-colors: (
+    black: $black,
+    white: $black,
+    transparent: $transparent
+) !default;

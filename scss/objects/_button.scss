@@ -1,0 +1,29 @@
+/*-----------------------------------------------------------------------------*\
+ * #OBJECTS button
+\*-----------------------------------------------------------------------------*/
+
+
+
+/**
+ * Abstract object for re-using styling that's common to all buttons.
+ */
+.o-button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+
+
+/**
+ * A button that spans the entire width of it's parent.
+ */
+.o-button--full-width {
+    display: block;
+    width: 100%;
+}

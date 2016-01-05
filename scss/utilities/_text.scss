@@ -1,0 +1,47 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES text
+\*-----------------------------------------------------------------------------*/
+
+
+
+//
+// Local variables.
+//
+$text-alignments: right center left;
+
+
+
+/**
+ * Remove or apply text-decoration.
+ */
+.u-no-underline { text-decoration: none; }
+.u-underline { text-decoration: underline; }
+
+
+
+/**
+ * Casing.
+ */
+.u-capitalize { text-transform: capitalize; }
+.u-lower { text-transform: lowercase; }
+.u-upper { text-transform: uppercase; }
+
+
+
+/**
+ * Typographic treatments.
+ */
+.u-small-caps { font-variant: small-caps; }
+
+
+
+//
+// Create text alignments.
+//
+@each $alignment in $text-alignments {
+
+    /**
+     * Utility class for aligning the text to the `${alignment}`.
+     */
+    .u-text--#{$alignment} { text-align: $alignment; }
+}

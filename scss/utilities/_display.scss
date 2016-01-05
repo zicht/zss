@@ -1,0 +1,25 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES display
+\*-----------------------------------------------------------------------------*/
+
+
+
+//
+// Local variables.
+//
+$display-values: (
+    block: block,
+    hidden: none,
+    inline: inline,
+    inline-block: inline-block
+);
+
+
+
+@each $name, $value in $display-values {
+
+    /**
+     * Utility class for applying a display value of `#{$value}` to an element.
+     */
+    .u-#{$name} { display: $value; }
+}

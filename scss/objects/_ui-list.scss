@@ -1,0 +1,38 @@
+/*-----------------------------------------------------------------------------*\
+ * #OBJECTS ui-list
+ *
+ * Abstract object for using a <ul> or <ol> as an interface element,
+ * instead of it being a text list with bullet points.
+\*-----------------------------------------------------------------------------*/
+
+
+
+/**
+ * The list element.
+ */
+.o-ui-list {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Make the list horizontal.
+ */
+.o-ui-list--inline {
+    overflow: hidden;
+}
+
+
+
+/**
+ * The list item.
+ */
+.o-ui-list__item {
+
+    /**
+     * When the list is horizontal, the items should be next to each other, so float them.
+     */
+    .o-ui-list--inline & {
+        float: left;
+    }
+}
