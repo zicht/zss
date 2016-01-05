@@ -16,7 +16,7 @@ $position-values: absolute fixed relative static;
     /**
      * Utility class for applying a position value of `#{$p}` to an element.
      */
-    .u-position--#{$p} { position: $p; }
+    .u-#{$p} { position: $p; }
 }
 
 
