@@ -1,0 +1,22 @@
+// ----------------------------------------------------------------------------- \\
+// #VARIABLES responsive
+// ----------------------------------------------------------------------------- //
+
+
+
+//
+// Responsive.
+//
+// 1. Smallest screens e.g. phones.
+// 2. Regular mobile screens e.g. iPhones.
+// 3. Medium screens e.g. tablets.
+// 4. Large screens e.g. desktops.
+// 5. Extra large screens e.g. wide desktops.
+// 
+$breakpoints: (
+    xs: 0, // [1] 
+    sm: 34em, // [2] 
+    md: 48em, // [3] 
+    lg: 62em, // [4] 
+    xl: 75em // [5] 
+) !default;

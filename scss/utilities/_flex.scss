@@ -9,3 +9,15 @@
 .u-flex--auto { flex: 1 1 auto; }
 .u-flex--single { flex: 1; }
 .u-flex--twice { flex: 2; }
+
+
+
+@each $screen, $size in $breakpoints {
+    @media (min-width: $size) {
+        .u-flex\@#{$screen} { display: flex; }
+        .u-flex--reverse\@#{$screen} { flex-direction: column-reverse; }
+        .u-flex--auto\@#{$screen} { flex: 1 1 auto; }
+        .u-flex--single\@#{$screen} { flex: 1; }
+        .u-flex--twice\@#{$screen} { flex: 2; }
+    }
+}
