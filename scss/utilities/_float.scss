@@ -1,0 +1,24 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES float
+\*-----------------------------------------------------------------------------*/
+
+
+
+//
+// Local variables.
+//
+$float-values: (
+    right: right,
+    left: left,
+    float--none: none
+);
+
+
+
+@each $name, $value in $float-values {
+
+    /**
+     * Utility class for applying a float value of `#{$value}` to an element.
+     */
+    .u-#{$name} { float: $value; }
+}

@@ -9,6 +9,7 @@
 //
 // Settings / variables.
 //
+@import 'variables/base';
 @import 'variables/colors';
 @import 'variables/whitespace';
 
@@ -51,6 +52,8 @@
 @import 'utilities/clear';
 @import 'utilities/color';
 @import 'utilities/display';
+@import 'utilities/float';
+@import 'utilities/overflow';
 @import 'utilities/position';
 @import 'utilities/whitespace';
 @import 'utilities/text';

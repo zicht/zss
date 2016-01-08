@@ -1,0 +1,20 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES overflow
+\*-----------------------------------------------------------------------------*/
+
+
+
+//
+// Local variables.
+//
+$overflow-values: hidden scroll visible;
+
+
+
+@each $o in $overflow-values {
+
+    /**
+     * Utility class for applying an overflow value of `#{$o}` to an element.
+     */
+    .u-overflow--#{$o} { overflow: $o; }
+}
