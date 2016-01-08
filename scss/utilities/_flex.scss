@@ -1,0 +1,11 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES flex
+\*-----------------------------------------------------------------------------*/
+
+
+
+.u-flex { display: flex; }
+.u-flex--reverse { flex-direction: column-reverse; }
+.u-flex--auto { flex: 1 1 auto; }
+.u-flex--single { flex: 1; }
+.u-flex--twice { flex: 2; }
