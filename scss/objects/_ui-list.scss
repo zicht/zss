@@ -33,7 +33,7 @@
     /**
      * When the list is horizontal, the items should be next to each other, so float them.
      */
-    .o-ui-list--inline & {
+    .o-ui-list--inline > & {
         float: left;
     }
 }
