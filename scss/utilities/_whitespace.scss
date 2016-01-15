@@ -8,34 +8,36 @@
 // Local helper mixin for generating whitespace classes.
 //
 @mixin spacing-classes($index, $property, $value, $negatives, $screen: null) {
+    $suffix: if($screen != null, '\\@' + $screen, '');
+
     /**
      * Utility class that applies a #{$property} to all 4 sides of an element.
      */
-    .u-#{$property}--#{$index}#{if($screen, '\@' + $screen, '')} { #{$property}: $value; }
+    .u-#{$property}--#{$index}#{$suffix} { #{$property}: $value; }
 
     /**
      * Utility classes that apply a #{$property} along the X or Y axis.
      */
-    .u-#{$property}--y#{$index} { #{$property}-top: $value; #{$property}-bottom: $value; }
-    .u-#{$property}--x#{$index} { #{$property}-right: $value; #{$property}-left: $value; }
+    .u-#{$property}--y#{$index}#{$suffix} { #{$property}-top: $value; #{$property}-bottom: $value; }
+    .u-#{$property}--x#{$index}#{$suffix} { #{$property}-right: $value; #{$property}-left: $value; }
 
     /**
      * Utility classes that apply a #{$property} to a single side of an element.
      */
-    .u-#{$property}--t#{$index} { #{$property}-top: $value; }
-    .u-#{$property}--r#{$index} { #{$property}-right: $value; }
-    .u-#{$property}--b#{$index} { #{$property}-bottom: $value; }
-    .u-#{$property}--l#{$index} { #{$property}-left: $value; }
+    .u-#{$property}--t#{$index}#{$suffix} { #{$property}-top: $value; }
+    .u-#{$property}--r#{$index}#{$suffix} { #{$property}-right: $value; }
+    .u-#{$property}--b#{$index}#{$suffix} { #{$property}-bottom: $value; }
+    .u-#{$property}--l#{$index}#{$suffix} { #{$property}-left: $value; }
 
 
     @if $negatives and $index > 0 {
         /**
          * Utility classes that apply a negative #{$property} to a single side of an element.
          */
-        .u-#{$property}--t#{$index}n { #{$property}-top: -$value; }
-        .u-#{$property}--r#{$index}n { #{$property}-right: -$value; }
-        .u-#{$property}--b#{$index}n { #{$property}-bottom: -$value; }
-        .u-#{$property}--l#{$index}n { #{$property}-left: -$value; }
+        .u-#{$property}--t#{$index}n#{$suffix} { #{$property}-top: -$value; }
+        .u-#{$property}--r#{$index}n#{$suffix} { #{$property}-right: -$value; }
+        .u-#{$property}--b#{$index}n#{$suffix} { #{$property}-bottom: -$value; }
+        .u-#{$property}--l#{$index}n#{$suffix} { #{$property}-left: -$value; }
     }
 }
 
@@ -44,7 +46,7 @@
 //
 // Local helper mixin for generating whitespace classes for each breakpoint.
 //
-@mixin spacing-utilities($property, $spaces: $whitespace-values, $breakpoints: $breakpoints, $negatives: true) {
+@mixin spacing-utilities($property, $spaces: $whitespace-values, $screens: $breakpoints, $negatives: true) {
     @for $i from 1 through length($spaces) {
 
         $value: nth($spaces, $i);
@@ -52,7 +54,7 @@
 
         @include spacing-classes($index, $property, $value, $negatives);
 
-        @each $screen, $size in $breakpoints {
+        @each $screen, $size in $screens {
             @media (min-width: $size) {
                 @include spacing-classes($index, $property, $value, $negatives, $screen);
             }
