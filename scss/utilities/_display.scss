@@ -22,4 +22,10 @@ $display-values: (
      * Utility class for applying a display value of `#{$value}` to an element.
      */
     .u-#{$name} { display: $value; }
+
+    @each $screen, $size in $breakpoints {
+        @media (min-width: $size) {
+            .u-#{$name}\@#{$screen} { display: $value; }
+        }
+    }
 }
