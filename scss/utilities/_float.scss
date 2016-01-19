@@ -21,4 +21,10 @@ $float-values: (
      * Utility class for applying a float value of `#{$value}` to an element.
      */
     .u-#{$name} { float: $value; }
+
+    @each $screen, $size in $breakpoints {
+        @media (min-width: $size) {
+            .u-#{$name}\@#{$screen} { float: $value; }
+        }
+    }
 }
