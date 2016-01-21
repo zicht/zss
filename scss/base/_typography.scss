@@ -4,7 +4,13 @@
 
 
 
-html {
+//
+// 1. The `html` selector is to have a proper base for REM values.
+// 2. The `body` is to make sure other CSS files don't override our font-size,
+//    for example when ZSS is included in a WYSIWYG editor.
+//
+html,
+body {
     line-height: $base-line-height;
     font-size: $base-font-size;
 }
