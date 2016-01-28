@@ -12,7 +12,7 @@
 
 
 
-@each $screen, $size in $breakpoints {
+@each $screen, $size in $zss-screens {
     @media (min-width: $size) {
         .u-flex\@#{$screen} { display: flex; }
         .u-flex--reverse\@#{$screen} { flex-direction: column-reverse; }

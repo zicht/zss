@@ -23,7 +23,7 @@ $display-values: (
      */
     .u-#{$name} { display: $value; }
 
-    @each $screen, $size in $breakpoints {
+    @each $screen, $size in $zss-screens {
         @media (min-width: $size) {
             .u-#{$name}\@#{$screen} { display: $value; }
         }

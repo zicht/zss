@@ -22,7 +22,7 @@ $float-values: (
      */
     .u-#{$name} { float: $value; }
 
-    @each $screen, $size in $breakpoints {
+    @each $screen, $size in $zss-screens {
         @media (min-width: $size) {
             .u-#{$name}\@#{$screen} { float: $value; }
         }

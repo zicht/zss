@@ -51,11 +51,12 @@ $utility-colors: (
 // 3. Medium screens e.g. tablets.
 // 4. Large screens e.g. desktops.
 //
-$breakpoints: (
-    xs: 480px, // [1]
-    sm: 768px, // [2]
-    md: 992px, // [3]
-    lg: 1200px, // [4]
+$zss-screens: (
+    xs: 0,
+    sm: 550px, // [1]
+    md: 780px, // [2]
+    lg: 990px, // [3]
+    xl: 1200px, // [4]
 ) !default;
 
 

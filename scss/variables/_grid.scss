@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------\\
+// #VARIABLES grid
+// -----------------------------------------------------------------------------//
+
+
+
+//
+// A fixed grid has a maximum width per screen.
+//
+$zss-grid--max-widths: (
+    sm: 530px,
+    md: 750px,
+    lg: 960px,
+    xl: 1170px
+) !default;
+
+$zss-grid--columns: 12 !default;
+$zss-grid--gutter: 2rem !default;
+
+
+
+//
+// The method of creating grid columns. Possible options:
+// 1. `flex`: the columns are positioned using flexbox
+// 2. `flex-with-fallback`: the columns are generated with flexbox if
+//    the client supports that, and includes a fallback to regular floats.
+// 2. `float`: the columns are positioned with floats, for support of
+//    ancient browsers.
+//
+$zss-grid--type: flex-with-fallback !default;
+
+
+
+//
+// The class names that are used to test if the client supports
+// flexbox. The default values come from Modernizr, but
+// can be overridden.
+//
+$zss-grid--flex: no-flexwrap !default;
+$zss-grid--no-flex: flexwrap !default;
