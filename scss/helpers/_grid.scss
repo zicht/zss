@@ -99,6 +99,7 @@
                             }
 
                             .#{$flex} & {
+                                display: flex;
                                 flex: 0 0 percentage($index / $column-count);
                                 min-width: percentage($index / $column-count); // [1]
                             }
