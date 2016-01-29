@@ -36,5 +36,5 @@ $zss-grid--type: flex-with-fallback !default;
 // flexbox. The default values come from Modernizr, but
 // can be overridden.
 //
-$zss-grid--flex: no-flexwrap !default;
-$zss-grid--no-flex: flexwrap !default;
+$zss-grid--flex: flexwrap !default;
+$zss-grid--no-flex: no-flexwrap !default;
