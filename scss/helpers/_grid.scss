@@ -2,6 +2,9 @@
 // #HELPERS grid
 //-----------------------------------------------------------------------------//
 
+@import '../helpers/clear';
+@import '../helpers/responsive';
+
 
 
 @mixin create-grid($gutter, $grid-type, $no-flex: $zss-grid--no-flex) {
@@ -85,6 +88,7 @@
                 @at-root {
                     #{&}--#{$index}\@#{$screen-name} {
                         @if $grid-type == flex {
+                            display: flex;
                             flex: 0 0 percentage($index / $column-count);
                             min-width: percentage($index / $column-count); // [1]
                         } @else if $grid-type == float {

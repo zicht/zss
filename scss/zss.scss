@@ -9,18 +9,21 @@
 //
 // Settings / variables.
 //
-@import 'variables/defaults';
+@import 'variables/base';
+@import 'variables/colors';
 @import 'variables/grid';
+@import 'variables/responsive';
+@import 'variables/whitespace';
 
 
 
 //
 // Mixins and other helpers.
 //
-@import 'helpers/clear';
-@import 'helpers/grid';
-@import 'helpers/responsive';
-@import 'helpers/units';
+//@import 'helpers/clear';
+//@import 'helpers/grid';
+//@import 'helpers/responsive';
+//@import 'helpers/units';
 
 
 

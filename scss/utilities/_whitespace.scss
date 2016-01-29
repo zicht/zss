@@ -46,7 +46,7 @@
 //
 // Local helper mixin for generating whitespace classes for each breakpoint.
 //
-@mixin spacing-utilities($property, $spaces: $whitespace-values, $screens: $zss-screens, $negatives: true) {
+@mixin spacing-utilities($property, $spaces: $zss-whitespace, $screens: $zss-screens, $negatives: true) {
     @for $i from 1 through length($spaces) {
 
         $value: nth($spaces, $i);

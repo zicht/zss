@@ -3,7 +3,7 @@
 \*-----------------------------------------------------------------------------*/
 
 
-@each $name, $hex-value in $utility-colors {
+@each $name, $hex-value in $zss-utility-colors {
 
     // The linter will incorrectly report the interpolation of a variable when applied as a color,
     // so disable the linter for these lines.

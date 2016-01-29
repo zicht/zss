@@ -2,6 +2,7 @@
 // #VARIABLES responsive
 //-----------------------------------------------------------------------------//
 
+@import '../variables/responsive';
 
 
 @mixin media-until($screen-name, $screens: $zss-screens) {
