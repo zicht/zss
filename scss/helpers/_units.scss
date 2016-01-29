@@ -12,7 +12,7 @@
         @return $px;
     }
 
-    @return ($px / $base-font-size) * 1rem;
+    @return ($px / $zss-base-font-size) * 1rem;
 }
 
 
@@ -33,7 +33,7 @@
     font-size: px-to-rem($font-size);
 
     @if $line-height == auto {
-        line-height: ceil($base-line-height / $font-size);
+        line-height: ceil($zss-base-line-height / $font-size);
     } @else {
         @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
             line-height: $line-height;
