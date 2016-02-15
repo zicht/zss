@@ -88,7 +88,6 @@
                 @at-root {
                     #{&}--#{$index}\@#{$screen-name} {
                         @if $grid-type == flex {
-                            display: flex;
                             flex: 0 0 percentage($index / $column-count);
                             min-width: percentage($index / $column-count); // [1]
                         } @else if $grid-type == float {
@@ -99,7 +98,6 @@
                             }
 
                             .#{$flex} & {
-                                display: flex;
                                 flex: 0 0 percentage($index / $column-count);
                                 min-width: percentage($index / $column-count); // [1]
                             }

@@ -25,5 +25,15 @@
 .o-grid__col {
     @include create-grid-column($zss-grid--gutter, $zss-grid--type);
     @include create-grid-column-sizes($zss-grid--columns, $zss-grid--type);
+
+    .o-grid--flex-content & {
+        @if $zss-grid--type == flex {
+            display: flex;
+        } @else if $zss-grid--type == flex-with-fallback {
+            .#{$zss-grid--flex} & {
+                display: flex;
+            }
+        }
+    }
 }
 
