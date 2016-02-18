@@ -44,4 +44,10 @@ $text-alignments: right center left;
      * Utility class for aligning the text to the `${alignment}`.
      */
     .u-text--#{$alignment} { text-align: $alignment; }
+
+    @each $screen, $size in $zss-screens {
+        @media (min-width: $size) {
+            .u-text--#{$alignment}\@#{$screen} { text-align: $alignment; }
+        }
+    }
 }
