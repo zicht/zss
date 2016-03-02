@@ -7,10 +7,7 @@
 
 
 
-//
-// Local helper mixin for generating whitespace classes.
-//
-@mixin spacing-classes($index, $property, $value, $negatives, $screen: null) {
+@mixin create-whitespace-for-value($index, $property, $value, $include-negatives, $screen: null) {
     $suffix: if($screen != null, '\\@' + $screen, '');
 
     /**
@@ -33,7 +30,7 @@
     .u-#{$property}--l#{$index}#{$suffix} { #{$property}-left: $value; }
 
 
-    @if $negatives and $index > 0 {
+    @if $include-negatives and $value > 0 {
         /**
          * Utility classes that apply a negative #{$property} to a single side of an element.
          */
@@ -46,20 +43,17 @@
 
 
 
-//
-// Local helper mixin for generating whitespace classes for each breakpoint.
-//
-@mixin spacing-utilities($property, $spaces: $zss-whitespace, $screens: $zss-screens, $negatives: true) {
-    @for $i from 1 through length($spaces) {
+@mixin create-all-whitespace($property, $values, $include-negatives, $screens) {
+    @for $i from 1 through length($values) {
+        @include create-whitespace-for-value($i - 1, $property, nth($values, $i), $include-negatives)
+    }
 
-        $value: nth($spaces, $i);
-        $index: $i - 1;
-
-        @include spacing-classes($index, $property, $value, $negatives);
-
-        @each $screen, $size in $screens {
-            @media (min-width: $size) {
-                @include spacing-classes($index, $property, $value, $negatives, $screen);
+    @each $screen, $size in $screens {
+        @media (min-width: $size) {
+            @for $i from 1 through length($values) {
+                @if $size > 0 {
+                    @include create-whitespace-for-value($i - 1, $property, nth($values, $i), $include-negatives, $screen)
+                }
             }
         }
     }
@@ -67,8 +61,8 @@
 
 
 
-@include spacing-utilities(margin, $negatives: true);
-@include spacing-utilities(padding, $negatives: false);
+@include create-all-whitespace(margin, $zss-whitespace, true, $zss-screens);
+@include create-all-whitespace(padding, $zss-whitespace, false, $zss-screens);
 
 
 
