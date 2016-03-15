@@ -7,7 +7,7 @@
 ///
 // Function that calculates the rem value for the given number of pixels.
 //
-@function px-to-rem($px) {
+@function rem($px) {
     @if (unit($px) == 'rem') {
         @return $px;
     }
@@ -29,7 +29,7 @@
 // @include font-px-to-rem(24px, 26px);
 //
 //
-@mixin font-px-to-rem($font-size, $line-height: auto) {
+@mixin font-rem($font-size, $line-height: auto) {
     font-size: px-to-rem($font-size);
 
     @if $line-height == auto {
