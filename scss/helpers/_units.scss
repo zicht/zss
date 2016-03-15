@@ -30,7 +30,7 @@
 //
 //
 @mixin font-rem($font-size, $line-height: auto) {
-    font-size: px-to-rem($font-size);
+    font-size: rem($font-size);
 
     @if $line-height == auto {
         line-height: ceil($zss-base-line-height / $font-size);
