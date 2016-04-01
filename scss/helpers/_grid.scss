@@ -77,8 +77,8 @@
 //
 // 1. According to the flexbox specification, by default, flex items won't shrink below their minimum
 //    content size (the length of the longest word or fixed-size element). To change this, set the
-//    min-width or min-height property.
-//    NOTE: if we leave the min-width, the 'columns' in separate rows don't have the same width.
+//    max-width or max-height property.
+//    NOTE: if we leave the max-width, the 'columns' in separate rows don't have the same width.
 //
 @mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss-screens, $no-flex: $zss-grid--no-flex, $flex: $zss-grid--flex) {
     @each $screen-name, $screen-size in $screens {
@@ -89,7 +89,7 @@
                     #{&}--#{$index}\@#{$screen-name} {
                         @if $grid-type == flex {
                             flex: 0 0 percentage($index / $column-count);
-                            min-width: percentage($index / $column-count); // [1]
+                            max-width: percentage($index / $column-count); // [1]
                         } @else if $grid-type == float {
                             width: percentage($index / $column-count);
                         } @else if $grid-type == flex-with-fallback {
@@ -99,7 +99,7 @@
 
                             .#{$flex} & {
                                 flex: 0 0 percentage($index / $column-count);
-                                min-width: percentage($index / $column-count); // [1]
+                                max-width: percentage($index / $column-count); // [1]
                             }
                         }
 
