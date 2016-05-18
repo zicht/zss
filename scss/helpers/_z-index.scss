@@ -1,0 +1,26 @@
+/*-----------------------------------------------------------------------------*\
+ * #HELPERS z-index
+\*-----------------------------------------------------------------------------*/
+
+
+
+/**
+ * Mixin that tries to keep z-indexes in check.
+ */
+@mixin z-index($stack-level: default) {
+    @if $stack-level == below {
+        z-index: -1;
+    } @else if $stack-level == default {
+        z-index: 1;
+    } @else if $stack-level == middle {
+        z-index: 125;
+    } @else if $stack-level == top {
+        z-index: 200;
+    } @else if $stack-level == modal {
+        z-index: 666;
+    } @else if $stack-level == stoned {
+        z-index: 999;
+    } @else {
+        z-index: 1;
+    }
+}
