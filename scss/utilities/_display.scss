@@ -27,7 +27,7 @@ $display-values: (
 
     @each $screen, $size in $zss-screens {
         @media (min-width: $size) {
-            .u-#{$name}\@#{$screen} { display: $value; }
+            .u-#{$name}\@#{$screen} { display: $value !important; }
         }
     }
 }
