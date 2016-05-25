@@ -23,7 +23,7 @@ $display-values: (
     /**
      * Utility class for applying a display value of `#{$value}` to an element.
      */
-    .u-#{$name} { display: $value; }
+    .u-#{$name} { display: $value !important; }
 
     @each $screen, $size in $zss-screens {
         @media (min-width: $size) {
