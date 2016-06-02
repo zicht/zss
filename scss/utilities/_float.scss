@@ -18,13 +18,14 @@ $float-values: (
 
 
 @each $name, $value in $float-values {
-
     /**
      * Utility class for applying a float value of `#{$value}` to an element.
      */
     .u-#{$name} { float: $value; }
+}
 
-    @each $screen, $size in $zss-screens {
+@each $screen, $size in $zss-screens {
+    @each $name, $value in $float-values {
         @media (min-width: $size) {
             .u-#{$name}\@#{$screen} { float: $value; }
         }

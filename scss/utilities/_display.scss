@@ -19,15 +19,20 @@ $display-values: (
 
 
 @each $name, $value in $display-values {
-
     /**
      * Utility class for applying a display value of `#{$value}` to an element.
      */
+    // scss-lint:disable ImportantRule
     .u-#{$name} { display: $value !important; }
+    // scss-lint:enable ImportantRule
+}
 
-    @each $screen, $size in $zss-screens {
+@each $screen, $size in $zss-screens {
+    @each $name, $value in $display-values {
         @media (min-width: $size) {
+            // scss-lint:disable ImportantRule
             .u-#{$name}\@#{$screen} { display: $value !important; }
+            // scss-lint:enable ImportantRule
         }
     }
 }

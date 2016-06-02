@@ -12,13 +12,14 @@ $position-values: absolute fixed relative static;
 
 
 @each $p in $position-values {
-
     /**
      * Utility class for applying a position value of `#{$p}` to an element.
      */
     .u-#{$p} { position: $p; }
+}
 
-    @each $screen, $size in $zss-screens {
+@each $screen, $size in $zss-screens {
+    @each $p in $position-values {
         @media (min-width: $size) {
             .u-#{$p}\@#{$screen} { position: $p; }
         }
