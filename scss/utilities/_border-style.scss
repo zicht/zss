@@ -1,0 +1,15 @@
+
+
+.u-b--dashed { border-style: dashed; }
+.u-b--dotted { border-style: dotted; }
+.u-b--solid { border-style: solid; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-b--dashed\@#{$screen} { border-style: dashed; }
+        .u-b--dotted\@#{$screen} { border-style: dotted; }
+        .u-b--solid\@#{$screen} { border-style: solid; }
+    }
+}

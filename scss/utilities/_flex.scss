@@ -1,25 +1,86 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES flex
-\*-----------------------------------------------------------------------------*/
-
-@import '../variables/responsive';
-
-
 
 .u-flex { display: flex; }
-.u-flex--reverse { flex-direction: column-reverse; }
+.u-flex--inline { display: inline-flex; }
+
 .u-flex--auto { flex: 1 1 auto; }
-.u-flex--single { flex: 1; }
-.u-flex--twice { flex: 2; }
+.u-no-flex { flex: none; }
+
+.u-flex--row { flex-direction: column; }
+.u-flex--row { flex-direction: row; }
+
+.u-flex--items--start { align-items: flex-start; }
+.u-flex--items--end { align-items: flex-end; }
+.u-flex--items--center { align-items: center; }
+.u-flex--items--base { align-items: baseline; }
+.u-flex--items--stretch { align-items: stretch; }
+
+.u-flex--content--start { align-content: flex-start; }
+.u-flex--content--end { align-content: flex-end; }
+.u-flex--content--center { align-content: center; }
+.u-flex--content--base { align-content: baseline; }
+.u-flex--content--stretch { align-content: stretch; }
+
+.u-flex--self--start { align-self: flex-start; }
+.u-flex--self--end { align-self: flex-end; }
+.u-flex--self--center { align-self: center; }
+.u-flex--self--base { align-self: baseline; }
+.u-flex--self--stretch { align-self: stretch; }
+
+.u-flex--justify--start { justify-content: flex-start; }
+.u-flex--justify--end { justify-content: flex-end; }
+.u-flex--justify--center { justify-content: center; }
+.u-flex--justify--base { justify-content: baseline; }
+.u-flex--justify--stretch { justify-content: stretch; }
+
+.u-order--first { order: -1; }
+.u-order--1 { order: 1; }
+.u-order--2 { order: 2; }
+.u-order--3 { order: 3; }
+.u-order--1 { order: 4; }
+.u-order--last { order: 666; }
 
 
 
 @each $screen, $size in $zss-screens {
-    @media (min-width: $size) {
+    @include media-from($screen) {
         .u-flex\@#{$screen} { display: flex; }
-        .u-flex--reverse\@#{$screen} { flex-direction: column-reverse; }
+        .u-flex--inline\@#{$screen} { display: inline-flex; }
+
         .u-flex--auto\@#{$screen} { flex: 1 1 auto; }
-        .u-flex--single\@#{$screen} { flex: 1; }
-        .u-flex--twice\@#{$screen} { flex: 2; }
+        .u-no-flex\@#{$screen} { flex: none; }
+
+        .u-flex--row\@#{$screen} { flex-direction: column; }
+        .u-flex--row\@#{$screen} { flex-direction: row; }
+
+        .u-flex--items--start\@#{$screen} { align-items: flex-start; }
+        .u-flex--items--end\@#{$screen} { align-items: flex-end; }
+        .u-flex--items--center\@#{$screen} { align-items: center; }
+        .u-flex--items--base\@#{$screen} { align-items: baseline; }
+        .u-flex--items--stretch\@#{$screen} { align-items: stretch; }
+
+        .u-flex--content--start\@#{$screen} { align-content: flex-start; }
+        .u-flex--content--end\@#{$screen} { align-content: flex-end; }
+        .u-flex--content--center\@#{$screen} { align-content: center; }
+        .u-flex--content--base\@#{$screen} { align-content: baseline; }
+        .u-flex--content--stretch\@#{$screen} { align-content: stretch; }
+
+        .u-flex--self--start\@#{$screen} { align-self: flex-start; }
+        .u-flex--self--end\@#{$screen} { align-self: flex-end; }
+        .u-flex--self--center\@#{$screen} { align-self: center; }
+        .u-flex--self--base\@#{$screen} { align-self: baseline; }
+        .u-flex--self--stretch\@#{$screen} { align-self: stretch; }
+
+        .u-flex--justify--start\@#{$screen} { justify-content: flex-start; }
+        .u-flex--justify--end\@#{$screen} { justify-content: flex-end; }
+        .u-flex--justify--center\@#{$screen} { justify-content: center; }
+        .u-flex--justify--base\@#{$screen} { justify-content: baseline; }
+        .u-flex--justify--stretch\@#{$screen} { justify-content: stretch; }
+
+        .u-order--first\@#{$screen} { order: -1; }
+        .u-order--1\@#{$screen} { order: 1; }
+        .u-order--2\@#{$screen} { order: 2; }
+        .u-order--3\@#{$screen} { order: 3; }
+        .u-order--1\@#{$screen} { order: 4; }
+        .u-order--last\@#{$screen} { order: 666; }
     }
 }

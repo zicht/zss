@@ -1,27 +1,16 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES color
-\*-----------------------------------------------------------------------------*/
 
-@import '../variables/colors';
-
-
-
-@each $name, $hex-value in $zss-utility-colors {
-
-    // The linter will incorrectly report the interpolation of a variable when applied as a color,
-    // so disable the linter for these lines.
-    //scss-lint:disable VariableForProperty
-
-    /**
-     * Utility class for changing the text color to `#{$hex-value}`.
-     */
+@each $name, $hex-value in $zss--colors {
     .u-#{inspect($name)} { color: #{$hex-value}; }
-
-    /**
-     * Utility class for changing the background color to `#{$hex-value}`.
-     */
     .u-bg--#{inspect($name)} { background-color: #{$hex-value}; }
+}
 
-    // Re-enable the linter for further code.
-    //scss-lint:enable VariableForProperty
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        @each $name, $hex-value in $zss--colors {
+            .u-#{inspect($name)}\@#{$screen} { color: #{$hex-value}; }
+            .u-bg--#{inspect($name)}\@#{$screen} { background-color: #{$hex-value}; }
+        }
+    }
 }

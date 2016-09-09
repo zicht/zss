@@ -1,20 +1,26 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES overflow
-\*-----------------------------------------------------------------------------*/
+
+.u-of--hidden { overflow: hidden; }
+.u-of--scroll { overflow: scroll; }
+.u-of--visible { overflow: visible; }
+.u-of--hidden--x { overflow-x: hidden; }
+.u-of--scroll--x { overflow-x: scroll; }
+.u-of--visible--x { overflow-x: visible; }
+.u-of--hidden--y { overflow-y: hidden; }
+.u-of--scroll--y { overflow-y: scroll; }
+.u-of--visible--y { overflow-y: visible; }
 
 
 
-//
-// Local variables.
-//
-$overflow-values: hidden scroll visible;
-
-
-
-@each $o in $overflow-values {
-
-    /**
-     * Utility class for applying an overflow value of `#{$o}` to an element.
-     */
-    .u-overflow--#{$o} { overflow: $o; }
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-of--hidden\@#{$screen} { overflow: hidden; }
+        .u-of--scroll\@#{$screen} { overflow: scroll; }
+        .u-of--visible\@#{$screen} { overflow: visible; }
+        .u-of--hidden--x\@#{$screen} { overflow-x: hidden; }
+        .u-of--scroll--x\@#{$screen} { overflow-x: scroll; }
+        .u-of--visible--x\@#{$screen} { overflow-x: visible; }
+        .u-of--hidden--y\@#{$screen} { overflow-y: hidden; }
+        .u-of--scroll--y\@#{$screen} { overflow-y: scroll; }
+        .u-of--visible--y\@#{$screen} { overflow-y: visible; }
+    }
 }

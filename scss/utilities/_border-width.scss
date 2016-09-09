@@ -1,0 +1,30 @@
+
+$zss--border-width-scale: 0.125rem 0.25rem 0.5rem !default;
+
+
+
+.u-no-border { border-width: 0; }
+
+@each $value in $zss--border-width-scale {
+    .u-bw--#{index($zss--border-width-scale, $value)} { border-width: #{$value}; }
+    .u-bw--t#{index($zss--border-width-scale, $value)} { border-top-width: #{$value}; }
+    .u-bw--r#{index($zss--border-width-scale, $value)} { border-right-width: #{$value}; }
+    .u-bw--b#{index($zss--border-width-scale, $value)} { border-bottom-width: #{$value}; }
+    .u-bw--l#{index($zss--border-width-scale, $value)} { border-left-width: #{$value}; }
+}
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-no-border\@#{$screen} { border-width: 0; }
+
+        @each $value in $zss--border-width-scale {
+            .u-bw--#{index($zss--border-width-scale, $value)}\@#{$screen} { border-width: #{$value}; }
+            .u-bw--t#{index($zss--border-width-scale, $value)}\@#{$screen} { border-top-width: #{$value}; }
+            .u-bw--r#{index($zss--border-width-scale, $value)}\@#{$screen} { border-right-width: #{$value}; }
+            .u-bw--b#{index($zss--border-width-scale, $value)}\@#{$screen} { border-bottom-width: #{$value}; }
+            .u-bw--l#{index($zss--border-width-scale, $value)}\@#{$screen} { border-left-width: #{$value}; }
+        }
+    }
+}

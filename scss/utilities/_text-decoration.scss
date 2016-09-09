@@ -1,0 +1,14 @@
+
+.u-strike { text-decoration: line-through; }
+.u-underline { text-decoration: underline; }
+.u-no-underline { text-decoration: none; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-strike\@#{$screen} { text-decoration: line-through; }
+        .u-underline\@#{$screen} { text-decoration: underline; }
+        .u-no-underline\@#{$screen} { text-decoration: none; }
+    }
+}

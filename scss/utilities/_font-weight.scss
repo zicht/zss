@@ -1,0 +1,26 @@
+
+.u-weight--100 { font-weight: 100; }
+.u-weight--200 { font-weight: 200; }
+.u-weight--300 { font-weight: 300; }
+.u-weight--400 { font-weight: 400; }
+.u-weight--500 { font-weight: 500; }
+.u-weight--600 { font-weight: 600; }
+.u-weight--700 { font-weight: 700; }
+.u-weight--800 { font-weight: 800; }
+.u-weight--900 { font-weight: 900; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-weight--100\@#{$screen} { font-weight: 100; }
+        .u-weight--200\@#{$screen} { font-weight: 200; }
+        .u-weight--300\@#{$screen} { font-weight: 300; }
+        .u-weight--400\@#{$screen} { font-weight: 400; }
+        .u-weight--500\@#{$screen} { font-weight: 500; }
+        .u-weight--600\@#{$screen} { font-weight: 600; }
+        .u-weight--700\@#{$screen} { font-weight: 700; }
+        .u-weight--800\@#{$screen} { font-weight: 800; }
+        .u-weight--900\@#{$screen} { font-weight: 900; }
+    }
+}

@@ -7,13 +7,9 @@
 
 
 
-@mixin create-grid($gutter, $grid-type, $no-flex: $zss-grid--no-flex) {
+@mixin create-grid($gutter, $grid-type) {
     @if $grid-type == float {
         @include clear;
-    } @else if $grid-type == flex-with-fallback {
-        .#{$no-flex} & {
-            @include clear;
-        }
     }
 
     margin-right: auto;
@@ -34,21 +30,12 @@
 
 
 
-@mixin create-grid-row($gutter, $grid-type, $no-flex: $zss-grid--no-flex, $flex: $zss-grid--flex) {
+@mixin create-grid-row($gutter, $grid-type) {
     @if $grid-type == flex {
         display: flex;
         flex-wrap: wrap;
     } @else if $grid-type == float {
         @include clear();
-    } @else if $grid-type == flex-with-fallback {
-        .#{$no-flex} & {
-            @include clear;
-        }
-
-        .#{$flex} & {
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 
     margin-right: $gutter / -2;
@@ -57,13 +44,9 @@
 
 
 
-@mixin create-grid-column($gutter, $grid-type, $no-flex: $zss-grid--no-flex) {
+@mixin create-grid-column($gutter, $grid-type) {
     @if $grid-type == float {
         float: left;
-    } @else if $grid-type == flex-with-fallback {
-        .#{$no-flex} & {
-            float: left;
-        }
     }
 
     position: relative;
@@ -80,7 +63,7 @@
 //    max-width or max-height property.
 //    NOTE: if we leave the max-width, the 'columns' in separate rows don't have the same width.
 //
-@mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss-screens, $no-flex: $zss-grid--no-flex, $flex: $zss-grid--flex) {
+@mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss-screens) {
     @each $screen-name, $screen-size in $screens {
         @include media-from($screen-name, $screens) {
 
@@ -92,17 +75,7 @@
                             max-width: percentage($index / $column-count); // [1]
                         } @else if $grid-type == float {
                             width: percentage($index / $column-count);
-                        } @else if $grid-type == flex-with-fallback {
-                            .#{$no-flex} & {
-                                width: percentage($index / $column-count);
-                            }
-
-                            .#{$flex} & {
-                                flex: 0 0 percentage($index / $column-count);
-                                max-width: percentage($index / $column-count); // [1]
-                            }
                         }
-
                     }
                 }
             }

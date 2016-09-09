@@ -1,0 +1,18 @@
+
+$zss--font-scale: 4rem 3rem 2rem 1rem 0.75rem 0.5rem !default;
+
+
+
+@each $value in $zss--font-scale {
+    .u-size--#{index($zss--font-scale, $value)} { font-size: $value; }
+}
+
+
+
+@each $screen in $zss-screens {
+    @include media-from($screen) {
+        @each $value in $zss--font-scale {
+            .u-size--#{index($zss--font-scale, $value)}\@#{$screen} { font-size: $value; }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+$zss--line-height-scale: 1 1.25 1.5 1.75 !default;
+
+
+
+@each $value in $zss--line-height-scale {
+    .u-lh--#{index($zss--line-height-scale, $value)} { line-height: $value; }
+}
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        @each $value in $zss--line-height-scale {
+            .u-lh--#{index($zss--line-height-scale, $value)}\@#{$screen} { line-height: $value; }
+        }
+    }
+}

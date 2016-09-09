@@ -29,10 +29,6 @@
     .o-grid--flex-content & {
         @if $zss-grid--type == flex {
             display: flex;
-        } @else if $zss-grid--type == flex-with-fallback {
-            .#{$zss-grid--flex} & {
-                display: flex;
-            }
         }
     }
 }

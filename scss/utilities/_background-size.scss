@@ -1,0 +1,12 @@
+
+.u-bg--contain { background-size: contain; }
+.u-bg--cover { background-size: cover; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-bg--contain\@#{$screen} { background-size: contain; }
+        .u-bg--cover\@#{$screen} { background-size: cover; }
+    }
+}

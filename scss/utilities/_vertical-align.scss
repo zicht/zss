@@ -1,0 +1,22 @@
+
+.u-v--sub { vertical-align: sub; }
+.u-v--super { vertical-align: super; }
+.u-v--text-top { vertical-align: text-top; }
+.u-v--text-bottom { vertical-align: text-bottom; }
+.u-v--middle { vertical-align: middle; }
+.u-v--top { vertical-align: top; }
+.u-v--bottom { vertical-align: bottom; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-v--sub\@#{$screen} { vertical-align: sub; }
+        .u-v--super\@#{$screen} { vertical-align: super; }
+        .u-v--text-top\@#{$screen} { vertical-align: text-top; }
+        .u-v--text-bottom\@#{$screen} { vertical-align: text-bottom; }
+        .u-v--middle\@#{$screen} { vertical-align: middle; }
+        .u-v--top\@#{$screen} { vertical-align: top; }
+        .u-v--bottom\@#{$screen} { vertical-align: bottom; }
+    }
+}

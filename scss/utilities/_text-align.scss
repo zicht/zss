@@ -1,0 +1,14 @@
+
+.u-text--right { text-align: right; }
+.u-text--center { text-align: center; }
+.u-text--left { text-align: left; }
+
+
+
+@each $screen, $size in $zss-screens {
+    @include media-from($screen) {
+        .u-text--right\@#{$screen} { text-align: right; }
+        .u-text--center\@#{$screen} { text-align: center; }
+        .u-text--left\@#{$screen} { text-align: left; }
+    }
+}

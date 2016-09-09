@@ -1,33 +1,14 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES float
-\*-----------------------------------------------------------------------------*/
 
-@import '../variables/responsive';
-
+.u-f--right { float: right; }
+.u-f--left { float: left; }
+.u-f--none { float: none; }
 
 
-//
-// Local variables.
-//
-$float-values: (
-    right: right,
-    left: left,
-    float--none: none
-);
-
-
-
-@each $name, $value in $float-values {
-    /**
-     * Utility class for applying a float value of `#{$value}` to an element.
-     */
-    .u-#{$name} { float: $value; }
-}
 
 @each $screen, $size in $zss-screens {
-    @each $name, $value in $float-values {
-        @media (min-width: $size) {
-            .u-#{$name}\@#{$screen} { float: $value; }
-        }
+    @include media-from($screen) {
+        .u-f--right\@#{$screen} { float: right; }
+        .u-f--left\@#{$screen} { float: left; }
+        .u-f--none\@#{$screen} { float: none; }
     }
 }

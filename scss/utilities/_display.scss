@@ -1,38 +1,28 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES display
-\*-----------------------------------------------------------------------------*/
 
-@import '../variables/responsive';
-
-
-
-//
-// Local variables.
-//
-$display-values: (
-    hidden: none,
-    block: block,
-    inline: inline,
-    inline-block: inline-block
-);
+.u-hidden { display: none; }
+.u-block { display: block; }
+.u-inline { display: inline; }
+.u-inline-block { display: inline-block; }
+.u-table { display: table; }
+.u-cell { display: table-cell; }
+.u-row { display: table-row; }
+.u-row-group { display: table-row-group; }
+.u-column { display: table-column; }
+.u-column-group { display: table-column-group; }
 
 
-
-@each $name, $value in $display-values {
-    /**
-     * Utility class for applying a display value of `#{$value}` to an element.
-     */
-    // scss-lint:disable ImportantRule
-    .u-#{$name} { display: $value !important; }
-    // scss-lint:enable ImportantRule
-}
 
 @each $screen, $size in $zss-screens {
-    @each $name, $value in $display-values {
-        @media (min-width: $size) {
-            // scss-lint:disable ImportantRule
-            .u-#{$name}\@#{$screen} { display: $value !important; }
-            // scss-lint:enable ImportantRule
-        }
+    @include media-from($screen) {
+        .u-hidden\@#{$screen} { display: none; }
+        .u-block\@#{$screen} { display: block; }
+        .u-inline\@#{$screen} { display: inline; }
+        .u-inline-block\@#{$screen} { display: inline-block; }
+        .u-table\@#{$screen} { display: table; }
+        .u-cell\@#{$screen} { display: table-cell; }
+        .u-row\@#{$screen} { display: table-row; }
+        .u-row-group\@#{$screen} { display: table-row-group; }
+        .u-column\@#{$screen} { display: table-column; }
+        .u-column-group\@#{$screen} { display: table-column-group; }
     }
 }
