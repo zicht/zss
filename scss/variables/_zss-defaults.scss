@@ -1,6 +1,6 @@
 
 $zss--base-font-size: 16px !default;
-$zss--base-line-height: 26px !default;
+$zss--base-line-height: 1.5 !default;
 
 
 
@@ -53,7 +53,17 @@ $zss--screens: (
 
 
 $zss--border-colors: $zss--colors !default;
+$zss--border-radius-scale: 0.125rem 0.25rem 0.5rem !default;
+$zss--border-width-scale: 0.125rem 0.25rem 0.5rem !default;
 
 
 
 $zss--spacing-scale: 0 0.5rem 1rem 2rem 4rem !default;
+
+
+
+$zss--font-scale: 4rem 3rem 2rem 1rem 0.75rem 0.5rem !default;
+
+
+
+$zss--line-height-scale: 1 1.25 1.5 1.75 !default;

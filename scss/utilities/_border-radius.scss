@@ -1,8 +1,4 @@
 
-$zss--border-radius-scale: 0.125rem 0.25rem 0.5rem !default;
-
-
-
 .u-circle { border-radius: 100%; }
 
 @each $value in $zss--border-radius-scale {

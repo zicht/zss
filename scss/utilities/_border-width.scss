@@ -1,8 +1,4 @@
 
-$zss--border-width-scale: 0.125rem 0.25rem 0.5rem !default;
-
-
-
 .u-no-border { border-width: 0; }
 
 @each $value in $zss--border-width-scale {
