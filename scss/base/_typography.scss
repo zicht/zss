@@ -2,8 +2,6 @@
  * #BASE typography
 \*-----------------------------------------------------------------------------*/
 
-@import '../variables/base';
-
 
 
 //
@@ -13,6 +11,6 @@
 //
 html,
 body {
-    line-height: $zss-base-line-height;
-    font-size: $zss-base-font-size;
+    line-height: $zss--base-line-height;
+    font-size: $zss--base-font-size;
 }

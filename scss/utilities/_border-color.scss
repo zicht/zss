@@ -1,15 +1,11 @@
 
-$zss--border-colors: $zss--colors !default;
-
-
-
 @each $name, $hex-value in $zss--border-colors {
     .u-b--#{inspect($name)} { border-color: #{$hex-value}; }
 }
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         @each $name, $hex-value in $zss--border-colors {
             .u-b--#{inspect($name)}\@#{$screen} { border-color: #{$hex-value}; }

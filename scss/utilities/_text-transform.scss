@@ -5,7 +5,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-capitalize\@#{$screen} { text-transform: capitalize; }
         .u-lower\@#{$screen} { text-transform: lowercase; }

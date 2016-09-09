@@ -6,7 +6,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         @each $name, $hex-value in $zss--colors {
             .u-#{inspect($name)}\@#{$screen} { color: #{$hex-value}; }

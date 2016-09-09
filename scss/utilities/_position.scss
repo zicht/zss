@@ -14,7 +14,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-absolute\@#{$screen} { position: absolute; }
         .u-fixed\@#{$screen} { position: fixed; }

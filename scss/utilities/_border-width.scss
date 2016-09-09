@@ -15,7 +15,7 @@ $zss--border-width-scale: 0.125rem 0.25rem 0.5rem !default;
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-no-border\@#{$screen} { border-width: 0; }
 

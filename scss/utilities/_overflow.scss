@@ -11,7 +11,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-of--hidden\@#{$screen} { overflow: hidden; }
         .u-of--scroll\@#{$screen} { overflow: scroll; }

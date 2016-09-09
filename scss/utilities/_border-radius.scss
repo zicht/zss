@@ -11,7 +11,7 @@ $zss--border-radius-scale: 0.125rem 0.25rem 0.5rem !default;
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-circle\@#{$screen} { border-radius: 100%; }
 

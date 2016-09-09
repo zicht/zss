@@ -8,7 +8,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-z--bottom\@#{$screen} { z-index: -1; }
         .u-z--1\@#{$screen} { z-index: 1; }

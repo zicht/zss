@@ -41,7 +41,7 @@
 
 
 
-@each $screen, $size in $zss-screens {
+@each $screen, $size in $zss--screens {
     @include media-from($screen) {
         .u-flex\@#{$screen} { display: flex; }
         .u-flex--inline\@#{$screen} { display: inline-flex; }

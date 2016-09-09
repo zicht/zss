@@ -2,11 +2,9 @@
 // #VARIABLES responsive
 //-----------------------------------------------------------------------------//
 
-@import '../variables/responsive';
 
 
-
-@mixin media-until($screen-name, $screens: $zss-screens) {
+@mixin media-until($screen-name, $screens: $zss--screens) {
     @media (max-width: map-get($screens, $screen-name)) {
         @content;
     }
@@ -14,7 +12,7 @@
 
 
 
-@mixin media-between($min-screen-name, $max-screen-name, $screens: $zss-screens) {
+@mixin media-between($min-screen-name, $max-screen-name, $screens: $zss--screens) {
     @media (min-width: map-get($screens, $min-screen-name)) and (max-width: map-get($screens, $max-screen-name)) {
         @content
     }
@@ -22,7 +20,7 @@
 
 
 
-@mixin media-from($screen-name, $screens: $zss-screens) {
+@mixin media-from($screen-name, $screens: $zss--screens) {
     @media (min-width: map-get($screens, $screen-name)) {
         @content;
     }

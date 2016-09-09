@@ -2,9 +2,6 @@
  * #UTILITIES spacing
 \*-----------------------------------------------------------------------------*/
 
-@import '../variables/responsive';
-@import '../variables/whitespace';
-
 
 
 @mixin create-whitespace-for-value($index, $property, $value, $include-negatives, $screen: null) {
@@ -61,8 +58,8 @@
 
 
 
-@include create-all-whitespace(margin, $zss-whitespace, true, $zss-screens);
-@include create-all-whitespace(padding, $zss-whitespace, false, $zss-screens);
+@include create-all-whitespace(margin, $zss--spacing-scale, true, $zss--screens);
+@include create-all-whitespace(padding, $zss--spacing-scale, false, $zss--screens);
 
 
 
