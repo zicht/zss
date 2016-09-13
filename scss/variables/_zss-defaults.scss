@@ -1,4 +1,18 @@
 
+
+//
+// Colour variables that are used in almost every project, to prevent typo's.
+//
+$black: #000;
+$white: #fff;
+$transparent: transparent;
+
+
+
+//
+// The root type variables
+// If you use REM units, this value is used in font size calculcations by the browser.
+//
 $zss--base-font-size: 16px !default;
 $zss--base-line-height: 1.5 !default;
 
@@ -12,9 +26,6 @@ $zss--colors: (
 
 
 
-//
-// A fixed grid has a maximum width per screen.
-//
 $zss--grid--max-widths: (
     sm: 530px,
     md: 750px,
@@ -56,14 +67,8 @@ $zss--border-colors: $zss--colors !default;
 $zss--border-radius-scale: 0.125rem 0.25rem 0.5rem !default;
 $zss--border-width-scale: 0.125rem 0.25rem 0.5rem !default;
 
-
-
 $zss--spacing-scale: 0 0.5rem 1rem 2rem 4rem !default;
 
-
-
 $zss--font-scale: 4rem 3rem 2rem 1rem 0.75rem 0.5rem !default;
-
-
 
 $zss--line-height-scale: 1 1.25 1.5 1.75 !default;

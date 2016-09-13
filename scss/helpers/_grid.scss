@@ -61,7 +61,7 @@
 // 1. According to the flexbox specification, by default, flex items won't shrink below their minimum
 //    content size (the length of the longest word or fixed-size element). To change this, set the
 //    max-width or max-height property.
-//    NOTE: if we leave the max-width, the 'columns' in separate rows don't have the same width.
+//    NOTE: if we remove the max-width, the 'columns' in separate rows don't have the same width.
 //
 @mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss--breakpoints) {
     @each $screen-name, $screen-size in $screens {
