@@ -3,10 +3,12 @@
 \*-----------------------------------------------------------------------------*/
 
 
+
 .u-absolute { position: absolute; }
 .u-fixed { position: fixed; }
 .u-relative { position: relative; }
 .u-static { position: static; }
+
 .u-top--0 { top: 0; }
 .u-right--0 { right: 0; }
 .u-bottom--0 { bottom: 0; }
@@ -14,12 +16,13 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-absolute\@#{$screen} { position: absolute; }
         .u-fixed\@#{$screen} { position: fixed; }
         .u-relative\@#{$screen} { position: relative; }
         .u-static\@#{$screen} { position: static; }
+
         .u-top--0\@#{$screen} { top: 0; }
         .u-right--0\@#{$screen} { right: 0; }
         .u-bottom--0\@#{$screen} { bottom: 0; }

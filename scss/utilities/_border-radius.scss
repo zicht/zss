@@ -7,7 +7,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-circle\@#{$screen} { border-radius: 100%; }
 

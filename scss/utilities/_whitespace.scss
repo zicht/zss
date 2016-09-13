@@ -58,8 +58,8 @@
 
 
 
-@include create-all-whitespace(margin, $zss--spacing-scale, true, $zss--screens);
-@include create-all-whitespace(padding, $zss--spacing-scale, false, $zss--screens);
+@include create-all-whitespace(margin, $zss--spacing-scale, true, $zss--breakpoints);
+@include create-all-whitespace(padding, $zss--spacing-scale, false, $zss--breakpoints);
 
 
 

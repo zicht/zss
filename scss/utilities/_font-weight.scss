@@ -11,7 +11,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-weight--100\@#{$screen} { font-weight: 100; }
         .u-weight--200\@#{$screen} { font-weight: 200; }

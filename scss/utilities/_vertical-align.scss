@@ -9,7 +9,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-v--sub\@#{$screen} { vertical-align: sub; }
         .u-v--super\@#{$screen} { vertical-align: super; }

@@ -5,7 +5,7 @@
 
 
 
-@each $screen in $zss--screens {
+@each $screen in $zss--breakpoints {
     @include media-from($screen) {
         @each $value in $zss--font-scale {
             .u-size--#{index($zss--font-scale, $value)}\@#{$screen} { font-size: $value; }

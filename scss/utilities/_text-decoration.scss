@@ -5,7 +5,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-strike\@#{$screen} { text-decoration: line-through; }
         .u-underline\@#{$screen} { text-decoration: underline; }

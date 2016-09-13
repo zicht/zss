@@ -42,7 +42,7 @@ $zss--grid--type: flex !default;
 // 3. Medium screens e.g. tablets.
 // 4. Large screens e.g. desktops.
 //
-$zss--screens: (
+$zss--breakpoints: (
     xs: 0,
     sm: 550px, // [1]
     md: 780px, // [2]

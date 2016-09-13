@@ -11,7 +11,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-no-border\@#{$screen} { border-width: 0; }
 

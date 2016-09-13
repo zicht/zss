@@ -20,7 +20,7 @@
 
 
 
-@mixin create-grid-widths($max-widths: $zss--grid--max-widths, $screens: $zss--screens) {
+@mixin create-grid-widths($max-widths: $zss--grid--max-widths, $screens: $zss--breakpoints) {
     @each $screen-name, $screen-size in $screens {
         @include media-from($screen-name, $screens) {
             max-width: map-get($max-widths, $screen-name);
@@ -63,7 +63,7 @@
 //    max-width or max-height property.
 //    NOTE: if we leave the max-width, the 'columns' in separate rows don't have the same width.
 //
-@mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss--screens) {
+@mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss--breakpoints) {
     @each $screen-name, $screen-size in $screens {
         @include media-from($screen-name, $screens) {
 

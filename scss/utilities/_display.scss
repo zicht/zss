@@ -12,7 +12,7 @@
 
 
 
-@each $screen, $size in $zss--screens {
+@each $screen, $size in $zss--breakpoints {
     @include media-from($screen) {
         .u-hidden\@#{$screen} { display: none; }
         .u-block\@#{$screen} { display: block; }
