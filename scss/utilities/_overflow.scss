@@ -2,25 +2,29 @@
 .u-of--hidden { overflow: hidden; }
 .u-of--scroll { overflow: scroll; }
 .u-of--visible { overflow: visible; }
+
 .u-of--hidden--x { overflow-x: hidden; }
 .u-of--scroll--x { overflow-x: scroll; }
 .u-of--visible--x { overflow-x: visible; }
+
 .u-of--hidden--y { overflow-y: hidden; }
 .u-of--scroll--y { overflow-y: scroll; }
 .u-of--visible--y { overflow-y: visible; }
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-of--hidden\@#{$screen} { overflow: hidden; }
-        .u-of--scroll\@#{$screen} { overflow: scroll; }
-        .u-of--visible\@#{$screen} { overflow: visible; }
-        .u-of--hidden--x\@#{$screen} { overflow-x: hidden; }
-        .u-of--scroll--x\@#{$screen} { overflow-x: scroll; }
-        .u-of--visible--x\@#{$screen} { overflow-x: visible; }
-        .u-of--hidden--y\@#{$screen} { overflow-y: hidden; }
-        .u-of--scroll--y\@#{$screen} { overflow-y: scroll; }
-        .u-of--visible--y\@#{$screen} { overflow-y: visible; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-of--hidden\@#{$breakpoint} { overflow: hidden; }
+        .u-of--scroll\@#{$breakpoint} { overflow: scroll; }
+        .u-of--visible\@#{$breakpoint} { overflow: visible; }
+
+        .u-of--hidden--x\@#{$breakpoint} { overflow-x: hidden; }
+        .u-of--scroll--x\@#{$breakpoint} { overflow-x: scroll; }
+        .u-of--visible--x\@#{$breakpoint} { overflow-x: visible; }
+
+        .u-of--hidden--y\@#{$breakpoint} { overflow-y: hidden; }
+        .u-of--scroll--y\@#{$breakpoint} { overflow-y: scroll; }
+        .u-of--visible--y\@#{$breakpoint} { overflow-y: visible; }
     }
 }

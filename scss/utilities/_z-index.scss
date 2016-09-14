@@ -8,13 +8,13 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-z--bottom\@#{$screen} { z-index: -1; }
-        .u-z--1\@#{$screen} { z-index: 1; }
-        .u-z--2\@#{$screen} { z-index: 2; }
-        .u-z--3\@#{$screen} { z-index: 3; }
-        .u-z--4\@#{$screen} { z-index: 4; }
-        .u-z--top\@#{$screen} { z-index: 666; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-z--bottom\@#{$breakpoint} { z-index: -1; }
+        .u-z--1\@#{$breakpoint} { z-index: 1; }
+        .u-z--2\@#{$breakpoint} { z-index: 2; }
+        .u-z--3\@#{$breakpoint} { z-index: 3; }
+        .u-z--4\@#{$breakpoint} { z-index: 4; }
+        .u-z--top\@#{$breakpoint} { z-index: 666; }
     }
 }

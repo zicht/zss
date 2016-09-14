@@ -4,9 +4,9 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-bg--contain\@#{$screen} { background-size: contain; }
-        .u-bg--cover\@#{$screen} { background-size: cover; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-bg--contain\@#{$breakpoint} { background-size: contain; }
+        .u-bg--cover\@#{$breakpoint} { background-size: cover; }
     }
 }

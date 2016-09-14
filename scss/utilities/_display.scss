@@ -12,17 +12,17 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-hidden\@#{$screen} { display: none; }
-        .u-block\@#{$screen} { display: block; }
-        .u-inline\@#{$screen} { display: inline; }
-        .u-inline-block\@#{$screen} { display: inline-block; }
-        .u-table\@#{$screen} { display: table; }
-        .u-cell\@#{$screen} { display: table-cell; }
-        .u-row\@#{$screen} { display: table-row; }
-        .u-row-group\@#{$screen} { display: table-row-group; }
-        .u-column\@#{$screen} { display: table-column; }
-        .u-column-group\@#{$screen} { display: table-column-group; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-hidden\@#{$breakpoint} { display: none; }
+        .u-block\@#{$breakpoint} { display: block; }
+        .u-inline\@#{$breakpoint} { display: inline; }
+        .u-inline-block\@#{$breakpoint} { display: inline-block; }
+        .u-table\@#{$breakpoint} { display: table; }
+        .u-cell\@#{$breakpoint} { display: table-cell; }
+        .u-row\@#{$breakpoint} { display: table-row; }
+        .u-row-group\@#{$breakpoint} { display: table-row-group; }
+        .u-column\@#{$breakpoint} { display: table-column; }
+        .u-column-group\@#{$breakpoint} { display: table-column-group; }
     }
 }

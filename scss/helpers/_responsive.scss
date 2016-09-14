@@ -4,24 +4,24 @@
 
 
 
-@mixin media-until($screen-name, $screens: $zss--breakpoints) {
-    @media (max-width: map-get($screens, $screen-name)) {
+@mixin media-until($breakpoint-name, $breakpoints: $zss--breakpoints) {
+    @media (max-width: map-get($breakpoints, $breakpoint-name)) {
         @content;
     }
 }
 
 
 
-@mixin media-between($min-screen-name, $max-screen-name, $screens: $zss--breakpoints) {
-    @media (min-width: map-get($screens, $min-screen-name)) and (max-width: map-get($screens, $max-screen-name)) {
+@mixin media-between($min-screen-name, $max-screen-name, $breakpoints: $zss--breakpoints) {
+    @media (min-width: map-get($breakpoints, $min-screen-name)) and (max-width: map-get($breakpoints, $max-screen-name)) {
         @content
     }
 }
 
 
 
-@mixin media-from($screen-name, $screens: $zss--breakpoints) {
-    @media (min-width: map-get($screens, $screen-name)) {
+@mixin media-from($breakpoint-name, $breakpoints: $zss--breakpoints) {
+    @media (min-width: map-get($breakpoints, $breakpoint-name)) {
         @content;
     }
 }

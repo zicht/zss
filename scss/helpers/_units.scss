@@ -12,5 +12,5 @@
         @return $px;
     }
 
-    @return ($px / $zss-base-font-size) * 1rem;
+    @return ($px / $zss--base-font-size) * 1rem;
 }

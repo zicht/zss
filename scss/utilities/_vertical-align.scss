@@ -9,14 +9,14 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-v--sub\@#{$screen} { vertical-align: sub; }
-        .u-v--super\@#{$screen} { vertical-align: super; }
-        .u-v--text-top\@#{$screen} { vertical-align: text-top; }
-        .u-v--text-bottom\@#{$screen} { vertical-align: text-bottom; }
-        .u-v--middle\@#{$screen} { vertical-align: middle; }
-        .u-v--top\@#{$screen} { vertical-align: top; }
-        .u-v--bottom\@#{$screen} { vertical-align: bottom; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-v--sub\@#{$breakpoint} { vertical-align: sub; }
+        .u-v--super\@#{$breakpoint} { vertical-align: super; }
+        .u-v--text-top\@#{$breakpoint} { vertical-align: text-top; }
+        .u-v--text-bottom\@#{$breakpoint} { vertical-align: text-bottom; }
+        .u-v--middle\@#{$breakpoint} { vertical-align: middle; }
+        .u-v--top\@#{$breakpoint} { vertical-align: top; }
+        .u-v--bottom\@#{$breakpoint} { vertical-align: bottom; }
     }
 }

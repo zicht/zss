@@ -2,17 +2,17 @@
 .u-circle { border-radius: 100%; }
 
 @each $value in $zss--border-radius-scale {
-    .u-br--#{index($zss--border-radius-scale, $value)} { border-radius: #{$value}; }
+    .u-br--#{index($zss--border-radius-scale, $value) - 1} { border-radius: $value; }
 }
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-circle\@#{$screen} { border-radius: 100%; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-circle\@#{$breakpoint} { border-radius: 100%; }
 
         @each $value in $zss--border-radius-scale {
-            .u-br--#{index($zss--border-radius-scale, $value)} { border-radius: #{$value}; }
+            .u-br--#{index($zss--border-radius-scale, $value) - 1} { border-radius: $value; }
         }
     }
 }

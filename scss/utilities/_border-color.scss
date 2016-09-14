@@ -1,14 +1,14 @@
 
-@each $name, $hex-value in $zss--border-colors {
-    .u-b--#{inspect($name)} { border-color: #{$hex-value}; }
+@each $name, $value in $zss--border-colors {
+    .u-b--#{inspect($name)} { border-color: $value; }
 }
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        @each $name, $hex-value in $zss--border-colors {
-            .u-b--#{inspect($name)}\@#{$screen} { border-color: #{$hex-value}; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @each $name, $value in $zss--border-colors {
+            .u-b--#{inspect($name)}\@#{$breakpoint} { border-color: $value; }
         }
     }
 }

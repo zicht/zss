@@ -5,10 +5,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-capitalize\@#{$screen} { text-transform: capitalize; }
-        .u-lower\@#{$screen} { text-transform: lowercase; }
-        .u-upper\@#{$screen} { text-transform: uppercase; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-capitalize\@#{$breakpoint} { text-transform: capitalize; }
+        .u-lower\@#{$breakpoint} { text-transform: lowercase; }
+        .u-upper\@#{$breakpoint} { text-transform: uppercase; }
     }
 }

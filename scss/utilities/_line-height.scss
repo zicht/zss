@@ -5,10 +5,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
         @each $value in $zss--line-height-scale {
-            .u-lh--#{index($zss--line-height-scale, $value)}\@#{$screen} { line-height: $value; }
+            .u-lh--#{index($zss--line-height-scale, $value)}\@#{$breakpoint} { line-height: $value; }
         }
     }
 }

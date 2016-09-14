@@ -20,10 +20,10 @@
 
 
 
-@mixin create-grid-widths($max-widths: $zss--grid--max-widths, $screens: $zss--breakpoints) {
-    @each $screen-name, $screen-size in $screens {
-        @include media-from($screen-name, $screens) {
-            max-width: map-get($max-widths, $screen-name);
+@mixin create-grid-widths($max-widths: $zss--grid--max-widths, $breakpoints: $zss--breakpoints) {
+    @each $breakpoint-name, $breakpoint-size in $breakpoints {
+        @include media-from($breakpoint-name, $breakpoints) {
+            max-width: map-get($max-widths, $breakpoint-name);
         }
     }
 }
@@ -63,13 +63,13 @@
 //    max-width or max-height property.
 //    NOTE: if we remove the max-width, the 'columns' in separate rows don't have the same width.
 //
-@mixin create-grid-column-sizes($column-count, $grid-type, $screens: $zss--breakpoints) {
-    @each $screen-name, $screen-size in $screens {
-        @include media-from($screen-name, $screens) {
+@mixin create-grid-column-sizes($column-count, $grid-type, $breakpoints: $zss--breakpoints) {
+    @each $breakpoint-name, $breakpoint-size in $breakpoints {
+        @include media-from($breakpoint-name, $breakpoints) {
 
             @for $index from 1 through $column-count {
                 @at-root {
-                    #{&}--#{$index}\@#{$screen-name} {
+                    #{&}--#{$index}\@#{$breakpoint-name} {
                         @if $grid-type == flex {
                             flex: 0 0 percentage($index / $column-count);
                             max-width: percentage($index / $column-count); // [1]

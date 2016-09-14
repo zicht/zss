@@ -5,10 +5,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-text--right\@#{$screen} { text-align: right; }
-        .u-text--center\@#{$screen} { text-align: center; }
-        .u-text--left\@#{$screen} { text-align: left; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-text--right\@#{$breakpoint} { text-align: right; }
+        .u-text--center\@#{$breakpoint} { text-align: center; }
+        .u-text--left\@#{$breakpoint} { text-align: left; }
     }
 }

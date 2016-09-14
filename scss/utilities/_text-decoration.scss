@@ -5,10 +5,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-strike\@#{$screen} { text-decoration: line-through; }
-        .u-underline\@#{$screen} { text-decoration: underline; }
-        .u-no-underline\@#{$screen} { text-decoration: none; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-strike\@#{$breakpoint} { text-decoration: line-through; }
+        .u-underline\@#{$breakpoint} { text-decoration: underline; }
+        .u-no-underline\@#{$breakpoint} { text-decoration: none; }
     }
 }

@@ -1,16 +1,16 @@
 
-@each $name, $hex-value in $zss--colors {
-    .u-#{inspect($name)} { color: #{$hex-value}; }
-    .u-bg--#{inspect($name)} { background-color: #{$hex-value}; }
+@each $name, $value in $zss--colors {
+    .u-#{inspect($name)} { color: $value; }
+    .u-bg--#{inspect($name)} { background-color: $value; }
 }
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        @each $name, $hex-value in $zss--colors {
-            .u-#{inspect($name)}\@#{$screen} { color: #{$hex-value}; }
-            .u-bg--#{inspect($name)}\@#{$screen} { background-color: #{$hex-value}; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @each $name, $value in $zss--colors {
+            .u-#{inspect($name)}\@#{$breakpoint} { color: $value; }
+            .u-bg--#{inspect($name)}\@#{$breakpoint} { background-color: $value; }
         }
     }
 }

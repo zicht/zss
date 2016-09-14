@@ -41,46 +41,46 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-flex\@#{$screen} { display: flex; }
-        .u-flex--inline\@#{$screen} { display: inline-flex; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-flex\@#{$breakpoint} { display: flex; }
+        .u-flex--inline\@#{$breakpoint} { display: inline-flex; }
 
-        .u-flex--auto\@#{$screen} { flex: 1 1 auto; }
-        .u-no-flex\@#{$screen} { flex: none; }
+        .u-flex--auto\@#{$breakpoint} { flex: 1 1 auto; }
+        .u-no-flex\@#{$breakpoint} { flex: none; }
 
-        .u-flex--row\@#{$screen} { flex-direction: column; }
-        .u-flex--row\@#{$screen} { flex-direction: row; }
+        .u-flex--row\@#{$breakpoint} { flex-direction: column; }
+        .u-flex--row\@#{$breakpoint} { flex-direction: row; }
 
-        .u-flex--items--start\@#{$screen} { align-items: flex-start; }
-        .u-flex--items--end\@#{$screen} { align-items: flex-end; }
-        .u-flex--items--center\@#{$screen} { align-items: center; }
-        .u-flex--items--base\@#{$screen} { align-items: baseline; }
-        .u-flex--items--stretch\@#{$screen} { align-items: stretch; }
+        .u-flex--items--start\@#{$breakpoint} { align-items: flex-start; }
+        .u-flex--items--end\@#{$breakpoint} { align-items: flex-end; }
+        .u-flex--items--center\@#{$breakpoint} { align-items: center; }
+        .u-flex--items--base\@#{$breakpoint} { align-items: baseline; }
+        .u-flex--items--stretch\@#{$breakpoint} { align-items: stretch; }
 
-        .u-flex--content--start\@#{$screen} { align-content: flex-start; }
-        .u-flex--content--end\@#{$screen} { align-content: flex-end; }
-        .u-flex--content--center\@#{$screen} { align-content: center; }
-        .u-flex--content--base\@#{$screen} { align-content: baseline; }
-        .u-flex--content--stretch\@#{$screen} { align-content: stretch; }
+        .u-flex--content--start\@#{$breakpoint} { align-content: flex-start; }
+        .u-flex--content--end\@#{$breakpoint} { align-content: flex-end; }
+        .u-flex--content--center\@#{$breakpoint} { align-content: center; }
+        .u-flex--content--base\@#{$breakpoint} { align-content: baseline; }
+        .u-flex--content--stretch\@#{$breakpoint} { align-content: stretch; }
 
-        .u-flex--self--start\@#{$screen} { align-self: flex-start; }
-        .u-flex--self--end\@#{$screen} { align-self: flex-end; }
-        .u-flex--self--center\@#{$screen} { align-self: center; }
-        .u-flex--self--base\@#{$screen} { align-self: baseline; }
-        .u-flex--self--stretch\@#{$screen} { align-self: stretch; }
+        .u-flex--self--start\@#{$breakpoint} { align-self: flex-start; }
+        .u-flex--self--end\@#{$breakpoint} { align-self: flex-end; }
+        .u-flex--self--center\@#{$breakpoint} { align-self: center; }
+        .u-flex--self--base\@#{$breakpoint} { align-self: baseline; }
+        .u-flex--self--stretch\@#{$breakpoint} { align-self: stretch; }
 
-        .u-flex--justify--start\@#{$screen} { justify-content: flex-start; }
-        .u-flex--justify--end\@#{$screen} { justify-content: flex-end; }
-        .u-flex--justify--center\@#{$screen} { justify-content: center; }
-        .u-flex--justify--base\@#{$screen} { justify-content: baseline; }
-        .u-flex--justify--stretch\@#{$screen} { justify-content: stretch; }
+        .u-flex--justify--start\@#{$breakpoint} { justify-content: flex-start; }
+        .u-flex--justify--end\@#{$breakpoint} { justify-content: flex-end; }
+        .u-flex--justify--center\@#{$breakpoint} { justify-content: center; }
+        .u-flex--justify--base\@#{$breakpoint} { justify-content: baseline; }
+        .u-flex--justify--stretch\@#{$breakpoint} { justify-content: stretch; }
 
-        .u-order--first\@#{$screen} { order: -1; }
-        .u-order--1\@#{$screen} { order: 1; }
-        .u-order--2\@#{$screen} { order: 2; }
-        .u-order--3\@#{$screen} { order: 3; }
-        .u-order--1\@#{$screen} { order: 4; }
-        .u-order--last\@#{$screen} { order: 666; }
+        .u-order--first\@#{$breakpoint} { order: -1; }
+        .u-order--1\@#{$breakpoint} { order: 1; }
+        .u-order--2\@#{$breakpoint} { order: 2; }
+        .u-order--3\@#{$breakpoint} { order: 3; }
+        .u-order--1\@#{$breakpoint} { order: 4; }
+        .u-order--last\@#{$breakpoint} { order: 666; }
     }
 }

@@ -6,10 +6,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-b--dashed\@#{$screen} { border-style: dashed; }
-        .u-b--dotted\@#{$screen} { border-style: dotted; }
-        .u-b--solid\@#{$screen} { border-style: solid; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-b--dashed\@#{$breakpoint} { border-style: dashed; }
+        .u-b--dotted\@#{$breakpoint} { border-style: dotted; }
+        .u-b--solid\@#{$breakpoint} { border-style: solid; }
     }
 }

@@ -5,10 +5,10 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-f--right\@#{$screen} { float: right; }
-        .u-f--left\@#{$screen} { float: left; }
-        .u-f--none\@#{$screen} { float: none; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-f--right\@#{$breakpoint} { float: right; }
+        .u-f--left\@#{$breakpoint} { float: left; }
+        .u-f--none\@#{$breakpoint} { float: none; }
     }
 }

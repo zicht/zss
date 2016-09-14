@@ -11,16 +11,16 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-weight--100\@#{$screen} { font-weight: 100; }
-        .u-weight--200\@#{$screen} { font-weight: 200; }
-        .u-weight--300\@#{$screen} { font-weight: 300; }
-        .u-weight--400\@#{$screen} { font-weight: 400; }
-        .u-weight--500\@#{$screen} { font-weight: 500; }
-        .u-weight--600\@#{$screen} { font-weight: 600; }
-        .u-weight--700\@#{$screen} { font-weight: 700; }
-        .u-weight--800\@#{$screen} { font-weight: 800; }
-        .u-weight--900\@#{$screen} { font-weight: 900; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-weight--100\@#{$breakpoint} { font-weight: 100; }
+        .u-weight--200\@#{$breakpoint} { font-weight: 200; }
+        .u-weight--300\@#{$breakpoint} { font-weight: 300; }
+        .u-weight--400\@#{$breakpoint} { font-weight: 400; }
+        .u-weight--500\@#{$breakpoint} { font-weight: 500; }
+        .u-weight--600\@#{$breakpoint} { font-weight: 600; }
+        .u-weight--700\@#{$breakpoint} { font-weight: 700; }
+        .u-weight--800\@#{$breakpoint} { font-weight: 800; }
+        .u-weight--900\@#{$breakpoint} { font-weight: 900; }
     }
 }

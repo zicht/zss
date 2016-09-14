@@ -5,10 +5,10 @@
 
 
 
-@each $screen in $zss--breakpoints {
-    @include media-from($screen) {
+@each $breakpoint in $zss--breakpoints {
+    @include media-from($breakpoint) {
         @each $value in $zss--font-scale {
-            .u-size--#{index($zss--font-scale, $value)}\@#{$screen} { font-size: $value; }
+            .u-size--#{index($zss--font-scale, $value)}\@#{$breakpoint} { font-size: $value; }
         }
     }
 }

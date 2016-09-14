@@ -3,67 +3,63 @@
 \*-----------------------------------------------------------------------------*/
 
 
+@each $value in $zss--spacing-scale {
+    .u-m--x-auto { margin-right: auto; margin-left: auto; }
 
-@mixin create-whitespace-for-value($index, $property, $value, $include-negatives, $screen: null) {
-    $suffix: if($screen != null, '\\@' + $screen, '');
+    .u-m--#{index($zss--spacing-scale, $value) - 1} { margin: $value; }
+    .u-m--t#{index($zss--spacing-scale, $value) - 1} { margin-top: $value; }
+    .u-m--r#{index($zss--spacing-scale, $value) - 1} { margin-right: $value; }
+    .u-m--b#{index($zss--spacing-scale, $value) - 1} { margin-bottom: $value; }
+    .u-m--l#{index($zss--spacing-scale, $value) - 1} { margin-left: $value; }
 
-    /**
-     * Utility class that applies a #{$property} to all 4 sides of an element.
-     */
-    .u-#{$property}--#{$index}#{$suffix} { #{$property}: $value; }
+    .u-m--y#{index($zss--spacing-scale, $value) - 1} { margin-top: $value; margin-bottom: $value; }
+    .u-m--x#{index($zss--spacing-scale, $value) - 1} { margin-right: $value; margin-left: $value; }
 
-    /**
-     * Utility classes that apply a #{$property} along the X or Y axis.
-     */
-    .u-#{$property}--y#{$index}#{$suffix} { #{$property}-top: $value; #{$property}-bottom: $value; }
-    .u-#{$property}--x#{$index}#{$suffix} { #{$property}-right: $value; #{$property}-left: $value; }
+    .u-m--t#{index($zss--spacing-scale, $value) - 1}n { margin-top: -$value; }
+    .u-m--r#{index($zss--spacing-scale, $value) - 1}n { margin-right: -$value; }
+    .u-m--b#{index($zss--spacing-scale, $value) - 1}n { margin-bottom: -$value; }
+    .u-m--l#{index($zss--spacing-scale, $value) - 1}n { margin-left: -$value; }
 
-    /**
-     * Utility classes that apply a #{$property} to a single side of an element.
-     */
-    .u-#{$property}--t#{$index}#{$suffix} { #{$property}-top: $value; }
-    .u-#{$property}--r#{$index}#{$suffix} { #{$property}-right: $value; }
-    .u-#{$property}--b#{$index}#{$suffix} { #{$property}-bottom: $value; }
-    .u-#{$property}--l#{$index}#{$suffix} { #{$property}-left: $value; }
+    .u-p--#{index($zss--spacing-scale, $value) - 1} { padding: $value; }
+    .u-p--t#{index($zss--spacing-scale, $value) - 1} { padding-top: $value; }
+    .u-p--r#{index($zss--spacing-scale, $value) - 1} { padding-right: $value; }
+    .u-p--b#{index($zss--spacing-scale, $value) - 1} { padding-bottom: $value; }
+    .u-p--l#{index($zss--spacing-scale, $value) - 1} { padding-left: $value; }
 
-
-    @if $include-negatives and $value > 0 {
-        /**
-         * Utility classes that apply a negative #{$property} to a single side of an element.
-         */
-        .u-#{$property}--t#{$index}n#{$suffix} { #{$property}-top: -$value; }
-        .u-#{$property}--r#{$index}n#{$suffix} { #{$property}-right: -$value; }
-        .u-#{$property}--b#{$index}n#{$suffix} { #{$property}-bottom: -$value; }
-        .u-#{$property}--l#{$index}n#{$suffix} { #{$property}-left: -$value; }
-    }
+    .u-p--y#{index($zss--spacing-scale, $value) - 1} { padding-top: $value; padding-bottom: $value; }
+    .u-p--x#{index($zss--spacing-scale, $value) - 1} { padding-right: $value; padding-left: $value; }
 }
 
 
 
-@mixin create-all-whitespace($property, $values, $include-negatives, $screens) {
-    @for $i from 1 through length($values) {
-        @include create-whitespace-for-value($i - 1, $property, nth($values, $i), $include-negatives)
-    }
 
-    @each $screen, $size in $screens {
-        @media (min-width: $size) {
-            @for $i from 1 through length($values) {
-                @if $size > 0 {
-                    @include create-whitespace-for-value($i - 1, $property, nth($values, $i), $include-negatives, $screen)
-                }
-            }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @each $value in $zss--spacing-scale {
+            .u-m--x-auto\@#{$breakpoint} { margin-right: auto; margin-left: auto; }
+
+            .u-m--#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin: $value; }
+            .u-m--t#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-top: $value; }
+            .u-m--r#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-right: $value; }
+            .u-m--b#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-bottom: $value; }
+            .u-m--l#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-left: $value; }
+
+            .u-m--y#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-top: $value; margin-bottom: $value; }
+            .u-m--x#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { margin-right: $value; margin-left: $value; }
+
+            .u-m--t#{index($zss--spacing-scale, $value) - 1}n\@#{$breakpoint} { margin-top: -$value; }
+            .u-m--r#{index($zss--spacing-scale, $value) - 1}n\@#{$breakpoint} { margin-right: -$value; }
+            .u-m--b#{index($zss--spacing-scale, $value) - 1}n\@#{$breakpoint} { margin-bottom: -$value; }
+            .u-m--l#{index($zss--spacing-scale, $value) - 1}n\@#{$breakpoint} { margin-left: -$value; }
+
+            .u-p--#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding: $value; }
+            .u-p--t#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-top: $value; }
+            .u-p--r#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-right: $value; }
+            .u-p--b#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-bottom: $value; }
+            .u-p--l#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-left: $value; }
+
+            .u-p--y#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-top: $value; padding-bottom: $value; }
+            .u-p--x#{index($zss--spacing-scale, $value) - 1}\@#{$breakpoint} { padding-right: $value; padding-left: $value; }
         }
     }
 }
-
-
-
-@include create-all-whitespace(margin, $zss--spacing-scale, true, $zss--breakpoints);
-@include create-all-whitespace(padding, $zss--spacing-scale, false, $zss--breakpoints);
-
-
-
-/**
- * Centering.
- */
-.u-margin--x-auto { margin-right: auto; margin-left: auto; }

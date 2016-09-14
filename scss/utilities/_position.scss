@@ -16,16 +16,16 @@
 
 
 
-@each $screen, $size in $zss--breakpoints {
-    @include media-from($screen) {
-        .u-absolute\@#{$screen} { position: absolute; }
-        .u-fixed\@#{$screen} { position: fixed; }
-        .u-relative\@#{$screen} { position: relative; }
-        .u-static\@#{$screen} { position: static; }
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-absolute\@#{$breakpoint} { position: absolute; }
+        .u-fixed\@#{$breakpoint} { position: fixed; }
+        .u-relative\@#{$breakpoint} { position: relative; }
+        .u-static\@#{$breakpoint} { position: static; }
 
-        .u-top--0\@#{$screen} { top: 0; }
-        .u-right--0\@#{$screen} { right: 0; }
-        .u-bottom--0\@#{$screen} { bottom: 0; }
-        .u-left--0\@#{$screen} { left: 0; }
+        .u-top--0\@#{$breakpoint} { top: 0; }
+        .u-right--0\@#{$breakpoint} { right: 0; }
+        .u-bottom--0\@#{$breakpoint} { bottom: 0; }
+        .u-left--0\@#{$breakpoint} { left: 0; }
     }
 }
