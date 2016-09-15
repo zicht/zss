@@ -16,22 +16,22 @@ $zss--colors: (
 
 
 
-$zss--grid--max-widths: (
+$zss--grid-max-widths: (
     sm: 530px,
     md: 750px,
     lg: 960px,
     xl: 1170px
 ) !default;
 
-$zss--grid--columns: 12 !default;
-$zss--grid--gutter: 2rem !default;
+$zss--grid-columns: 12 !default;
+$zss--grid-gutter: 2rem !default;
 
 //
 // The method of creating grid columns. Possible options:
 // 1. `flex`: the columns are positioned using flexbox
 // 2. `float`: the columns are positioned with floats, for support of ancient browsers.
 //
-$zss--grid--type: flex !default;
+$zss--grid-type: flex !default;
 
 
 

@@ -20,7 +20,7 @@
 
 
 
-@mixin create-grid-widths($max-widths: $zss--grid--max-widths, $breakpoints: $zss--breakpoints) {
+@mixin create-grid-widths($max-widths: $zss--grid-max-widths, $breakpoints: $zss--breakpoints) {
     @each $breakpoint-name, $breakpoint-size in $breakpoints {
         @include media-from($breakpoint-name, $breakpoints) {
             max-width: map-get($max-widths, $breakpoint-name);

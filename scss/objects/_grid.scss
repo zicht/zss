@@ -5,7 +5,7 @@
 
 
 .o-grid {
-    @include create-grid($zss--grid--gutter, $zss--grid--type);
+    @include create-grid($zss--grid-gutter, $zss--grid-type);
 }
 
 .o-grid--fixed {
@@ -15,16 +15,16 @@
 
 
 .o-grid__row {
-    @include create-grid-row($zss--grid--gutter, $zss--grid--type);
+    @include create-grid-row($zss--grid-gutter, $zss--grid-type);
 }
 
 
 .o-grid__col {
-    @include create-grid-column($zss--grid--gutter, $zss--grid--type);
-    @include create-grid-column-sizes($zss--grid--columns, $zss--grid--type);
+    @include create-grid-column($zss--grid-gutter, $zss--grid-type);
+    @include create-grid-column-sizes($zss--grid-columns, $zss--grid-type);
 
     .o-grid--flex-content & {
-        @if $zss--grid--type == flex {
+        @if $zss--grid-type == flex {
             display: flex;
         }
     }
