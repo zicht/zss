@@ -5,7 +5,7 @@
 .u-flex--auto { flex: 1 1 auto; }
 .u-no-flex { flex: none; }
 
-.u-flex--row { flex-direction: column; }
+.u-flex--column { flex-direction: column; }
 .u-flex--row { flex-direction: row; }
 
 .u-flex--items--start { align-items: flex-start; }
@@ -49,7 +49,7 @@
         .u-flex--auto\@#{$breakpoint} { flex: 1 1 auto; }
         .u-no-flex\@#{$breakpoint} { flex: none; }
 
-        .u-flex--row\@#{$breakpoint} { flex-direction: column; }
+        .u-flex--column\@#{$breakpoint} { flex-direction: column; }
         .u-flex--row\@#{$breakpoint} { flex-direction: row; }
 
         .u-flex--items--start\@#{$breakpoint} { align-items: flex-start; }
