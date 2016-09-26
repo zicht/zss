@@ -1,0 +1,21 @@
+{
+  "name": "zss",
+  "version": "1.0.0",
+  "description": "ZSS is a Sass framework that helps you design and build UI components in a quick and reliable way.",
+  "main": "scss/zss.scss",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.zicht.nl:zicht/zss.git"
+  },
+  "keywords": [
+    "Sass"
+  ],
+  "author": "Robert van Kempen",
+  "license": "MIT"
+}
