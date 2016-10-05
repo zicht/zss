@@ -1,0 +1,27 @@
+{
+  "name": "zss",
+  "version": "2.0.0",
+  "description": "A Sass framework for quickly building application components.",
+  "main": "./scss/zss.scss",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.zicht.nl/zicht/zss.git"
+  },
+  "keywords": [
+    "css",
+    "zss",
+    "sass",
+    "scss",
+    "zicht",
+    "functional css"
+  ],
+  "author": "Zicht Online",
+  "license": "MIT"
+}
