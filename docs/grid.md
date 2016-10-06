@@ -1,11 +1,11 @@
 # Grid
 
-The grid object is a way to place your components onto a view, similar to the well-known Bootstrap grid.
+The ZSS rid object is a way to align your components onto a view, similar to the well-known Bootstrap grid.
 
 ## Using the grid
 
 1. Create a grid container.
-2. Add a row that holds your columns to the container.
+2. Add a row that will contain your columns.
 3. Add one or more columns to the row.
 
 ### The grid container
@@ -18,7 +18,7 @@ The grid container is the wrapper for your entire grid.
 
 ### Grid rows
 
-Grid rows divide the page into vertical sections. Use as many as you like inside a container. Just add the class `o-grid__row` to a child element
+Grid rows divide the page into vertical sections. Use as many as you like inside a container. Just add the class `o-grid__row` to a child element of the grid container.
 
 ### Grid colums
 
@@ -27,7 +27,7 @@ Grid columns divide the page into horizontal sections. They work by specifying h
 1. Add the class `o-grid__col` to one ore more columns.
 2. Add a class that defines the width of the column. Examples: `o-grid__col--12@xs`, `o-grid__col--6@md`.
 
-## Modifying the default grid
+## Customizing
 
 ### Width
 
@@ -52,10 +52,10 @@ The default gutter width between the columns is `2rem`. Override the variable `$
 
 ### Grid type
 
-Grid columns are typically constructed with floats. However, the flexbox model makes it slightly easier, especially if you want the columns in a row to be equally high. One drawback is that the [browser support for flexbox](http://caniuse.com/#search=flexbox) is less favourable, but it's still acceptable, though.
+Grid columns are typically constructed with floats. However, the flexbox model makes building grids easier, especially if you want the columns in a row to have an equal height. One drawback is that the [browser support for flexbox](http://caniuse.com/#search=flexbox) is less favourable, but it's still acceptable, though.
 
 You can choose the type of grid you want. The variable `$zss--grid-type` has these possible values:
-1. `$zss--grid-type: flex`   
-The grid is generated solely using flexbox. Use this if you work with modern browsers.
+1. `$zss--grid-type: flex` (default)   
+The grid is generated with flexbox properties. Use this if you work with modern browsers.
 2. `$zss--grid-type: float`   
-The grid is generated using floats (the old Bootstrap way). Use this if you need support for older browsers, and don't require columns of equal height.
+The grid is generated with floats (the old Bootstrap way). Use this if you need support for older browsers, and don't require columns of equal height.

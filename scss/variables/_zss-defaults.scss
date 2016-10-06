@@ -1,6 +1,6 @@
 
 //
-// Colour variables that are used in almost every project, to prevent typo's.
+// Three basic colour variables that are probably used in every project.
 //
 $black: #000;
 $white: #fff;
@@ -8,6 +8,9 @@ $transparent: transparent;
 
 
 
+//
+// The key of fthis color map is used in the generated class name.
+//
 $zss--colors: (
     black: $black,
     white: $white,
@@ -57,10 +60,10 @@ $zss--border-colors: $zss--colors !default;
 $zss--border-radius-scale: 0 0.125rem 0.25rem 0.5rem !default;
 $zss--border-width-scale: 0 0.125rem 0.25rem 0.5rem !default;
 
-$zss--spacing-scale: 0 0.5rem 1rem 2rem 4rem !default;
+$zss--spacing-scale: 0 0.25rem 0.5rem 1rem 2rem 4rem !default;
 
 $zss--font-scale: 4rem 3rem 2rem 1rem 0.75rem 0.5rem !default;
 $zss--base-font-size: 16px !default;
 
-$zss--line-height-scale: 1 1.25 1.5 1.75 !default;
+$zss--line-height-scale: 0 1 1.25 1.5 1.75 !default;
 $zss--base-line-height: nth($zss--line-height-scale, 3) !default;

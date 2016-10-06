@@ -1,0 +1,55 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES margin
+\*-----------------------------------------------------------------------------*/
+
+
+
+@for $i from 1 through length($zss--spacing-scale) {
+    $value: nth($zss--spacing-scale, $i);
+
+    .u-margin--x-auto { margin-right: auto; margin-left: auto; }
+
+    .u-margin--#{$i - 1} { margin: $value; }
+    .u-margin--t#{$i - 1} { margin-top: $value; }
+    .u-margin--r#{$i - 1} { margin-right: $value; }
+    .u-margin--b#{$i - 1} { margin-bottom: $value; }
+    .u-margin--l#{$i - 1} { margin-left: $value; }
+
+    .u-margin--y#{$i - 1} { margin-top: $value; margin-bottom: $value; }
+    .u-margin--x#{$i - 1} { margin-right: $value; margin-left: $value; }
+
+    @if $value > 0 {
+        .u-margin--t#{$i - 1}n { margin-top: -#{$value}; }
+        .u-margin--r#{$i - 1}n { margin-right: -#{$value}; }
+        .u-margin--b#{$i - 1}n { margin-bottom: -#{$value}; }
+        .u-margin--l#{$i - 1}n { margin-left: -#{$value}; }
+    }
+}
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @for $i from 1 through length($zss--spacing-scale) {
+            $value: nth($zss--spacing-scale, $i);
+            
+            .u-margin--x-auto\@#{$breakpoint} { margin-right: auto; margin-left: auto; }
+
+            .u-margin--#{$i - 1}\@#{$breakpoint} { margin: $value; }
+            .u-margin--t#{$i - 1}\@#{$breakpoint} { margin-top: $value; }
+            .u-margin--r#{$i - 1}\@#{$breakpoint} { margin-right: $value; }
+            .u-margin--b#{$i - 1}\@#{$breakpoint} { margin-bottom: $value; }
+            .u-margin--l#{$i - 1}\@#{$breakpoint} { margin-left: $value; }
+
+            .u-margin--y#{$i - 1}\@#{$breakpoint} { margin-top: $value; margin-bottom: $value; }
+            .u-margin--x#{$i - 1}\@#{$breakpoint} { margin-right: $value; margin-left: $value; }
+
+            @if $value > 0 {
+                .u-margin--t#{$i - 1}n\@#{$breakpoint} { margin-top: -#{$value}; }
+                .u-margin--r#{$i - 1}n\@#{$breakpoint} { margin-right: -#{$value}; }
+                .u-margin--b#{$i - 1}n\@#{$breakpoint} { margin-bottom: -#{$value}; }
+                .u-margin--l#{$i - 1}n\@#{$breakpoint} { margin-left: -#{$value}; }
+            }
+        }
+    }
+}

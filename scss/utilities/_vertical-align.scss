@@ -1,22 +1,22 @@
 
-.u-v--sub { vertical-align: sub; }
-.u-v--super { vertical-align: super; }
-.u-v--text-top { vertical-align: text-top; }
-.u-v--text-bottom { vertical-align: text-bottom; }
-.u-v--middle { vertical-align: middle; }
-.u-v--top { vertical-align: top; }
-.u-v--bottom { vertical-align: bottom; }
+.u-valign--sub { vertical-align: sub; }
+.u-valign--super { vertical-align: super; }
+.u-valign--text-top { vertical-align: text-top; }
+.u-valign--text-bottom { vertical-align: text-bottom; }
+.u-valign--middle { vertical-align: middle; }
+.u-valign--top { vertical-align: top; }
+.u-valign--bottom { vertical-align: bottom; }
 
 
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
-        .u-v--sub\@#{$breakpoint} { vertical-align: sub; }
-        .u-v--super\@#{$breakpoint} { vertical-align: super; }
-        .u-v--text-top\@#{$breakpoint} { vertical-align: text-top; }
-        .u-v--text-bottom\@#{$breakpoint} { vertical-align: text-bottom; }
-        .u-v--middle\@#{$breakpoint} { vertical-align: middle; }
-        .u-v--top\@#{$breakpoint} { vertical-align: top; }
-        .u-v--bottom\@#{$breakpoint} { vertical-align: bottom; }
+        .u-valign--sub\@#{$breakpoint} { vertical-align: sub; }
+        .u-valign--super\@#{$breakpoint} { vertical-align: super; }
+        .u-valign--text-top\@#{$breakpoint} { vertical-align: text-top; }
+        .u-valign--text-bottom\@#{$breakpoint} { vertical-align: text-bottom; }
+        .u-valign--middle\@#{$breakpoint} { vertical-align: middle; }
+        .u-valign--top\@#{$breakpoint} { vertical-align: top; }
+        .u-valign--bottom\@#{$breakpoint} { vertical-align: bottom; }
     }
 }

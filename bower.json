@@ -4,14 +4,15 @@
   "authors": [
     "Zicht Online"
   ],
-  "description": "ZSS is a Sass framework for quickly building web application components.",
+  "description": "A Sass framework for quickly building application components.",
   "main": "zss.css",
   "keywords": [
     "css",
     "zss",
     "sass",
     "scss",
-    "zicht"
+    "zicht",
+    "functional css"
   ],
   "license": "MIT",
   "ignore": [

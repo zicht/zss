@@ -4,15 +4,15 @@
 .u-of--scroll { overflow: scroll; }
 .u-of--visible { overflow: visible; }
 
-.u-of--auto--x { overflow-x: auto; }
-.u-of--hidden--x { overflow-x: hidden; }
-.u-of--scroll--x { overflow-x: scroll; }
-.u-of--visible--x { overflow-x: visible; }
+.u-ofx--auto { overflow-x: auto; }
+.u-ofx--hidden { overflow-x: hidden; }
+.u-ofx--scroll { overflow-x: scroll; }
+.u-ofx--visible { overflow-x: visible; }
 
-.u-of--auto--y { overflow-y: auto; }
-.u-of--hidden--y { overflow-y: hidden; }
-.u-of--scroll--y { overflow-y: scroll; }
-.u-of--visible--y { overflow-y: visible; }
+.u-ofy--auto { overflow-y: auto; }
+.u-ofy--hidden { overflow-y: hidden; }
+.u-ofy--scroll { overflow-y: scroll; }
+.u-ofy--visible { overflow-y: visible; }
 
 
 
@@ -23,14 +23,14 @@
         .u-of--scroll\@#{$breakpoint} { overflow: scroll; }
         .u-of--visible\@#{$breakpoint} { overflow: visible; }
 
-        .u-of--auto--x\@#{$breakpoint} { overflow-x: auto; }
-        .u-of--hidden--x\@#{$breakpoint} { overflow-x: hidden; }
-        .u-of--scroll--x\@#{$breakpoint} { overflow-x: scroll; }
-        .u-of--visible--x\@#{$breakpoint} { overflow-x: visible; }
+        .u-ofx--auto\@#{$breakpoint} { overflow-x: auto; }
+        .u-ofx--hidden\@#{$breakpoint} { overflow-x: hidden; }
+        .u-ofx--scroll\@#{$breakpoint} { overflow-x: scroll; }
+        .u-ofx--visible\@#{$breakpoint} { overflow-x: visible; }
 
-        .u-of--auto--y\@#{$breakpoint} { overflow-y: auto; }
-        .u-of--hidden--y\@#{$breakpoint} { overflow-y: hidden; }
-        .u-of--scroll--y\@#{$breakpoint} { overflow-y: scroll; }
-        .u-of--visible--y\@#{$breakpoint} { overflow-y: visible; }
+        .u-ofy--auto\@#{$breakpoint} { overflow-y: auto; }
+        .u-ofy--hidden\@#{$breakpoint} { overflow-y: hidden; }
+        .u-ofy--scroll\@#{$breakpoint} { overflow-y: scroll; }
+        .u-ofy--visible\@#{$breakpoint} { overflow-y: visible; }
     }
 }
