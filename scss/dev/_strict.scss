@@ -1,0 +1,88 @@
+//
+// Enables "strict" mode.
+//
+// - Checks if the ZSS configuration is correct.
+// - Checks for design smells by measuring the configurable design scales.
+//
+
+
+
+//
+// Check if the grid type is set to a supported value.
+//
+@if (index(flex float, $zss--grid-type) == null) {
+    @error "`#{$zss--grid-type}` is not a valid value for $zss--grid-type. It should be either `flex` or `float`.";
+}
+
+
+
+//
+// Check if the grid gutter value is part of the spacing scale.
+//
+@if (index($zss--spacing-scale, $zss--grid-gutter) == null) {
+    @warn "The grid gutter `$zss--grid-gutter` is not part of the spacing scale. Consider choosing a value from the scale `$zss--spacing-scale`.";
+}
+
+
+
+
+//
+// Check if the font scale does not contain too many values.
+//
+@if (length($zss--spacing-scale) > 8) {
+    @warn "The spacing scale `$zss--spacing-scale` contains more than 8 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the type scale does not contain too many values.
+//
+@if (length($zss--type-scale) > 8) {
+    @warn "The font scale `$zss--type-scale` contains more than 8 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the base font size is part of the type scale.
+//
+@if (index($zss--type-scale, $zss--base-font-size) == null) {
+    @warn "The base font size `$zss--base-font-size` is not part of the font scale. Consider choosing a value from the scale `$zss--type-scale`.";
+}
+
+
+
+//
+// Check if the line height scale does not contain too many values.
+//
+@if (length($zss--line-height-scale) > 5) {
+    @warn "The line height scale `$zss--line-height-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the base line height is part of the scale.
+//
+@if (index($zss--line-height-scale, $zss--base-line-height) == null) {
+    @warn "The base line height `$zss--base-line-height` is not part of the line height scale. Consider choosing a value from the scale `$zss--line-height-scale`.";
+}
+
+
+
+//
+// Check if the border radius scale does not contain too many values.
+//
+@if (length($zss--border-radius-scale) > 5) {
+    @warn "The spacing scale `$zss--border-radius-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the border width scale does not contain too many values.
+//
+@if (length($zss--border-width-scale) > 5) {
+    @warn "The spacing scale `$zss--border-width-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
