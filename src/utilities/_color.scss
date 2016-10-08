@@ -1,0 +1,16 @@
+
+@each $name, $value in $zss--colors {
+    .u-#{inspect($name)} { color: $value; }
+    .u-bg--#{inspect($name)} { background-color: $value; }
+}
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @each $name, $value in $zss--colors {
+            .u-#{inspect($name)}\@#{$breakpoint} { color: $value; }
+            .u-bg--#{inspect($name)}\@#{$breakpoint} { background-color: $value; }
+        }
+    }
+}

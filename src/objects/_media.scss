@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------*\
+ * #OBJECTS media
+ *
+ * Use the media object when building a component that looks like an
+ * image next to a block of text.
+ *
+ * Based on the famous media object by @stubbornella, and modified for flex-box.
+ *
+ * See: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+\*-----------------------------------------------------------------------------*/
+
+
+
+.o-media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.o-media--center-figure {
+    align-items: center;
+}
+
+
+
+.o-media__figure {
+    margin-right: $zss--media-margin;
+
+    .o-media--reverse > & {
+        order: 1;
+        margin-right: 0;
+        margin-left: $zss--media-margin;
+    }
+}
+
+
+
+.o-media__body {
+    flex: 1;
+}

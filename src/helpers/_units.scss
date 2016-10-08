@@ -5,7 +5,7 @@
 
 
 ///
-// Function that calculates the rem value for the given number of pixels.
+// Calculates the rem value for the given number of pixels.
 //
 @function rem($px) {
     @if (unit($px) == 'rem') {
@@ -13,4 +13,13 @@
     }
 
     @return ($px / $zss--base-font-size) * 1rem;
+}
+
+
+
+//
+// Removes the unit from the given value.
+//
+@function strip-units($value) {
+    @return $value / ($value * 0 + 1);
 }

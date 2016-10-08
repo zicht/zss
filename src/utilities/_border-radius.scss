@@ -1,0 +1,26 @@
+
+.u-circle { border-radius: 100%; }
+
+@each $value in $zss--border-radius-scale {
+    .u-br--#{index($zss--border-radius-scale, $value) - 1} { border-radius: $value; }
+    .u-br--t#{index($zss--border-radius-scale, $value) - 1} { border-top-left-radius: $value; }
+    .u-br--r#{index($zss--border-radius-scale, $value) - 1} { border-top-right-radius: $value; }
+    .u-br--b#{index($zss--border-radius-scale, $value) - 1} { border-bottom-right-radius: $value; }
+    .u-br--l#{index($zss--border-radius-scale, $value) - 1} { border-bottom-left-radius: $value; }
+}
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-circle\@#{$breakpoint} { border-radius: 100%; }
+
+        @each $value in $zss--border-radius-scale {
+            .u-br--#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-radius: $value; }
+            .u-br--t#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-top-left-radius: $value; }
+            .u-br--r#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-top-right-radius: $value; }
+            .u-br--b#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-bottom-right-radius: $value; }
+            .u-br--l#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-bottom-left-radius: $value; }
+        }
+    }
+}

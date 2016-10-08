@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------*\
- * #OBJECTS ui-list
+ * #OBJECTS list-reset
  *
  * Abstract object for using a <ul> or <ol> as an interface element,
  * instead of it being a text list with bullet points.
@@ -10,7 +10,7 @@
 /**
  * The list element.
  */
-.o-ui-list {
+.o-list-reset {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -19,7 +19,7 @@
 /**
  * Make the list horizontal.
  */
-.o-ui-list--inline {
+.o-list-reset--inline {
     overflow: hidden;
 }
 
@@ -28,12 +28,12 @@
 /**
  * The list item.
  */
-.o-ui-list__item {
+.o-list-reset__item {
 
     /**
      * When the list is horizontal, the items should be next to each other, so float them.
      */
-    .o-ui-list--inline > & {
+    .o-list-reset--inline > & {
         float: left;
     }
 }

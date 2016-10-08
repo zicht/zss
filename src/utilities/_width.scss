@@ -1,6 +1,6 @@
 
 .u-width--auto { width: auto; }
-.u-width--viewport { width: 100vw; }
+.u-width--100v { width: 100vw; }
 
 @each $value in $zss--width--scale {
     .u-width--#{index($zss--width--scale, $value)} { width: $value; }
@@ -14,14 +14,12 @@
 
 
 @each $breakpoint, $size in $zss--breakpoints {
-    @each $value in $zss--width--scale {
-        @include media-from($breakpoint) {
+    @include media-from($breakpoint) {
+        @each $value in $zss--width--scale {
             .u-width--#{index($zss--width--scale, $value)}\@#{$breakpoint} { width: $value;}
         }
-    }
 
-    @each $value in $zss--width--percentage-scale {
-        @include media-from($breakpoint) {
+        @each $value in $zss--width--percentage-scale {
             .u-width--auto\@#{$breakpoint} { width: auto; }
             .u-width--viewport\@#{$breakpoint} { width: 100vw; }
 

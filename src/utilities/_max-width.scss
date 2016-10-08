@@ -1,0 +1,20 @@
+
+.u-width--mx100 { max-width: 100%; }
+.u-width--mx-none { max-width: none; }
+
+@each $value in $zss--max-width--scale {
+    .u-width--mx#{index($zss--max-width--scale, $value)} { max-width: $value; }
+}
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-width--mx100\@#{$breakpoint} { max-width: 100%; }
+        .u-width--mx-none\@#{$breakpoint} { max-width: none; }
+
+        @each $value in $zss--max-width--scale {
+            .u-width--mx#{index($zss--max-width--scale, $value)}\@#{$breakpoint} { max-width: $value; }
+        }
+    }
+}

@@ -5,7 +5,7 @@
 
 
 
-@each $breakpoint in $zss--breakpoints {
+@each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @each $value in $zss--type-scale {
             .u-size--#{index($zss--type-scale, $value)}\@#{$breakpoint} { font-size: $value; }

@@ -1,0 +1,15 @@
+
+
+.u-bs--dashed { border-style: dashed; }
+.u-bs--dotted { border-style: dotted; }
+.u-bs--solid { border-style: solid; }
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-bs--dashed\@#{$breakpoint} { border-style: dashed; }
+        .u-bs--dotted\@#{$breakpoint} { border-style: dotted; }
+        .u-bs--solid\@#{$breakpoint} { border-style: solid; }
+    }
+}
