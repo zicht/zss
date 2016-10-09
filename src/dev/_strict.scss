@@ -8,10 +8,20 @@
 
 
 //
-// Check if the grid type is set to a supported value.
+// Helper function that checks whether the scale is sorted correctly.
 //
-@if (index(flex float, $zss--grid-type) == null) {
-    @error "`#{$zss--grid-type}` is not a valid value for $zss--grid-type. It should be either `flex` or `float`.";
+@function is-scale-ordered($scale, $order: asc) {
+    $previous-value: null;
+
+    @each $value in $scale {
+        @if $previous-value != null and (($order == asc and $previous-value >= $value) or ($order == desc and $previous-value <= $value)) {
+            @return false;
+        }
+
+        $previous-value: $value;
+    }
+
+    @return true;
 }
 
 
@@ -19,7 +29,7 @@
 //
 // Check if the grid gutter value is part of the spacing scale.
 //
-@if (index($zss--spacing-scale, $zss--grid-gutter) == null) {
+@if index($zss--spacing-scale, $zss--grid-gutter) == null {
     @error "The grid gutter `$zss--grid-gutter` is not part of the spacing scale. Choose a value from the scale `$zss--spacing-scale`.";
 }
 
@@ -29,8 +39,17 @@
 //
 // Check if the font scale does not contain too many values.
 //
-@if (length($zss--spacing-scale) > 8) {
+@if length($zss--spacing-scale) > 8 {
     @warn "The spacing scale `$zss--spacing-scale` contains more than 8 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the spacing scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--spacing-scale) == false {
+    @error "The spacing scale `$zss--spacing-scale` is not sorted in an ascending order.";
 }
 
 
@@ -38,8 +57,17 @@
 //
 // Check if the type scale does not contain too many values.
 //
-@if (length($zss--type-scale) > 8) {
+@if length($zss--type-scale) > 8 {
     @warn "The font scale `$zss--type-scale` contains more than 8 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the type scale is sorted in a descending order.
+//
+@if is-scale-ordered($zss--type-scale, $order: desc) == false {
+    @error "The type scale `$zss--type-scale` is not sorted in a descending order.";
 }
 
 
@@ -47,7 +75,7 @@
 //
 // Check if the base font size is part of the type scale.
 //
-@if (index($zss--type-scale, $zss--base-font-size) == null) {
+@if index($zss--type-scale, $zss--base-font-size) == null {
     @error "The base font size `$zss--base-font-size` is not part of the font scale. Choose a value from the scale `$zss--type-scale`.";
 }
 
@@ -56,8 +84,17 @@
 //
 // Check if the line height scale does not contain too many values.
 //
-@if (length($zss--line-height-scale) > 5) {
+@if length($zss--line-height-scale) > 5 {
     @warn "The line height scale `$zss--line-height-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the line height scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--line-height-scale) == false {
+    @error "The line height scale `$zss--line-height-scale` is not sorted in an ascending order.";
 }
 
 
@@ -65,7 +102,7 @@
 //
 // Check if the base line height is part of the scale.
 //
-@if (index($zss--line-height-scale, $zss--base-line-height) == null) {
+@if index($zss--line-height-scale, $zss--base-line-height) == null {
     @error "The base line height `$zss--base-line-height` is not part of the line height scale. Choose a value from the scale `$zss--line-height-scale`.";
 }
 
@@ -74,8 +111,17 @@
 //
 // Check if the border radius scale does not contain too many values.
 //
-@if (length($zss--border-radius-scale) > 5) {
+@if length($zss--border-radius-scale) > 5 {
     @warn "The spacing scale `$zss--border-radius-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the border radius scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--border-radius-scale) == false {
+    @error "The border radius scale `$zss--border-radius-scale` is not sorted in an ascending order.";
 }
 
 
@@ -83,8 +129,17 @@
 //
 // Check if the border width scale does not contain too many values.
 //
-@if (length($zss--border-width-scale) > 5) {
+@if length($zss--border-width-scale) > 5 {
     @warn "The spacing scale `$zss--border-width-scale` contains more than 5 values. This is a design smell that should probably be fixed.";
+}
+
+
+
+//
+// Check if the border width scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--border-width-scale) == false {
+    @error "The border width scale `$zss--border-width-scale` is not sorted in an ascending order.";
 }
 
 
@@ -93,7 +148,7 @@
 // Check if the border color names are part of the current color palette.
 //
 @each $name, $value in $zss--border-colors {
-    @if (map-has-key($zss--colors, $name) == false) {
+    @if map-has-key($zss--colors, $name) == false {
         @warn "The border color name `#{$name}` is not part of the color palette `$zss--colors`. Consider only using exising colors to generate border colors.";
     }
 }
@@ -104,7 +159,7 @@
 // Check if the border color values are part of the current color palette.
 //
 @each $name, $value in $zss--border-colors {
-    @if (index(map-values($zss--colors), $value) == null) {
+    @if index(map-values($zss--colors), $value) == null {
         @warn "The border color value `#{$value}` is not part of the color palette `$zss--colors`. Consider only using exising colors to generate border colors.";
     }
 }
@@ -114,6 +169,51 @@
 //
 // Check if the margin of the media object is part of the spacing scale.
 //
-@if (index($zss--spacing-scale, $zss--media-margin) == null) {
+@if index($zss--spacing-scale, $zss--media-margin) == null {
     @error "The media object's margin `$zss--media-margin` is not part of the spacing scale. Choose a value from the scale `$zss--spacing-scale`.";
+}
+
+
+
+//
+// Check if the width scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--width--scale) == false {
+    @error "The width scale `$zss--width--scale` is not sorted in an ascending order.";
+}
+
+
+
+//
+// Check if the width percentage scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--width--percentage-scale) == false {
+    @error "The width scale `$zss--width--percentage-scale` is not sorted in an ascending order.";
+}
+
+
+
+//
+// Check if the max width percentage scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--max-width--scale) == false {
+    @error "The width scale `$zss--max-width--scale` is not sorted in an ascending order.";
+}
+
+
+
+//
+// Check if the height scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--height--scale) == false {
+    @error "The height scale `$zss--height--scale` is not sorted in an ascending order.";
+}
+
+
+
+//
+// Check if the height percentage scale is sorted in an ascending order.
+//
+@if is-scale-ordered($zss--height--percentage-scale) == false {
+    @error "The height scale `$zss--height--percentage-scale` is not sorted in an ascending order.";
 }
