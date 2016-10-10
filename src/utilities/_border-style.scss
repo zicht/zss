@@ -1,15 +1,42 @@
 
-
 .u-bs--dashed { border-style: dashed; }
+.u-bs--t-dashed { border-top-style: dashed; }
+.u-bs--r-dashed { border-right-style: dashed; }
+.u-bs--b-dashed { border-bottom-style: dashed; }
+.u-bs--l-dashed { border-left-style: dashed; }
+
 .u-bs--dotted { border-style: dotted; }
+.u-bs--t-dotted { border-top-style: dotted; }
+.u-bs--r-dotted { border-right-style: dotted; }
+.u-bs--b-dotted { border-bottom-style: dotted; }
+.u-bs--l-dotted { border-left-style: dotted; }
+
 .u-bs--solid { border-style: solid; }
+.u-bs--t-solid { border-top-style: solid; }
+.u-bs--r-solid { border-right-style: solid; }
+.u-bs--b-solid { border-bottom-style: solid; }
+.u-bs--l-solid { border-left-style: solid; }
 
 
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         .u-bs--dashed\@#{$breakpoint} { border-style: dashed; }
+        .u-bs--t-dashed\@#{$breakpoint} { border-top-style: dashed; }
+        .u-bs--r-dashed\@#{$breakpoint} { border-right-style: dashed; }
+        .u-bs--b-dashed\@#{$breakpoint} { border-bottom-style: dashed; }
+        .u-bs--l-dashed\@#{$breakpoint} { border-left-style: dashed; }
+
         .u-bs--dotted\@#{$breakpoint} { border-style: dotted; }
+        .u-bs--t-dotted\@#{$breakpoint} { border-top-style: dotted; }
+        .u-bs--r-dotted\@#{$breakpoint} { border-right-style: dotted; }
+        .u-bs--b-dotted\@#{$breakpoint} { border-bottom-style: dotted; }
+        .u-bs--l-dotted\@#{$breakpoint} { border-left-style: dotted; }
+
         .u-bs--solid\@#{$breakpoint} { border-style: solid; }
+        .u-bs--t-solid\@#{$breakpoint} { border-top-style: solid; }
+        .u-bs--r-solid\@#{$breakpoint} { border-right-style: solid; }
+        .u-bs--b-solid\@#{$breakpoint} { border-bottom-style: solid; }
+        .u-bs--l-solid\@#{$breakpoint} { border-left-style: solid; }
     }
 }
