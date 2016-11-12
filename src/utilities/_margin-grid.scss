@@ -1,0 +1,15 @@
+/*-----------------------------------------------------------------------------*\
+ * #UTILITIES margin-grid
+\*-----------------------------------------------------------------------------*/
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @for $i from 1 through $zss--grid-columns {
+            .u-margin--col--#{$i}\@#{$breakpoint} {
+                margin-left: percentage($i / $zss--grid-columns);
+            }
+        }
+    }
+}
