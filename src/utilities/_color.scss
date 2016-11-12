@@ -5,6 +5,10 @@
     .u-hover--#{inspect($name)} {
         &:hover { color: $value; }
     }
+
+    @each $opacity in $zss--color-opacity-scale {
+        .u-#{inspect($name)}--#{$opacity * 100} { color: rgba($value, $opacity); }
+    }
 }
 
 
@@ -16,6 +20,10 @@
 
             .u-hover--#{inspect($name)}\@#{$breakpoint} {
                 &:hover { color: $value; }
+            }
+
+            @each $opacity in $zss--color-opacity-scale {
+                .u-#{inspect($name)}--#{$opacity * 100}\@#{$breakpoint} { color: rgba($value, $opacity); }
             }
         }
     }
