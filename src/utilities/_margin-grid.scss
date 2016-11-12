@@ -4,6 +4,14 @@
 
 
 
+@for $i from 1 through $zss--grid-columns {
+    .u-margin--col--#{$i} {
+        margin-left: percentage($i / $zss--grid-columns);
+    }
+}
+
+
+
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @for $i from 1 through $zss--grid-columns {
