@@ -24,6 +24,29 @@ The fallback grid type proved too buggy to be useful, so there are now only two 
 
 A flex implementation of the famous [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) for the very common UI pattern of positioning an image next to a bunch of text.
 
+### Changed color structure
+
+Previously, colors were defined twice: both separate variables and a Sass map for generating utility classes. This was unnecessary and prone to errors.
+Now there are no more color variables: every color is defined directly in the map.
+
+```
+$zss--colors: (
+    black: #000,
+    white: #fff,
+    transparent: transparent
+)
+```
+
+You're strongly encouraged to use the generated utility classes if you need to add a color to your component, but if you really do need to access a color you can use the new mixin `color`:
+
+```
+.x {
+    color: color(black);
+}
+```
+
+Also, it's now possible to automatically generated lighter variations of color with the `zss--color-opacity-scale`. By default, it takes the color map and generates variations with 0.25, 0.5 and 0.75 opacity.
+
 ### New utility classes and a bit of refactoring
 
 Each CSS property now has it's own file, so it's easier to find in which file a property is located. Also: every utility class is now responsive, if applicable. (For example, the cursor is not responsive.)
@@ -50,6 +73,7 @@ These properties were expanded or changed:
 
 - Added a hover class for each color.
 - Added much more flex properties.
+- Added color variations with an opacity scale.
 - Margin and padding are moved from `_whitespace.scss` to two separate files.
 - The overflow classes are renamed from `u-overflow` to `u-of`.
 - The float classes renamed. For example, `u-left` is renamed to `u-f--left`.

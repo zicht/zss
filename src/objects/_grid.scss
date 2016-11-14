@@ -12,11 +12,16 @@
     @include create-grid-widths;
 }
 
+.o-grid--offset {
+    @include create-grid-offset;
+}
+
 
 
 .o-grid__row {
     @include create-grid-row($zss--grid-gutter, $zss--grid-type);
 }
+
 
 
 .o-grid__col {
