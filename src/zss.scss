@@ -90,3 +90,7 @@
 // Development tools.
 //
 @import 'dev/strict';
+
+.x {
+  color: get-color(black, 0.5);
+}

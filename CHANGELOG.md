@@ -37,11 +37,11 @@ $zss--colors: (
 )
 ```
 
-You're strongly encouraged to use the generated utility classes if you need to add a color to your component, but if you really do need to access a color you can use the new mixin `color`:
+You're strongly encouraged to use the generated utility classes if you need to add a color to your component, but if you really do need to access a color you can use the new mixin `get-color`:
 
 ```
 .x {
-    color: color(black);
+    color: get-color(black);
 }
 ```
 
