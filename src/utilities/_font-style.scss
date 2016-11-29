@@ -1,0 +1,10 @@
+
+.u-italic { font-style: italic; }
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-italic\@#{$breakpoint} { font-style: italic; }
+    }
+}
