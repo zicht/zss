@@ -55,6 +55,7 @@ The default gutter width between the columns is `2rem`. Override the variable `$
 Grid columns are typically constructed with floats. However, the flexbox model makes building grids easier, especially if you want the columns in a row to have an equal height. One drawback is that the [browser support for flexbox](http://caniuse.com/#search=flexbox) is less favourable, but it's still acceptable, though.
 
 You can choose the type of grid you want. The variable `$zss--grid-type` has these possible values:
+
 1. `$zss--grid-type: flex` (default)   
 The grid is generated with flexbox properties. Use this if you work with modern browsers.
 2. `$zss--grid-type: float`   
