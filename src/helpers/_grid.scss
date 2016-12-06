@@ -89,10 +89,12 @@
 @mixin create-grid-offset($column-count: $zss--grid-columns, $breakpoints: $zss--breakpoints) {
     @each $breakpoint, $size in $breakpoints {
         @include media-from($breakpoint, $breakpoints) {
-            @for $index from 1 through $column-count {
+            @for $index from 0 through $column-count - 1 {
                 @at-root {
-                    #{&}--#{$index}\@#{$breakpoint} {
-                        margin-left: percentage($index / $column-count);
+                    @if $size > 0 or $index > 0 {
+                        #{&}--#{$index}\@#{$breakpoint} {
+                            margin-left: percentage($index / $column-count);
+                        }
                     }
                 }
             }

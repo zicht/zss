@@ -20,6 +20,10 @@ And lastly: most configurable properties are now based on a scale. For example, 
 
 The fallback grid type proved too buggy to be useful, so there are now only two types of grid: `flex` (the default) and `float`.
 
+### Grid offset
+
+You can push columns to the right by using the grid offset classes. For example: `o-grid--offset--4@md  o-grid--offset--0@lg`.
+
 ### Added the `o-media` object
 
 A flex implementation of the famous [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) for the very common UI pattern of positioning an image next to a bunch of text.
