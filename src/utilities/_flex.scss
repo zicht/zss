@@ -1,7 +1,4 @@
 
-.u-flex { display: flex; }
-.u-flex--inline { display: inline-flex; }
-
 .u-flex--auto { flex: 1 1 auto; }
 .u-no-flex { flex: none; }
 
@@ -43,9 +40,6 @@
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
-        .u-flex\@#{$breakpoint} { display: flex; }
-        .u-flex--inline\@#{$breakpoint} { display: inline-flex; }
-
         .u-flex--auto\@#{$breakpoint} { flex: 1 1 auto; }
         .u-no-flex\@#{$breakpoint} { flex: none; }
 

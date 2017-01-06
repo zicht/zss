@@ -3,6 +3,8 @@
 .u-block { display: block; }
 .u-inline { display: inline; }
 .u-inline-block { display: inline-block; }
+.u-flex { display: flex; }
+.u-flex--inline { display: inline-flex; }
 .u-table { display: table; }
 .u-cell { display: table-cell; }
 .u-row { display: table-row; }
@@ -18,6 +20,8 @@
         .u-block\@#{$breakpoint} { display: block; }
         .u-inline\@#{$breakpoint} { display: inline; }
         .u-inline-block\@#{$breakpoint} { display: inline-block; }
+        .u-flex\@#{$breakpoint} { display: flex; }
+        .u-flex--inline\@#{$breakpoint} { display: inline-flex; }
         .u-table\@#{$breakpoint} { display: table; }
         .u-cell\@#{$breakpoint} { display: table-cell; }
         .u-row\@#{$breakpoint} { display: table-row; }
