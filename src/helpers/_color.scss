@@ -4,17 +4,9 @@
 
 
 
-@function get-color($name, $opacity: null) {
+@function get-color($name) {
     @if map-has-key($zss--colors, $name) == false {
         @error "There is no color defined with the name `#{$name}`. You can find available colors in in `$zss--colors`.";
-    }
-
-    @if $opacity != null and index($zss--color-opacity-scale, $opacity) == null {
-        @error "There is no opacity `#{$opacity}` defined for color `#{$name}`. You can find available opacity values in `$zss--color-opacity-scale`.";
-    }
-
-    @if $opacity != null {
-        @return rgba(map-get($zss--colors, $name), $opacity);
     }
 
     @return map-get($zss--colors, $name);

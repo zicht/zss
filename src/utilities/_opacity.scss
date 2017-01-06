@@ -1,0 +1,14 @@
+
+@each $value in $zss--color-opacity-scale {
+    .u-o--#{$value * 100} { opacity: $value; }
+}
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        @each $value in $zss--color-opacity-scale {
+            .u-o--#{$value * 100}\@#{$breakpoint} { opacity: $value; }
+        }
+    }
+}
