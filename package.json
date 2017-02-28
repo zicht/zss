@@ -16,11 +16,10 @@
   },
   "keywords": [
     "css",
-    "zss",
     "sass",
-    "scss",
     "zicht",
-    "functional css"
+    "functional css",
+    "design systems"
   ],
   "author": "Zicht Online",
   "license": "MIT"

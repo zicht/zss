@@ -1,6 +1,11 @@
 # Grid
 
-The ZSS rid object is a way to align your components onto a view, similar to the well-known Bootstrap grid.
+The ZSS grid object is a way to align your components onto a view in a column structure.
+
+## Referenced files
+
+- [helpers/_grid.scss](../../src/helpers/_grid.scss)
+- [objects/_grid.scss](../../src/objects/_grid.scss)
 
 ## Using the grid
 
