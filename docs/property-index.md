@@ -1,0 +1,48 @@
+# Property index
+
+A list of CSS properties and their corresponding class names in ZSS.
+
+* _The ZSS class_ is a an indication of the name of the class that might be generated. This can be dependent on the configured values.
+
+CSS property | ZSS class  | Variable | Docs | Source file
+------------ | ---------- | -------- | ------------ | ---------- | -------- | -----------
+`align-content` | `u-flex--content--start` | | | [💻](../docs/src/utilities/_flex.scss)
+`align-items` | `u-flex--items--start` | | | [💻](../docs/src/utilities/_flex.scss)
+`align-self` | `u-flex--self--start` | | | [💻](../docs/src/utilities/_flex.scss)
+`background-color` | `u-bg--black` | `$zss--colors` | [📜](docs/theming/colors.md) | [💻](../docs/src/utilities/_background-color.scss)
+`background-size` | `u-bg--cover` | | [📜](docs/theming/backgrounds.md) | [💻](../docs/src/utilities/_background-size.scss)
+`border-color` | `u-bc--black` | `$zss--border-colors` | | [💻](../docs/src/utilities/_border-color.scss)
+`border-radius` | `u-br--1` | `$zss--border-radius-scale` | | [💻](../docs/src/utilities/_border-radius.scss)
+`border-style` | `u-bs--dashed` | | | [💻](../docs/src/utilities/_border-style.scss)
+`border-width` | `u-bw--1` | `$zss--border-width-scale` | | [💻](../docs/src/utilities/_border-width.scss)
+`bottom` | `u-bottom--0` | | | [💻](../docs/src/utilities/_position.scss)
+`clear` | `u-clear--above` | | | [💻](../docs/src/utilities/_clear.scss)
+`color` | `u-black` | `$zss--colors` | | [💻](../docs/src/utilities/_color.scss)
+`cursor` | `u-pointer` | | | [💻](../docs/src/utilities/_cursor.scss)
+`display` | `u-block` | | | [💻](../docs/src/utilities/_display.scss)
+`flex` | `u-flex--auto` | | | [💻](../docs/src/utilities/_flex.scss)
+`float` | `u-f--right` | | | [💻](../docs/src/utilities/_float.scss)
+`font-size` | `u-size--1` | `$zss--type-scale` | | [💻](../docs/src/utilities/_font-size.scss)
+`font-style` | `u-italic` | | | [💻](../docs/src/utilities/_font-style.scss)
+`font-variant` | `u-small-caps` | | | [💻](../docs/src/utilities/_font-variant.scss)
+`font-weight` | `u-weight--100` | | | [💻](../docs/src/utilities/_font-weight.scss)
+`height` | `u-height--50` | `$zss--height--scale`<br>`$zss--height--percentage-scale` | | [💻](../docs/src/utilities/_font-weight.scss)
+`justify-content` | `u-flex--justify--start` | | | [💻](../docs/src/utilities/_flex.scss)
+`left` | `u-left--0` | | | [💻](../docs/src/utilities/_position.scss)
+`line-height` | `u-lh--1` | `$zss--line-height-scale` | | [💻](../docs/src/utilities/_line-height.scss)
+`margin` | `u-margin--1` | `$zss--spacing-scale` | | [💻](../docs/src/utilities/_margin.scss)
+`max-width` | `u-width--mx1` | `$zss--max-width--scale` | | [💻](../docs/src/utilities/_max-width.scss)
+`min-height` | `u-height--m100` | | | [💻](../docs/src/utilities/_min-height.scss)
+`opacity` | `u-o--100` | | | [💻](../docs/src/utilities/_opacity.scss)
+`overflow` | `u-of--auto` | | | [💻](../docs/src/utilities/_overflow.scss)
+`order` | `u-order--1` | | | [💻](../docs/src/utilities/_flex.scss)
+`padding` | `u-padding--1` | `$zss--spacing-scale` | | [💻](../docs/src/utilities/_padding.scss)
+`position` | `u-absolute` | | | [💻](../docs/src/utilities/_position.scss)
+`right` | `u-right--0` | | | [💻](../docs/src/utilities/_position.scss)
+`text-align` | `u-text--center` | | | [💻](../docs/src/utilities/_text-align.scss)
+`text-decoration` | `u-underline` | | | [💻](../docs/src/utilities/_text-decoration.scss)
+`text-transform` | `u-upper` | | | [💻](../docs/src/utilities/_text-transform.scss)
+`top` | `u-top--0` | | | [💻](../docs/src/utilities/_position.scss)
+`vertical-align` | `u-valign--middle` | | | [💻](../docs/src/utilities/_vertical-align.scss)
+`width` | `u-width--50` | `$zss--width--scale`<br>`$zss--width--percentage-scale` | | [💻](../docs/src/utilities/_width.scss)
+`z-index` | `u-z--1` | | | [💻](../docs/src/utilities/_z-index.scss)
