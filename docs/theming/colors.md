@@ -73,3 +73,15 @@ $zss--colors: (
     'orange': #f09;
 );
 ```
+
+## Usage
+
+```
+<p class="u-bg--black  u-white">
+    White text on a black background.
+</p>
+
+<p> class="u-white  u-black@md">
+    White text on small screens, black text from the `md` breakpoint up.
+</p>
+```
