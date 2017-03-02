@@ -2,7 +2,7 @@
 
 ZSS contains utility classes for setting CSS properties concerning background images.
 
-## Referenced files
+## Source files
 
 - [utilities/_background-size.scss](../../src/utilities/_background-size.scss)
 
@@ -12,13 +12,13 @@ Since the background CSS properties have a fixed set of values, there is no vari
 
 The background classes come with responsive equivalents. The exact breakpoints are defined in `$zss--breakpoints`.
 
-## Generated CSS classes
+## Generated CSS
 
 Below is an example of the background classes that are generated.
 
 `background-size`:
 
-```
+```sass
 .u-bg--contain { background-size: contain; }
 .u-bg--cover { background-size: cover; }
 
@@ -27,3 +27,15 @@ Below is an example of the background classes that are generated.
     .u-bg--cover\@sm { background-size: cover }
 }
 ```
+
+## Examples
+
+```html
+<div class="u-bg--cover" style="background-image: url(../images.webp)">
+    <p>Text with background image.</p>
+</div>
+```
+
+## References
+
+- [MDN: background-size](https://developer.mozilla.org/en/docs/Web/CSS/background-size)
