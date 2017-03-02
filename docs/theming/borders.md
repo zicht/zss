@@ -1,6 +1,6 @@
 # Borders
 
-ZSS contains utility classes for setting CSS properties concerning background images.
+ZSS contains utility classes for setting CSS border properties.
 
 ## Source files
 
