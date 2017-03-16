@@ -2,10 +2,10 @@
 
 A list of CSS properties and their corresponding class names in ZSS.
 
-* _The ZSS class_ is a an indication of the name of the class that might be generated. This can be dependent on the configured values.
+* _ZSS class_ is a an indication of the name of the class that might be generated. This can be dependent on the configured values.
 
 CSS property | ZSS class  | Variable | Docs | Source file
------------- | ---------- | -------- | ------------ | ---------- | -------- | -----------
+------------ | ---------- | -------- | ------------ | ----------
 `align-content` | `u-flex--content--start` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
 `align-items` | `u-flex--items--start` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
 `align-self` | `u-flex--self--start` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
