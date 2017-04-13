@@ -3,7 +3,9 @@
     .u-#{inspect($name)} { color: $value; }
 
     .u-hover--#{inspect($name)} {
-        &:hover { color: $value; }
+        @include hover {
+            color: $value; 
+        }
     }
 }
 
@@ -15,7 +17,9 @@
             .u-#{inspect($name)}\@#{$breakpoint} { color: $value; }
 
             .u-hover--#{inspect($name)}\@#{$breakpoint} {
-                &:hover { color: $value; }
+                @include hover {
+                    color: $value; 
+                }
             }
         }
     }
