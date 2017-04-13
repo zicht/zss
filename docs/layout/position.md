@@ -1,10 +1,10 @@
-# Display
+# Position
 
 ZSS contains utility classes for setting `position` and related CSS properties.
 
 ## Source files
 
-- [utilities/_display.scss](../../src/utilities/_position.scss)
+- [utilities/_position.scss](../../src/utilities/_position.scss)
 
 ## Variables
 
