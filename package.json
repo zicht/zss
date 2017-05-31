@@ -1,14 +1,10 @@
 {
   "name": "zss",
   "version": "2.0.0",
-  "description": "A Sass framework for quickly building application components.",
+  "description": "Sass for design systems",
   "main": "./scss/zss.scss",
   "directories": {
-    "doc": "docs",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "doc": "docs"
   },
   "repository": {
     "type": "git",
