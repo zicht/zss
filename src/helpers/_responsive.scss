@@ -1,8 +1,3 @@
-//-----------------------------------------------------------------------------\\
-// #VARIABLES responsive
-//-----------------------------------------------------------------------------//
-
-
 
 @mixin media-until($breakpoint-name, $breakpoints: $zss--breakpoints) {
     @media (max-width: map-get($breakpoints, $breakpoint-name)) {
@@ -13,8 +8,11 @@
 
 
 @mixin media-between($min-screen-name, $max-screen-name, $breakpoints: $zss--breakpoints) {
-    @media (min-width: map-get($breakpoints, $min-screen-name)) and (max-width: map-get($breakpoints, $max-screen-name)) {
-        @content
+    $min: map-get($breakpoints, $min-screen-name);
+    $max: map-get($breakpoints, $max-screen-name);
+
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
     }
 }
 

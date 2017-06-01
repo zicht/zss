@@ -14,7 +14,8 @@
         .u-width--mx-none\@#{$breakpoint} { max-width: none; }
 
         @each $value in $zss--max-width--scale {
-            .u-width--mx#{index($zss--max-width--scale, $value)}\@#{$breakpoint} { max-width: $value; }
+            $index: index($zss--max-width--scale, $value);
+            .u-width--mx#{$index}\@#{$breakpoint} { max-width: $value; }
         }
     }
 }

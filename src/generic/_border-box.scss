@@ -1,11 +1,10 @@
-/*-----------------------------------------------------------------------------*\
- * #GENERIC border-box
- *
+/* ----------------------------------------------------------------------------- *\
  * Apply generic border-box to all elements.
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-\*-----------------------------------------------------------------------------*/
+ * See:
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+\* ----------------------------------------------------------------------------- */
 
-
+/* stylelint-disable selector-no-type */
 
 /**
  * Apply border-box across the entire page.
@@ -14,7 +13,11 @@ html {
     box-sizing: border-box;
 }
 
+/* stylelint-enable selector-no-type */
 
+
+
+/* stylelint-disable selector-no-universal */
 
 /**
  * Relax the definition a bit, to allow components to override it manually.
@@ -26,3 +29,4 @@ html {
         box-sizing: inherit;
     }
 }
+/* stylelint-enable selector-no-universal */

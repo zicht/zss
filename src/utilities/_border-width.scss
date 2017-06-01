@@ -1,10 +1,11 @@
 
 @each $value in $zss--border-width-scale {
-    .u-bw--#{index($zss--border-width-scale, $value) - 1} { border-width: $value; }
-    .u-bw--t#{index($zss--border-width-scale, $value) - 1} { border-top-width: $value; }
-    .u-bw--r#{index($zss--border-width-scale, $value) - 1} { border-right-width: $value; }
-    .u-bw--b#{index($zss--border-width-scale, $value) - 1} { border-bottom-width: $value; }
-    .u-bw--l#{index($zss--border-width-scale, $value) - 1} { border-left-width: $value; }
+    $index: index($zss--border-width-scale, $value) - 1;
+    .u-bw--#{$index} { border-width: $value; }
+    .u-bw--t#{$index} { border-top-width: $value; }
+    .u-bw--r#{$index} { border-right-width: $value; }
+    .u-bw--b#{$index} { border-bottom-width: $value; }
+    .u-bw--l#{$index} { border-left-width: $value; }
 }
 
 
@@ -12,11 +13,12 @@
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @each $value in $zss--border-width-scale {
-            .u-bw--#{index($zss--border-width-scale, $value) - 1}\@#{$breakpoint} { border-width: $value; }
-            .u-bw--t#{index($zss--border-width-scale, $value) - 1}\@#{$breakpoint} { border-top-width: $value; }
-            .u-bw--r#{index($zss--border-width-scale, $value) - 1}\@#{$breakpoint} { border-right-width: $value; }
-            .u-bw--b#{index($zss--border-width-scale, $value) - 1}\@#{$breakpoint} { border-bottom-width: $value; }
-            .u-bw--l#{index($zss--border-width-scale, $value) - 1}\@#{$breakpoint} { border-left-width: $value; }
+            $index: index($zss--border-width-scale, $value) - 1;
+            .u-bw--#{$index}\@#{$breakpoint} { border-width: $value; }
+            .u-bw--t#{$index}\@#{$breakpoint} { border-top-width: $value; }
+            .u-bw--r#{$index}\@#{$breakpoint} { border-right-width: $value; }
+            .u-bw--b#{$index}\@#{$breakpoint} { border-bottom-width: $value; }
+            .u-bw--l#{$index}\@#{$breakpoint} { border-left-width: $value; }
         }
     }
 }

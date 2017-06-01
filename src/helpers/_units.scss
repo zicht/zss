@@ -1,14 +1,8 @@
-//-----------------------------------------------------------------------------\\
-// #HELPERS units
-//-----------------------------------------------------------------------------//
-
-
-
 ///
 // Calculates the rem value for the given number of pixels.
 //
 @function rem($px) {
-    @if (unit($px) == 'rem') {
+    @if (unit($px) == "rem") {
         @return $px;
     }
 

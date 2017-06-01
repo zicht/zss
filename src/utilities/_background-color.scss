@@ -3,9 +3,7 @@
     .u-bg--#{inspect($name)} { background-color: $value; }
 
     .u-bg-hover--#{inspect($name)} {
-        @include hover {
-            background-color: $value; 
-        }
+        @include hover { background-color: $value; }
     }
 }
 
@@ -17,9 +15,7 @@
             .u-bg--#{inspect($name)}\@#{$breakpoint} { background-color: $value; }
 
             .u-bg-hover--#{inspect($name)}\@#{$breakpoint} {
-                @include hover {
-                    background-color: $value; 
-                }
+                @include hover { background-color: $value; }
             }
         }
     }

@@ -3,8 +3,15 @@
   "version": "2.0.0",
   "description": "Sass for design systems",
   "main": "./scss/zss.scss",
+  "devDependencies": {
+    "stylelint": "^7.10.1",
+    "stylelint-config-zicht": "^0.1.0"
+  },
   "directories": {
     "doc": "docs"
+  },
+  "scripts": {
+    "lint-css": "./node_modules/.bin/stylelint 'src/**/*.scss' --verbose"
   },
   "repository": {
     "type": "git",
@@ -18,5 +25,22 @@
     "design systems"
   ],
   "author": "Zicht Online",
-  "license": "MIT"
+  "license": "MIT",
+  "stylelint": {
+    "extends": "stylelint-config-zicht",
+    "rules": {
+      "declaration-property-value-whitelist": {
+        "background-color": [
+          "$value"
+        ],
+        "border-color": [
+          "$value"
+        ],
+        "color": [
+          "$value"
+        ]
+      },
+      "selector-no-combinator": null
+    }
+  }
 }

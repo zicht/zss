@@ -8,7 +8,8 @@
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @each $value in $zss--line-height-scale {
-            .u-lh--#{index($zss--line-height-scale, $value) - 1}\@#{$breakpoint} { line-height: $value; }
+            $index: index($zss--line-height-scale, $value) - 1;
+            .u-lh--#{$index}\@#{$breakpoint} { line-height: $value; }
         }
     }
 }

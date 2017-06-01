@@ -1,8 +1,3 @@
-/*-----------------------------------------------------------------------------*\
- * #UTILITIES padding
-\*-----------------------------------------------------------------------------*/
-
-
 
 @for $i from 1 through length($zss--spacing-scale) {
     $value: nth($zss--spacing-scale, $i);
@@ -13,8 +8,15 @@
     .u-padding--b#{$i - 1} { padding-bottom: $value; }
     .u-padding--l#{$i - 1} { padding-left: $value; }
 
-    .u-padding--y#{$i - 1} { padding-top: $value; padding-bottom: $value; }
-    .u-padding--x#{$i - 1} { padding-right: $value; padding-left: $value; }
+    .u-padding--y#{$i - 1} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .u-padding--x#{$i - 1} {
+        padding-right: $value;
+        padding-left: $value;
+    }
 }
 
 
@@ -30,8 +32,15 @@
             .u-padding--b#{$i - 1}\@#{$breakpoint} { padding-bottom: $value; }
             .u-padding--l#{$i - 1}\@#{$breakpoint} { padding-left: $value; }
 
-            .u-padding--y#{$i - 1}\@#{$breakpoint} { padding-top: $value; padding-bottom: $value; }
-            .u-padding--x#{$i - 1}\@#{$breakpoint} { padding-right: $value; padding-left: $value; }
+            .u-padding--y#{$i - 1}\@#{$breakpoint} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+
+            .u-padding--x#{$i - 1}\@#{$breakpoint} {
+                padding-right: $value;
+                padding-left: $value;
+            }
         }
     }
 }

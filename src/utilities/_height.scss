@@ -11,9 +11,8 @@
 }
 
 @each $value in $zss--height--percentage-scale {
-    .u-height--#{$value} { height: #{unquote($value + '%')}; }
+    .u-height--#{$value} { height: #{unquote($value + "%")}; }
 }
-
 
 
 
@@ -31,7 +30,7 @@
         }
 
         @each $value in $zss--height--percentage-scale {
-            .u-height--#{$value}\@#{$breakpoint} { height: #{unquote($value + '%')}; }
+            .u-height--#{$value}\@#{$breakpoint} { height: #{unquote($value + "%")}; }
         }
     }
 }

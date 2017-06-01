@@ -7,23 +7,22 @@
 }
 
 @each $value in $zss--width--percentage-scale {
-    .u-width--#{$value} { width: #{unquote($value + '%')}; }
+    .u-width--#{$value} { width: #{unquote($value + "%")}; }
 }
-
 
 
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @each $value in $zss--width--scale {
-            .u-width--#{index($zss--width--scale, $value)}\@#{$breakpoint} { width: $value;}
+            .u-width--#{index($zss--width--scale, $value)}\@#{$breakpoint} { width: $value; }
         }
 
         @each $value in $zss--width--percentage-scale {
             .u-width--auto\@#{$breakpoint} { width: auto; }
             .u-width--viewport\@#{$breakpoint} { width: 100vw; }
 
-            .u-width--#{$value}\@#{$breakpoint} { width: #{unquote($value + '%')}; }
+            .u-width--#{$value}\@#{$breakpoint} { width: #{unquote($value + "%")}; }
         }
     }
 }

@@ -1,12 +1,7 @@
-//-----------------------------------------------------------------------------*\
-// #HELPERS color
-//-----------------------------------------------------------------------------*/
-
-
 
 @function get-color($name) {
     @if map-has-key($zss--colors, $name) == false {
-        @error "There is no color defined with the name `#{$name}`. You can find available colors in in `$zss--colors`.";
+        @error "There is no color named `#{$name}` in `$zss--colors`.";
     }
 
     @return map-get($zss--colors, $name);

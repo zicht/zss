@@ -1,9 +1,7 @@
-/*-----------------------------------------------------------------------------*\
- * #OBJECTS list-reset
- *
+/* ----------------------------------------------------------------------------- *\
  * Abstract object for using a <ul> or <ol> as an interface element,
  * instead of it being a text list with bullet points.
-\*-----------------------------------------------------------------------------*/
+\* ----------------------------------------------------------------------------- */
 
 
 
@@ -29,7 +27,6 @@
  * The list item.
  */
 .o-list-reset__item {
-
     /**
      * When the list is horizontal, the items should be next to each other, so float them.
      */

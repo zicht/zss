@@ -2,11 +2,12 @@
 .u-circle { border-radius: 100%; }
 
 @each $value in $zss--border-radius-scale {
-    .u-br--#{index($zss--border-radius-scale, $value) - 1} { border-radius: $value; }
-    .u-br--t#{index($zss--border-radius-scale, $value) - 1} { border-top-left-radius: $value; }
-    .u-br--r#{index($zss--border-radius-scale, $value) - 1} { border-top-right-radius: $value; }
-    .u-br--b#{index($zss--border-radius-scale, $value) - 1} { border-bottom-right-radius: $value; }
-    .u-br--l#{index($zss--border-radius-scale, $value) - 1} { border-bottom-left-radius: $value; }
+    $index: index($zss--border-radius-scale, $value) - 1;
+    .u-br--#{$index} { border-radius: $value; }
+    .u-br--t#{$index} { border-top-left-radius: $value; }
+    .u-br--r#{$index} { border-top-right-radius: $value; }
+    .u-br--b#{$index} { border-bottom-right-radius: $value; }
+    .u-br--l#{$index} { border-bottom-left-radius: $value; }
 }
 
 
@@ -16,11 +17,12 @@
         .u-circle\@#{$breakpoint} { border-radius: 100%; }
 
         @each $value in $zss--border-radius-scale {
-            .u-br--#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-radius: $value; }
-            .u-br--t#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-top-left-radius: $value; }
-            .u-br--r#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-top-right-radius: $value; }
-            .u-br--b#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-bottom-right-radius: $value; }
-            .u-br--l#{index($zss--border-radius-scale, $value) - 1}\@#{$breakpoint} { border-bottom-left-radius: $value; }
+            $index: index($zss--border-radius-scale, $value) - 1;
+            .u-br--#{$index}\@#{$breakpoint} { border-radius: $value; }
+            .u-br--t#{$index}\@#{$breakpoint} { border-top-left-radius: $value; }
+            .u-br--r#{$index}\@#{$breakpoint} { border-top-right-radius: $value; }
+            .u-br--b#{$index}\@#{$breakpoint} { border-bottom-right-radius: $value; }
+            .u-br--l#{$index}\@#{$breakpoint} { border-bottom-left-radius: $value; }
         }
     }
 }

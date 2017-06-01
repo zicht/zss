@@ -1,9 +1,6 @@
-//-----------------------------------------------------------------------------\\
-// #HELPERS grid
-//-----------------------------------------------------------------------------//
 
-@import '../helpers/clear';
-@import '../helpers/responsive';
+@import "../helpers/clear";
+@import "../helpers/responsive";
 
 
 
@@ -35,7 +32,7 @@
         display: flex;
         flex-wrap: wrap;
     } @else if $grid-type == float {
-        @include clear();
+        @include clear;
     }
 
     margin-right: $gutter / -2;
@@ -58,15 +55,14 @@
 
 
 //
-// 1. According to the flexbox specification, by default, flex items won't shrink below their minimum
-//    content size (the length of the longest word or fixed-size element). To change this, set the
-//    max-width or max-height property.
+// 1. According to the flexbox specification, by default, flex items won't shrink below
+//    their minimum content size (the length of the longest word or fixed-size element).
+//    To change this, set the max-width or max-height property.
 //    NOTE: if we remove the max-width, the 'columns' in separate rows don't have the same width.
 //
 @mixin create-grid-column-sizes($column-count, $grid-type, $breakpoints: $zss--breakpoints) {
     @each $breakpoint-name, $breakpoint-size in $breakpoints {
         @include media-from($breakpoint-name, $breakpoints) {
-
             @for $index from 1 through $column-count {
                 @at-root {
                     #{&}--#{$index}\@#{$breakpoint-name} {
@@ -79,7 +75,6 @@
                     }
                 }
             }
-
         }
     }
 }
@@ -98,7 +93,6 @@
                     }
                 }
             }
-
         }
     }
 }
