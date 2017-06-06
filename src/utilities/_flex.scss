@@ -16,6 +16,7 @@
 .u-flex--content--center { align-content: center; }
 .u-flex--content--base { align-content: baseline; }
 .u-flex--content--stretch { align-content: stretch; }
+.u-flex--content--between { align-content: space-between; }
 
 .u-flex--self--start { align-self: flex-start; }
 .u-flex--self--end { align-self: flex-end; }
@@ -28,6 +29,7 @@
 .u-flex--justify--center { justify-content: center; }
 .u-flex--justify--base { justify-content: baseline; }
 .u-flex--justify--stretch { justify-content: stretch; }
+.u-flex--justify--between { justify-content: space-between; }
 
 .u-order--first { order: -1; }
 .u-order--1 { order: 1; }
