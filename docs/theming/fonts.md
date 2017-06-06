@@ -67,6 +67,7 @@ For each breakpoint in `$zss--breakpoints`, these classes are generated:
 @media (min-width: 550px) {
     .u-small-caps\@sm { font-variant: small-caps }
 }
+```
 
 ### `font-weight`
 
@@ -109,7 +110,7 @@ For each breakpoint in `$zss--breakpoints`, these classes are generated:
 
 ## References
 
-- [MDN: border-color](https://developer.mozilla.org/en/docs/Web/CSS/font-size)
-- [MDN: border-color](https://developer.mozilla.org/en/docs/Web/CSS/font-style)
-- [MDN: border-color](https://developer.mozilla.org/en/docs/Web/CSS/font-variant)
-- [MDN: border-color](https://developer.mozilla.org/en/docs/Web/CSS/font-weight)
+- [MDN: font-size](https://developer.mozilla.org/en/docs/Web/CSS/font-size)
+- [MDN: font-style](https://developer.mozilla.org/en/docs/Web/CSS/font-style)
+- [MDN: font-variant](https://developer.mozilla.org/en/docs/Web/CSS/font-variant)
+- [MDN: font-weight](https://developer.mozilla.org/en/docs/Web/CSS/font-weight)
