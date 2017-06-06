@@ -12,7 +12,7 @@ Since the position CSS properties have a fixed set of values, there is no variab
 The `top`, `right`, `bottom` and `left` properties are included in this file as well, since they're
 very much related.
 
-The display classes come with responsive equivalents. The exact breakpoints are defined in `$zss--breakpoints`.
+The position classes come with responsive equivalents. The exact breakpoints are defined in `$zss--breakpoints`.
 
 ## Generated CSS
 

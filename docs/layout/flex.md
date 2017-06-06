@@ -97,8 +97,8 @@ Below is an example of the classes that are generated.
 ## Examples
 
 ```html
-<div class="u-flex">
-    <p class="u-flex--justify--end  u-flex--items--end">This element is aligned to the bottom right of the box</p>
+<div class="u-flex  u-flex--justify--end  u-flex--items--end">
+    <p>This element is aligned to the bottom right of the box</p>
 </div>
 ```
 
