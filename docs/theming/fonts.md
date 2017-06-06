@@ -95,6 +95,7 @@ For each breakpoint in `$zss--breakpoints`, these classes are generated:
     .u-weight--800\@sm { font-weight: 800 }
     .u-weight--900\@sm { font-weight: 900 }
 }
+```
 
 ## Examples
 
