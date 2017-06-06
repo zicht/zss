@@ -2,6 +2,7 @@
 .u-capitalize { text-transform: capitalize; }
 .u-lower { text-transform: lowercase; }
 .u-upper { text-transform: uppercase; }
+.u-no-transform { text-transform: none; }
 
 
 
@@ -10,5 +11,6 @@
         .u-capitalize\@#{$breakpoint} { text-transform: capitalize; }
         .u-lower\@#{$breakpoint} { text-transform: lowercase; }
         .u-upper\@#{$breakpoint} { text-transform: uppercase; }
+        .u-no-transform\@#{$breakpoint} { text-transform: none; }
     }
 }

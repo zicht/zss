@@ -26,7 +26,7 @@ For each breakpoint in `$zss--breakpoints`, these classes are generated:
 ## Examples
 
 ```html
-<p class="u-capitalize  u-no-transform@lg">Capitalized text on mobile, default text on desktop.</p>
+<p class="u-upper  u-no-transform@lg">Uppercase text on mobile, default text on desktop.</p>
 ```
 
 ## References

@@ -41,7 +41,7 @@ CSS property | ZSS class  | Variable | Docs | Source file
 `right` | `u-right--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `text-align` | `u-text--center` | | | [💻](../src/utilities/_text-align.scss)
 `text-decoration` | `u-underline` | | | [💻](../src/utilities/_text-decoration.scss)
-`text-transform` | `u-upper` | | | [💻](../src/utilities/_text-transform.scss)
+`text-transform` | `u-upper` | | [📜](theming/text-transform.md) | [💻](../src/utilities/_text-transform.scss)
 `top` | `u-top--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `vertical-align` | `u-valign--middle` | | | [💻](../src/utilities/_vertical-align.scss)
 `width` | `u-width--50` | `$zss--width--scale`<br>`$zss--width--percentage-scale` | | [💻](../src/utilities/_width.scss)
