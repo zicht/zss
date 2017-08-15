@@ -1,7 +1,7 @@
 
 .u-strike { text-decoration: line-through; }
 .u-underline { text-decoration: underline; }
-.u-no-underline { text-decoration: none; }
+.u-no-decoration { text-decoration: none; }
 
 
 
@@ -9,6 +9,6 @@
     @include media-from($breakpoint) {
         .u-strike\@#{$breakpoint} { text-decoration: line-through; }
         .u-underline\@#{$breakpoint} { text-decoration: underline; }
-        .u-no-underline\@#{$breakpoint} { text-decoration: none; }
+        .u-no-decoration\@#{$breakpoint} { text-decoration: none; }
     }
 }

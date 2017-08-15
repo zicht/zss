@@ -1,6 +1,6 @@
 # Display
 
-ZSS contains utility classes for setting `display` CSS properties.
+ZSS contains utility classes for setting values for the `display` property.
 
 ## Source files
 
@@ -8,7 +8,7 @@ ZSS contains utility classes for setting `display` CSS properties.
 
 ## Variables
 
-Since the display CSS properties have a fixed set of values, there is no variable to configure.   
+Since `display` has a fixed set of values, there is no variable to configure. 
 
 The display classes come with responsive equivalents. The exact breakpoints are defined in `$zss--breakpoints`.
 

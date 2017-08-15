@@ -59,6 +59,7 @@
         .u-flex--content--center\@#{$breakpoint} { align-content: center; }
         .u-flex--content--base\@#{$breakpoint} { align-content: baseline; }
         .u-flex--content--stretch\@#{$breakpoint} { align-content: stretch; }
+        .u-flex--content--between\@#{$breakpoint} { align-content: space-between; }
 
         .u-flex--self--start\@#{$breakpoint} { align-self: flex-start; }
         .u-flex--self--end\@#{$breakpoint} { align-self: flex-end; }
@@ -71,6 +72,7 @@
         .u-flex--justify--center\@#{$breakpoint} { justify-content: center; }
         .u-flex--justify--base\@#{$breakpoint} { justify-content: baseline; }
         .u-flex--justify--stretch\@#{$breakpoint} { justify-content: stretch; }
+        .u-flex--justify--between\@#{$breakpoint} { justify-content: space-between; }
 
         .u-order--first\@#{$breakpoint} { order: -1; }
         .u-order--1\@#{$breakpoint} { order: 1; }

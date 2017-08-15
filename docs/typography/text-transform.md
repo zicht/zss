@@ -1,4 +1,4 @@
-# Fonts
+# Text transform
 
 ZSS contains utility classes for setting text transformation properties.
 

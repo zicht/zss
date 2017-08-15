@@ -10,7 +10,7 @@ $zss--colors: (
 ) !default;
 /* stylelint-enable color-no-hex */
 
-$zss--color-opacity-scale: 0 0.25 0.5 0.75 1;
+$zss--color-opacity-scale: 0 0.25 0.5 0.75 1 !default;
 
 
 
@@ -86,21 +86,21 @@ $zss--base-line-height: 1.5 !default;
 //
 // Pre-defined width and max-width scales.
 //
-$zss--width--scale: 1rem 2rem 4rem 8rem;
-$zss--width--percentage-scale: 10 20 25 33 50 66 75 100;
-$zss--max-width--scale: 1rem 2rem 4rem 8rem 16rem 32rem;
+$zss--width--scale: 1rem 2rem 4rem 8rem !default;
+$zss--width--percentage-scale: 10 20 25 33 50 66 75 100 !default;
+$zss--max-width--scale: 1rem 2rem 4rem 8rem 16rem 32rem !default;
 
 
 
 //
 // Pre-defined height scales.
 //
-$zss--height--scale: 1rem 2rem 4rem 8rem;
-$zss--height--percentage-scale: 25 50 75 100;
+$zss--height--scale: 1rem 2rem 4rem 8rem !default;
+$zss--height--percentage-scale: 25 50 75 100 !default;
 
 
 
 //
 // Configurable media object.
 //
-$zss--media-margin: 1rem;
+$zss--media-margin: 1rem !default;

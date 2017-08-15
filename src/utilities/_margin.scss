@@ -1,4 +1,6 @@
 
+.u-margin--r-auto { margin-right: auto; }
+.u-margin--l-auto { margin-left: auto; }
 .u-margin--x-auto {
     margin-right: auto;
     margin-left: auto;
@@ -35,6 +37,8 @@
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
+        .u-margin--r-auto\@#{$breakpoint} { margin-right: auto; }
+        .u-margin--l-auto\@#{$breakpoint} { margin-left: auto; }
         .u-margin--x-auto\@#{$breakpoint} {
             margin-right: auto;
             margin-left: auto;
