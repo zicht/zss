@@ -1,8 +1,8 @@
-# Grid
+# Grid object
 
 The ZSS grid object is a way to align your components onto a view in a column structure.
 
-## Referenced files
+## Source files
 
 - [helpers/_grid.scss](../../src/helpers/_grid.scss)
 - [objects/_grid.scss](../../src/objects/_grid.scss)
@@ -19,7 +19,7 @@ The grid container is the wrapper for your entire grid.
 
 - Use the class `o-grid` if you want a fluid grid that spans the entire width of the viewport.
 - Add the modifier `o-grid--fixed` for a grid with a fixed max-width on each breakpoint.
-- Add the modifier `o-grid--flex-content` if you want each column to have `display: flex` applied. With this modifier, the content you add to the columns can be aligned with flexbox.
+- Add the modifier `o-grid--flex-content` if you want each column to have `display: flex` applied. With this modifier, the content of the columns can be aligned with flexbox.
 
 ### Grid rows
 
@@ -38,7 +38,7 @@ Grid columns divide the page into horizontal sections. They work by specifying h
 
 When the grid is not fluid, the grid applies several `max-width` values at certain breakpoints. Override the variables `$zss--grid-max-widths` to modify these values. The default values are:
 
-```
+```sass
 $zss--grid-max-widths: (
     sm: 530px,
     md: 750px,
@@ -57,11 +57,49 @@ The default gutter width between the columns is `2rem`. Override the variable `$
 
 ### Grid type
 
-Grid columns are typically constructed with floats. However, the flexbox model makes building grids easier, especially if you want the columns in a row to have an equal height. One drawback is that the [browser support for flexbox](http://caniuse.com/#search=flexbox) is less favourable, but it's still acceptable, though.
+Grid columns are built with flexbox. However, support for flexbox is missing in ancient browsers. For those who are unfortunate enough
+to have to support these browsers, the grid can be generated with floats instead of flexbox.
 
 You can choose the type of grid you want. The variable `$zss--grid-type` has these possible values:
 
 1. `$zss--grid-type: flex` (default)   
-The grid is generated with flexbox properties. Use this if you work with modern browsers.
+The grid is generated with flexbox properties. 
 2. `$zss--grid-type: float`   
-The grid is generated with floats (the old Bootstrap way). Use this if you need support for older browsers, and don't require columns of equal height.
+The grid is generated with floats. Use this if you need support for older browsers, and don't require columns of equal height.
+
+### Different class names
+
+If you want change the class names involved with the grid, you can call the mixins inside your own custom class. 
+The [grid implementation](../../src/objects/_grid.scss) provides a good starting point to see which mixins are required.
+
+```sass
+.hodor {
+    @include create-grid($zss--grid-gutter, $zss--grid-type);
+}
+```
+
+## Nesting
+
+It's possible to divide a grid column into several other columns. All you have to do is start a new grid row and add your columns.
+
+An example:
+
+```html
+<!-- Start the outer grid -->
+<div class="o-grid">
+    <div class="o-grid__row">
+        <div class="o-grid__col  o-grid__col--12@xs  o-grid__col--6@md">
+
+            <!-- Divide this column into three other columns -->
+            <div class="o-grid__row">
+                <div class="o-grid__col  o-grid__col--12@xs  o-grid__col--4@md"></div>
+                <div class="o-grid__col  o-grid__col--12@xs  o-grid__col--4@md"></div>
+                <div class="o-grid__col  o-grid__col--12@xs  o-grid__col--4@md"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+```
+
+⚠️ Do not nest `o-grid` classes. This leads to wrong calculations of whitespace inside the grid.

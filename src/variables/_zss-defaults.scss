@@ -51,56 +51,38 @@ $zss--breakpoints: (
 
 
 
-//
-// Border colors and width/radii scales.
-//
 $zss--border-colors: $zss--colors !default;
 $zss--border-radius-scale: 0 0.125rem 0.25rem 0.5rem !default;
 $zss--border-width-scale: 0 0.125rem 0.25rem 0.5rem !default;
 
 
 
-//
-// Spacing scale, used to generated margins and paddings.
-//
 $zss--spacing-scale: 0 0.25rem 0.5rem 1rem 2rem 4rem !default;
 
 
 
-//
-// Type scale.
-//
 $zss--type-scale: 6rem 4rem 3rem 2rem 1.5rem 1rem 0.75rem 0.5rem !default;
 $zss--base-font-size: 1rem !default;
 
 
 
-//
-// Line height scale.
-//
 $zss--line-height-scale: 0 1 1.25 1.5 1.75 !default;
 $zss--base-line-height: 1.5 !default;
 
 
 
-//
-// Pre-defined width and max-width scales.
-//
 $zss--width--scale: 1rem 2rem 4rem 8rem !default;
 $zss--width--percentage-scale: 10 20 25 33 50 66 75 100 !default;
 $zss--max-width--scale: 1rem 2rem 4rem 8rem 16rem 32rem !default;
 
 
 
-//
-// Pre-defined height scales.
-//
 $zss--height--scale: 1rem 2rem 4rem 8rem !default;
 $zss--height--percentage-scale: 25 50 75 100 !default;
 
 
 
 //
-// Configurable media object.
+// Margin of the media object.
 //
 $zss--media-margin: 1rem !default;
