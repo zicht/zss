@@ -15,7 +15,7 @@ ZSS is a Sass framework that helps you design and build UI components with sever
   - [Source order](#source-order)
   - [Responsive](#responsive)
 - [How to use](#how-to-use)
-  - [Variables and configuration](#variables-and-configuration)
+  - [Configuration and variables](#configuration-and-variables)
     - [Design scales](#design-scales)
     - [Other variables](#other-variables)
   - [Abstract objects](#abstract-objects)
@@ -156,4 +156,4 @@ Objects are classes that define the structure of a common UI pattern, like the p
 
 Utility classes have a single responsibility. In other words, they affect the value of just one single CSS property. (This
 construct is also known as functional CSS.) The most common CSS properties are available in ZSS and are listed
-in the [property index 📇](property-index.md).
+in the [property index 📇](docs/property-index.md).
