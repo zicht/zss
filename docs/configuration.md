@@ -2,8 +2,8 @@
 
 ZSS generates a bunch of CSS classes. You can control what is generated and customize it to your design needs.
 
-- Most utility classes are based on some sort of scale. It has sane defaults you can use to build an excellent design, but if you can customize the values if needed.
-- There are several component _abstractions_. If you don't want to use them, don't import them in your Sass file.
+- Most utility classes are based on some sort of scale. It has sane defaults you can use to quickly build a prototype, but if you can customize the values if needed.
+- There are several component _abstractions_, like buttons and grids. If you don't want to use them, don't import them in your Sass file.
 
 ## Customizing
 

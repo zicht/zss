@@ -1,6 +1,6 @@
 # Text transform
 
-ZSS contains utility classes for setting text transformation properties.
+ZSS contains utility classes for setting values for the `text-transform` property.
 
 ## Source files
 

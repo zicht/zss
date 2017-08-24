@@ -24,6 +24,7 @@ Below is an example of the classes that are generated.
 .u-valign--middle { vertical-align: middle; }
 .u-valign--top { vertical-align: top; }
 .u-valign--bottom { vertical-align: bottom; }
+.u-valign--baseline { vertical-align: baseline; }
 
 @media (min-width: 550px) {
     .u-valign--sub\@sm { vertical-align: sub; }
@@ -33,15 +34,14 @@ Below is an example of the classes that are generated.
     .u-valign--middle\@sm { vertical-align: middle; }
     .u-valign--top\@sm { vertical-align: top; }
     .u-valign--bottom\@sm { vertical-align: bottom; }
+    .u-valign--baseline\@sm { vertical-align: baseline; }
 }
 ```
 
 ## Examples
 
 ```html
-<div class="u-hidden  u-block@sm">
-    <p>This element is hidden on mobile and visible on bigger screens.</p>
-</div>
+<p class="u-inline-block  u-valign--middel">This element has text that's vertically aligned to the middle.</p>
 ```
 
 ## References

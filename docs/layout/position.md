@@ -1,6 +1,6 @@
 # Position
 
-ZSS contains utility classes for setting `position` and related CSS properties.
+ZSS contains utility classes for setting values for `position` and related properties.
 
 ## Source files
 

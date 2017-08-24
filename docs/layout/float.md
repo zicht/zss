@@ -1,6 +1,6 @@
 # Float
 
-ZSS contains utility classes for setting `float` CSS properties.
+ZSS contains utility classes for setting values for the `float` property.
 
 ## Source files
 

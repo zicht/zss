@@ -1,6 +1,6 @@
 # Height
 
-ZSS contains utility classes for setting a fixed height value.
+ZSS contains utility classes for setting values for the `height` property.
 
 ## Source files
 

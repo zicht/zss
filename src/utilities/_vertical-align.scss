@@ -6,6 +6,7 @@
 .u-valign--middle { vertical-align: middle; }
 .u-valign--top { vertical-align: top; }
 .u-valign--bottom { vertical-align: bottom; }
+.u-valign--baseline { vertical-align: baseline; }
 
 
 
@@ -18,5 +19,6 @@
         .u-valign--middle\@#{$breakpoint} { vertical-align: middle; }
         .u-valign--top\@#{$breakpoint} { vertical-align: top; }
         .u-valign--bottom\@#{$breakpoint} { vertical-align: bottom; }
+        .u-valign--baseline\@#{$breakpoint} { vertical-align: baseline; }
     }
 }
