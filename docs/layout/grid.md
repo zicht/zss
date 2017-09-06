@@ -55,18 +55,6 @@ The default number of columns is 12. If your content requires fewer or more colu
 
 The default gutter width between the columns is `2rem`. Override the variable `$zss--grid-gutter` if you require a different value.
 
-### Grid type
-
-Grid columns are built with flexbox. However, support for flexbox is missing in ancient browsers. For those who are unfortunate enough
-to have to support these browsers, the grid can be generated with floats instead of flexbox.
-
-You can choose the type of grid you want. The variable `$zss--grid-type` has these possible values:
-
-1. `$zss--grid-type: flex` (default)   
-The grid is generated with flexbox properties. 
-2. `$zss--grid-type: float`   
-The grid is generated with floats. Use this if you need support for older browsers, and don't require columns of equal height.
-
 ### Different class names
 
 If you want change the class names involved with the grid, you can call the mixins inside your own custom class. 
@@ -74,7 +62,7 @@ The [grid implementation](../../src/objects/_grid.scss) provides a good starting
 
 ```sass
 .hodor {
-    @include create-grid($zss--grid-gutter, $zss--grid-type);
+    @include create-grid($zss--grid-gutter);
 }
 ```
 

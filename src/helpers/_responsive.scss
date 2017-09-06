@@ -1,25 +1,38 @@
 
-@mixin media-until($breakpoint-name, $breakpoints: $zss--breakpoints) {
-    @media (max-width: map-get($breakpoints, $breakpoint-name)) {
+@mixin media-until($name, $breakpoints: $zss--breakpoints) {
+    @if map-has-key($breakpoints, $name) == false {
+        @error "There is no breakpoint defined by the name `#{$name}`.";
+    }
+    
+    @media (max-width: map-get($breakpoints, $name)) {
         @content;
     }
 }
 
 
 
-@mixin media-between($min-screen-name, $max-screen-name, $breakpoints: $zss--breakpoints) {
-    $min: map-get($breakpoints, $min-screen-name);
-    $max: map-get($breakpoints, $max-screen-name);
+@mixin media-between($min-name, $max-name, $breakpoints: $zss--breakpoints) {
+    @if map-has-key($breakpoints, $min-name) == false {
+        @error "There is no breakpoint defined by the name `#{$min-name}`.";
+    }
 
-    @media (min-width: $min) and (max-width: $max) {
+    @if map-has-key($breakpoints, $max-name) == false {
+        @error "There is no breakpoint defined by the name `#{$max-name}`.";
+    }
+
+    @media (min-width: map-get($breakpoints, $min-name)) and (max-width: map-get($breakpoints, $max-name)) {
         @content;
     }
 }
 
 
 
-@mixin media-from($breakpoint-name, $breakpoints: $zss--breakpoints) {
-    @media (min-width: map-get($breakpoints, $breakpoint-name)) {
+@mixin media-from($name, $breakpoints: $zss--breakpoints) {
+    @if map-has-key($breakpoints, $name) == false {
+        @error "There is no breakpoint defined by the name `#{$name}`.";
+    }
+
+    @media (min-width: map-get($breakpoints, $name)) {
         @content;
     }
 }

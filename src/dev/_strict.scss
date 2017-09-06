@@ -35,7 +35,7 @@
 @if index($zss--spacing-scale, $zss--grid-gutter) == null {
     @error
         "The grid gutter `$zss--grid-gutter` is not part of the spacing scale. \
-        Choose a value from the scale `$zss--spacing-scale`.";
+        Choose a value from `$zss--spacing-scale`.";
 }
 
 
@@ -88,7 +88,7 @@
 @if index($zss--type-scale, $zss--base-font-size) == null {
     @error
         "The base font size `$zss--base-font-size` is not part of the font scale.\
-        Choose a value from the scale `$zss--type-scale`.";
+        Choose a value from `$zss--type-scale`.";
 }
 
 
@@ -120,7 +120,7 @@
 @if index($zss--line-height-scale, $zss--base-line-height) == null {
     @error
         "The base line height `$zss--base-line-height` is not part of the line height scale.\
-        Choose a value from the scale `$zss--line-height-scale`.";
+        Choose a value from `$zss--line-height-scale`.";
 }
 
 
@@ -163,7 +163,7 @@
 //
 @if is-scale-ordered($zss--border-width-scale) == false {
     @error
-        "The border width scale `$zss--border-width-scale` is not sorted in
+        "The border width scale `$zss--border-width-scale` is not sorted in\
         an ascending order.";
 }
 
@@ -176,7 +176,7 @@
     @if map-has-key($zss--colors, $name) == false {
         @warn
             "The border color name `#{$name}` is not part of the color palette `$zss--colors`.\
-            Consider only using exising colors to generate border colors.";
+            Consider only using existing colors to generate border colors.";
     }
 }
 
@@ -189,7 +189,7 @@
     @if index(map-values($zss--colors), $value) == null {
         @warn
             "The border color value `#{$value}` is not part of the color palette `$zss--colors`.\
-            Consider only using exising colors to generate border colors.";
+            Consider only using existing colors to generate border colors.";
     }
 }
 

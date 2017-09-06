@@ -1,31 +1,29 @@
 
 .o-grid {
-    @include create-grid($zss--grid-gutter, $zss--grid-type);
+    @include create-grid($zss--grid-gutter);
 }
 
 .o-grid--fixed {
-    @include create-grid-widths;
+    @include create-grid-widths($zss--grid-max-widths, $zss--breakpoints);
 }
 
 .o-grid--offset {
-    @include create-grid-offset;
+    @include create-grid-offset($zss--grid-columns, $zss--breakpoints);
 }
 
 
 
 .o-grid__row {
-    @include create-grid-row($zss--grid-gutter, $zss--grid-type);
+    @include create-grid-row($zss--grid-gutter);
 }
 
 
 
 .o-grid__col {
-    @include create-grid-column($zss--grid-gutter, $zss--grid-type);
-    @include create-grid-column-sizes($zss--grid-columns, $zss--grid-type);
+    @include create-grid-column($zss--grid-gutter);
+    @include create-grid-column-sizes($zss--grid-columns, $zss--breakpoints);
 
     .o-grid--flex-content & {
-        @if $zss--grid-type == flex {
-            display: flex;
-        }
+        display: flex;
     }
 }

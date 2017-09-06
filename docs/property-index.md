@@ -45,4 +45,4 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `width` | `u-width--50` | `$zss--width--scale`<br>`$zss--width--percentage-scale` | [📜](layout/width.md) | [💻](../src/utilities/_width.scss)
 `z-index` | `u-z--1` | | [📜](layout/z-index.md) | [💻](../src/utilities/_z-index.scss)
 
-- <sup>1</sup> An indication of the name of the class that might be generated. This can be dependent on the configured values.
+<sup>1</sup> An indication of the name of the class that might be generated. This can be dependent on the configured values.

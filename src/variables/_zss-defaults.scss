@@ -16,37 +16,22 @@ $zss--color-opacity-scale: 0 0.25 0.5 0.75 1 !default;
 
 $zss--grid-max-widths: (
     sm: 530px,
-    md: 750px,
+    md: 730px,
     lg: 960px,
-    xl: 1170px
+    xl: 1190px
 ) !default;
 
 $zss--grid-columns: 12 !default;
 $zss--grid-gutter: 2rem !default;
 
-//
-// The method of creating grid columns. Possible options:
-// 1. `flex`: the columns are positioned using flexbox
-// 2. `float`: the columns are positioned with floats, for support of ancient browsers.
-//
-$zss--grid-type: flex !default;
 
 
-
-//
-// Responsive.
-//
-// 1. Smallest screens e.g. phones.
-// 2. Regular mobile screens e.g. iPhones.
-// 3. Medium screens e.g. tablets.
-// 4. Large screens e.g. desktops.
-//
 $zss--breakpoints: (
     xs: 0,
-    sm: 550px, // [1]
-    md: 780px, // [2]
-    lg: 990px, // [3]
-    xl: 1200px, // [4]
+    sm: 550px,
+    md: 760px,
+    lg: 990px,
+    xl: 1200px
 ) !default;
 
 
@@ -82,7 +67,4 @@ $zss--height--percentage-scale: 25 50 75 100 !default;
 
 
 
-//
-// Margin of the media object.
-//
 $zss--media-margin: 1rem !default;

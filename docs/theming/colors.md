@@ -1,7 +1,9 @@
 # Colors
 
-ZSS contains utility classes for setting text and background colors. It does not come with any defined colors except for
-black, white and transparent.
+ZSS contains utility classes for setting text and background colors. Also included are
+classes to change the text and background colors when an element is hovered.
+
+It does not come with any defined colors except for black, white and transparent.
 
 ## Source files
 

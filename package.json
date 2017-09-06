@@ -2,7 +2,7 @@
   "name": "zss",
   "version": "2.0.0",
   "description": "Sass for design systems",
-  "main": "./scss/zss.scss",
+  "main": "./src/zss.scss",
   "devDependencies": {
     "stylelint": "^7.10.1",
     "stylelint-config-zicht": "^0.1.0"

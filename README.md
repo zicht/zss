@@ -1,8 +1,6 @@
-# ZSS
+# 📐 ZSS – Sass for design systems
 
-## 📐 Sass for design systems.
-
-ZSS is a Sass framework that helps you design and build UI components with several design scales.
+ZSS is a Sass framework that helps you build UI components with design scales.
 
 ---
 - [Background](#background)
@@ -106,6 +104,15 @@ All ZSS variables are defined in [variables/_zss-defaults.scss](../src/variables
 @import 'variables/zss-overrides';
 ```
 
+### Development checks
+
+ZSS provides compile time checking of the configuration. Import `dev/strict` if you want to:
+   
+   - Check if the design scales are properly ordered.
+   - Check if there are any so called design smells, like too many font sizes in your scales.
+
+See [the documentation](docs/helpers/strict.md) for more details.
+
 #### Design scales
 
 Variable     | Explanation
@@ -130,18 +137,21 @@ Variable     | Explanation
 `$zss--grid-max-widths` | Sass map containing the max width of the grid on each breakpoint.
 `$zss--grid-columns` | The number of columns a grid row can have.
 `$zss--grid-gutter` | The amount of whitespace between grid column.
-`$zss--grid-type` | Defines if the grid is generated with flexbox or floats.
 `$zss--breakpoints` | Sass map containing breakpoint names and screen sizes.
 `$zss--border-colors` | Sass map containing color definitions for border utility classes.
 `$zss--base-font-size` | Font size that's used a base for `rem` values.
 `$zss--base-line-height` | Base line-height that's applied to the BODY element.
 `$zss--media-margin` | The margin between the image and text of media objects.
 
-## Helpers
+### Helpers
 
 Helpers are mixins, functions, and similar programmatic constructs in Sass that help with code re-use. ZSS provides these helpers:
 
-- [clear](helpers/clear): mixin that contains a clearfix.
+- [color](helpers/color): function for accessing pre-defined colors.
+- [grid](helpers/grid): mixin for generating grid classes.
+- [hover](helpers/hover): mixin for generating flexible hover effects.
+- [responsive](helpers/responsive): mixin for dealing with responsive declarations.
+- [units](helpers/units): functions for dealing with units and values.
 
 ### Abstract objects
 
@@ -156,4 +166,4 @@ Objects are classes that define the structure of a common UI pattern, like the p
 
 Utility classes have a single responsibility. In other words, they affect the value of just one single CSS property. (This
 construct is also known as functional CSS.) The most common CSS properties are available in ZSS and are listed
-in the [property index 📇](docs/property-index.md).
+in the [**property index** 📇](docs/property-index.md).
