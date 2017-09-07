@@ -21,7 +21,7 @@ $zss--colors: (
 ```
 
 - The key is used in the generated class name. 
-- The value can be any color format that's understood by CSS (hexadecimal, RGB, HSL et cetera).
+- The value can be any color format understood by CSS (hexadecimal, RGB, HSL et cetera).
 
 The color classes come with responsive equivalents. The exact breakpoints are defined in `$zss--breakpoints`.
 

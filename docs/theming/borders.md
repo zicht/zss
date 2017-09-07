@@ -18,7 +18,7 @@ $zss--border-colors: $zss--colors !default;
 `$zss--border-colors` uses the same construct as the [color utilities](colors.md). It is a Sass map where:
 
 - The key is used in the generated class name. 
-- The value can be any color format that's understood by CSS (hexadecimal, RGB, HSL et cetera).
+- The value can be any color format understood by CSS (hexadecimal, RGB, HSL et cetera).
 
 ```sass
 $zss--border-radius-scale: 0 0.125rem 0.25rem 0.5rem !default;

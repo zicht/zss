@@ -10,7 +10,7 @@ ZSS provides mixins for using only breakpoints that are defined in the Sass map 
 
 ### `media-until`  
 
-Define CSS that's only applied until the given breakpoint.
+Define CSS that’s only applied until the given breakpoint.
 
 #### Parameters
 
@@ -21,7 +21,7 @@ Define CSS that's only applied until the given breakpoint.
 
 ### `media-between`  
 
-Define CSS that's only applied between the two given breakpoints.
+Define CSS that’s only applied between the two given breakpoints.
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Define CSS that's only applied between the two given breakpoints.
 
 ### `media-from`  
 
-Define CSS that's only applied from a given breakpoint and up.
+Define CSS that’s only applied from a given breakpoint and up.
 
 #### Parameters
 

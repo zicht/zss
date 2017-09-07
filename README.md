@@ -26,12 +26,13 @@ ZSS is a Sass framework that helps you build UI components with design scales.
 
 - Provides a simple base for your typography.
 - Provides abstractions of common UI patterns, so you can focus on the specific design details.
-- Functional CSS: generates immutable and configurable utility classes.
-- Provides a flexible and configurable flexbox grid, with an optional fallback for ancient browsers.
+- Functional CSS: generates immutable, configurable, and responsive utility classes.
+- Provides a flexible and configurable flexbox grid.
+- Provide compile time checking of your configuration for design smells.
 
 ### What it doesn’t do
 
-- No design. If you’re looking for a framework to quickly build a prototype that you can discard later, Bootstrap or a specific prototyping tool is a better choice.
+- No pre-defined colors.
 - Unlike Bootstrap, ZSS does not contain pre-made components or JavaScript.
 
 ### Principles
@@ -139,27 +140,41 @@ Variable     | Explanation
 `$zss--grid-gutter` | The amount of whitespace between grid column.
 `$zss--breakpoints` | Sass map containing breakpoint names and screen sizes.
 `$zss--border-colors` | Sass map containing color definitions for border utility classes.
-`$zss--base-font-size` | Font size that's used a base for `rem` values.
-`$zss--base-line-height` | Base line-height that's applied to the BODY element.
+`$zss--base-font-size` | Font size used a base for `rem` values.
+`$zss--base-line-height` | Base line-height applied to the BODY element.
 `$zss--media-margin` | The margin between the image and text of media objects.
 
 ### Helpers
 
 Helpers are mixins, functions, and similar programmatic constructs in Sass that help with code re-use. ZSS provides these helpers:
 
-- [color](helpers/color): function for accessing pre-defined colors.
-- [grid](helpers/grid): mixin for generating grid classes.
-- [hover](helpers/hover): mixin for generating flexible hover effects.
-- [responsive](helpers/responsive): mixin for dealing with responsive declarations.
-- [units](helpers/units): functions for dealing with units and values.
+- [color](docs/helpers/color): function for accessing pre-defined colors.
+- [grid](docs/helpers/grid): mixin for generating grid classes.
+- [hover](docs/helpers/hover): mixin for generating flexible hover effects.
+- [responsive](docs/helpers/responsive): mixin for dealing with responsive declarations.
+- [units](docs/helpers/units): functions for dealing with units and values.
+
+### Generic
+
+The [generic](src/generic) folder contains CSS applied at a global level:
+
+- [border-box](docs/global/border-box.md)
+- [hard-reset](docs/global/hard-reset.css)
+- [normalize.css](docs/global/normalize.css)
+
+### Base
+
+The [base](src/base) folder contains CSS applied to specific elements:
+
+- [border-box](docs/global/typography.md)
 
 ### Abstract objects
 
 Objects are classes that define the structure of a common UI pattern, like the popular media object. ZSS provides these objects:
 
 - [button](docs/layout/button.md): a gathering of properties most used in buttons.
-- [grid](docs/layout/grid.md): a grid structure to divide the page in rows and columns.
-- [list-reset](docs/layout/list-reset.md): rests ordered and unordered lists.
+- [grid](docs/layout/grid.md): a grid structure to create a layout with rows and columns.
+- [list-reset](docs/layout/list-reset.md): resets ordered and unordered lists.
 - [media](docs/layout/media.md): image next to text.
 
 ### Utility classes

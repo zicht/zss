@@ -9,9 +9,6 @@
  *       So for now, manually copy-paste the contents into a .scss file.
 \* ----------------------------------------------------------------------------- */
 
-// NOTE: disable the scss-linter: no need to check the style of an external lib.
-// scss-lint:disable all
-
 
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -475,6 +472,3 @@ template {
 [hidden] {
     display: none;
 }
-
-// NOTE: re-enable the scss-linter for subsequent files.
-// scss-lint:enable all

@@ -41,7 +41,7 @@ Below is an example of the classes that are generated.
 ## Examples
 
 ```html
-<p class="u-inline-block  u-valign--middel">This element has text that's vertically aligned to the middle.</p>
+<p class="u-inline-block  u-valign--middel">This element has text that’s vertically aligned to the middle.</p>
 ```
 
 ## References
