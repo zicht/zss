@@ -146,7 +146,7 @@ ZSS provides compile time checking of the configuration. Import `dev/strict` if 
    - Check if the design scales are properly ordered.
    - Check if there are any so called design smells, like too many font sizes in your scales.
 
-See [the documentation](docs/helpers/strict.md) for more details.
+See [the documentation](docs/tools/strict.md) for more details.
 
 ### Helpers
 
