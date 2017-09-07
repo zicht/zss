@@ -16,6 +16,10 @@ ZSS is a Sass framework that helps you build UI components with design scales.
   - [Configuration and variables](#configuration-and-variables)
     - [Design scales](#design-scales)
     - [Other variables](#other-variables)
+  - [Development checks](#development-checks)
+  - [Helpers](#helpers)
+  - [Generic](#generic)
+  - [Base](#base)
   - [Abstract objects](#abstract-objects)
   - [Utility classes](#utility-classes)
 ---
@@ -105,15 +109,6 @@ All ZSS variables are defined in [variables/_zss-defaults.scss](../src/variables
 @import 'variables/zss-overrides';
 ```
 
-### Development checks
-
-ZSS provides compile time checking of the configuration. Import `dev/strict` if you want to:
-   
-   - Check if the design scales are properly ordered.
-   - Check if there are any so called design smells, like too many font sizes in your scales.
-
-See [the documentation](docs/helpers/strict.md) for more details.
-
 #### Design scales
 
 Variable     | Explanation
@@ -143,6 +138,15 @@ Variable     | Explanation
 `$zss--base-font-size` | Font size used a base for `rem` values.
 `$zss--base-line-height` | Base line-height applied to the BODY element.
 `$zss--media-margin` | The margin between the image and text of media objects.
+
+### Development checks
+
+ZSS provides compile time checking of the configuration. Import `dev/strict` if you want to:
+   
+   - Check if the design scales are properly ordered.
+   - Check if there are any so called design smells, like too many font sizes in your scales.
+
+See [the documentation](docs/helpers/strict.md) for more details.
 
 ### Helpers
 
