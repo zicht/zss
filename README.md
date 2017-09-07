@@ -102,7 +102,7 @@ ZSS uses an `@breakpoint` suffix to indicate if a class only works on a certain 
 
 ### Configuration and variables
 
-All ZSS variables are defined in [variables/_zss-defaults.scss](../src/variables/_zss-defaults.scss). Override them at will in your project.
+All ZSS variables are defined in [variables/_zss-defaults.scss](src/variables/_zss-defaults.scss). Override them at will in your project.
 
 ```sass
 @import '../node_modules/zss/src/variables/zss-defaults';
@@ -152,19 +152,19 @@ See [the documentation](docs/tools/strict.md) for more details.
 
 Helpers are mixins, functions, and similar programmatic constructs in Sass that help with code re-use. ZSS provides these helpers:
 
-- [color](docs/helpers/color): function for accessing pre-defined colors.
-- [grid](docs/helpers/grid): mixin for generating grid classes.
-- [hover](docs/helpers/hover): mixin for generating flexible hover effects.
-- [responsive](docs/helpers/responsive): mixin for dealing with responsive declarations.
-- [units](docs/helpers/units): functions for dealing with units and values.
+- [color](docs/tools/color.md): function for accessing pre-defined colors.
+- [grid](docs/tools/grid.md): mixin for generating grid classes.
+- [hover](docs/tools/hover.md): mixin for generating flexible hover effects.
+- [responsive](docs/tools/responsive.md): mixin for dealing with responsive declarations.
+- [units](docs/tools/units.md): functions for dealing with units and values.
 
 ### Generic
 
 The [generic](src/generic) folder contains CSS applied at a global level:
 
 - [border-box](docs/global/border-box.md)
-- [hard-reset](docs/global/hard-reset.css)
-- [normalize.css](docs/global/normalize.css)
+- [hard-reset](docs/global/hard-reset.md)
+- [normalize.css](docs/global/normalize.css.md)
 
 ### Base
 
