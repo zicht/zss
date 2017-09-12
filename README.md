@@ -1,6 +1,6 @@
 # 📐 ZSS – Sass for design systems
 
-ZSS is a Sass framework that helps you build UI components with design scales.
+ZSS is a Sass framework that helps you build design systems with configurable design scales.
 
 ---
 - [Background](#background)
