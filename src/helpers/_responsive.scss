@@ -3,7 +3,7 @@
     @if map-has-key($breakpoints, $name) == false {
         @error "There is no breakpoint defined by the name `#{$name}`.";
     }
-    
+
     @media (max-width: map-get($breakpoints, $name)) {
         @content;
     }
@@ -20,7 +20,10 @@
         @error "There is no breakpoint defined by the name `#{$max-name}`.";
     }
 
-    @media (min-width: map-get($breakpoints, $min-name)) and (max-width: map-get($breakpoints, $max-name)) {
+    $min: map-get($breakpoints, $min-name);
+    $max: map-get($breakpoints, $max-name);
+
+    @media (min-width: $min) and (max-width: $max) {
         @content;
     }
 }
