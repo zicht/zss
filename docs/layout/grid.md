@@ -57,7 +57,7 @@ The default gutter width between the columns is `2rem`. Override the variable `$
 
 ### Different class names
 
-If you want change the class names involved with the grid, you can call the mixins inside your own custom class. 
+If you want to change the class names involved with the grid, you can call the mixins inside your own custom class. 
 The [grid implementation](../../src/objects/_grid.scss) provides a good starting point to see which mixins are required.
 
 ```sass
