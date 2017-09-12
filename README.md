@@ -170,7 +170,7 @@ The [generic](src/generic) folder contains CSS applied at a global level:
 
 The [base](src/base) folder contains CSS applied to specific elements:
 
-- [border-box](docs/global/typography.md)
+- [typography](docs/global/typography.md)
 
 ### Abstract objects
 
