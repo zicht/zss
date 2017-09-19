@@ -3,6 +3,7 @@
 .u-fixed { position: fixed; }
 .u-relative { position: relative; }
 .u-static { position: static; }
+.u-sticky { position: sticky; }
 
 .u-top--0 { top: 0; }
 .u-right--0 { right: 0; }
@@ -17,6 +18,7 @@
         .u-fixed\@#{$breakpoint} { position: fixed; }
         .u-relative\@#{$breakpoint} { position: relative; }
         .u-static\@#{$breakpoint} { position: static; }
+        .u-sticky\@#{$breakpoint} { position: sticky; }
 
         .u-top--0\@#{$breakpoint} { top: 0; }
         .u-right--0\@#{$breakpoint} { right: 0; }

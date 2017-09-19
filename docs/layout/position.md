@@ -23,6 +23,7 @@ Below is an example of the position classes that are generated.
 .u-fixed { position: fixed; }
 .u-relative { position: relative; }
 .u-static { position: static; }
+.u-sticky { position: sticky; }
 
 .u-top--0 { top: 0; }
 .u-right--0 { right: 0; }
@@ -34,6 +35,7 @@ Below is an example of the position classes that are generated.
     .u-fixed\@sm { position: fixed; }
     .u-relative\@sm { position: relative; }
     .u-static\@sm { position: static; }
+    .u-sticky\@sm { position: sticky; }
 
     .u-top--0\@sm { top: 0; }
     .u-right--0\@sm { right: 0; }
