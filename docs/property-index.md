@@ -42,6 +42,7 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `right` | `u-right--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `text-align` | `u-text--center` | | [📜](typography/text-align.md) | [💻](../src/utilities/_text-align.scss)
 `text-decoration` | `u-underline` | | [📜](typography/text-decoration.md) | [💻](../src/utilities/_text-decoration.scss)
+`text-decoration-skip` | `u-skip--ink` | | [📜](typography/text-decoration-skip.md) | [💻](../src/utilities/_text-decoration-skip.scss)
 `text-transform` | `u-upper` | | [📜](typography/text-transform.md) | [💻](../src/utilities/_text-transform.scss)
 `top` | `u-top--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `vertical-align` | `u-valign--middle` | | [📜](layout/vertical-align.md) | [💻](../src/utilities/_vertical-align.scss)
