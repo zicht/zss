@@ -1,0 +1,16 @@
+
+.u-bg--repeat { background-repeat: repeat; }
+.u-bg--repeat-x { background-repeat: repeat-x; }
+.u-bg--repeat-y { background-repeat: repeat-y; }
+.u-bg--no-repeat { background-repeat: no-repeat; }
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-bg--repeat\@#{$breakpoint} { background-repeat: repeat; }
+        .u-bg--repeat-x\@#{$breakpoint} { background-repeat: repeat-x; }
+        .u-bg--repeat-y\@#{$breakpoint} { background-repeat: repeat-y; }
+        .u-bg--no-repeat\@#{$breakpoint} \@#{$breakpoint}{ background-repeat: no-repeat; }
+    }
+}
