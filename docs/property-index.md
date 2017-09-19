@@ -8,6 +8,8 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `align-items` | `u-flex--items--start` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
 `align-self` | `u-flex--self--start` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
 `background-color` | `u-bg--black` | `$zss--colors` | [📜](theming/colors.md) | [💻](../src/utilities/_background-color.scss)
+`background-position` | `u-bg--center` | | [📜](theming/backgrounds.md) | [💻](../src/utilities/_background-position.scss)
+`background-repeat` | `u-bg--no-repeat` | | [📜](theming/backgrounds.md) | [💻](../src/utilities/_background-repeat.scss)
 `background-size` | `u-bg--cover` | | [📜](theming/backgrounds.md) | [💻](../src/utilities/_background-size.scss)
 `border-color` | `u-bc--black` | `$zss--border-colors` | [📜](theming/borders.md) | [💻](../src/utilities/_border-color.scss)
 `border-radius` | `u-br--1` | `$zss--border-radius-scale` | [📜](theming/borders.md)  | [💻](../src/utilities/_border-radius.scss)

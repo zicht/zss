@@ -1,0 +1,18 @@
+
+.u-bg--top { background-position: top; }
+.u-bg--right { background-position: right; }
+.u-bg--bottom { background-position: bottom; }
+.u-bg--left { background-position: left; }
+.u-bg--center { background-position: center; }
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-bg--top\@#{$breakpoint} { background-position: top; }
+        .u-bg--right\@#{$breakpoint} { background-position: right; }
+        .u-bg--bottom\@#{$breakpoint} { background-position: bottom; }
+        .u-bg--left\@#{$breakpoint} { background-position: left; }
+        .u-bg--center\@#{$breakpoint} { background-position: center; }
+    }
+}
