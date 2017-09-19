@@ -73,19 +73,31 @@ For each value in `$zss--spacing-scale` and each breakpoint  in `$zss--breakpoin
 Furthermore, there are a couple of classes with fixed values. They can be used for centering or positioning elements inside a flex container.
 
 ```css
+.u-margin--t-auto { margin-top: auto; }
 .u-margin--r-auto { margin-right: auto; }
+.u-margin--b-auto { margin-bottom: auto; }
 .u-margin--l-auto { margin-left: auto; }
 .u-margin--x-auto {
     margin-right: auto;
     margin-left: auto;
 }
+.u-margin--y-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 @media (min-width: 550px) {
+    .u-margin--t-auto\@sm { margin-top: auto; }
     .u-margin--r-auto\@sm { margin-right: auto; }
+    .u-margin--b-auto\@sm { margin-bottom: auto; }
     .u-margin--l-auto\@sm { margin-left: auto; }
     .u-margin--x-auto\@sm {
         margin-right: auto;
         margin-left: auto;
+    }
+    .u-margin--y-auto\@sm {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 ```

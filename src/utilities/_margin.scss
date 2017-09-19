@@ -1,10 +1,17 @@
 
+.u-margin--t-auto { margin-top: auto; }
 .u-margin--r-auto { margin-right: auto; }
+.u-margin--b-auto { margin-bottom: auto; }
 .u-margin--l-auto { margin-left: auto; }
 
 .u-margin--x-auto {
     margin-right: auto;
     margin-left: auto;
+}
+
+.u-margin--y-auto {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 @for $i from 1 through length($zss--spacing-scale) {
@@ -38,12 +45,19 @@
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
+        .u-margin--t-auto\@#{$breakpoint} { margin-top: auto; }
         .u-margin--r-auto\@#{$breakpoint} { margin-right: auto; }
         .u-margin--l-auto\@#{$breakpoint} { margin-left: auto; }
+        .u-margin--b-auto\@#{$breakpoint} { margin-bottom: auto; }
 
         .u-margin--x-auto\@#{$breakpoint} {
             margin-right: auto;
             margin-left: auto;
+        }
+
+        .u-margin--y-auto\@#{$breakpoint} {
+            margin-top: auto;
+            margin-bottom: auto;
         }
 
         @for $i from 1 through length($zss--spacing-scale) {
