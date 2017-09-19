@@ -1,0 +1,16 @@
+
+.u-fit--fill { object-fit: fill; }
+.u-fit--contain { object-fit: contain; }
+.u-fit--cover { object-fit: cover; }
+.u-no-fit { object-fit: none; }
+
+
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-fit--fill\@#{$breakpoint} { object-fit: fill; }
+        .u-fit--contain\@#{$breakpoint} { object-fit: contain; }
+        .u-fit--cover\@#{$breakpoint} { object-fit: cover; }
+        .u-no-fit\@#{$breakpoint} { object-fit: none; }
+    }
+}

@@ -31,6 +31,7 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `margin` | `u-margin--1` | `$zss--spacing-scale` | [📜](layout/margin.md) | [💻](../src/utilities/_margin.scss)
 `max-width` | `u-width--mx1` | `$zss--max-width--scale` | [📜](layout/max-width.md) | [💻](../src/utilities/_max-width.scss)
 `min-height` | `u-height--m100` | | [📜](layout/min-height.md) | [💻](../src/utilities/_min-height.scss)
+`object-fit` | `u-fit--cover` | | [📜](theming/object-fit.md) | [💻](../src/utilities/_object-fit.scss)
 `opacity` | `u-opacity--100` | `$zss--color-opacity-scale` | [📜](theming/opacity.md) | [💻](../src/utilities/_opacity.scss)
 `overflow` | `u-of--auto` | | [📜](layout/overflow.md) | [💻](../src/utilities/_overflow.scss)
 `order` | `u-order--1` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
