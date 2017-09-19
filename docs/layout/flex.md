@@ -47,6 +47,10 @@ Below is an example of the classes that are generated.
 .u-flex--justify--base { justify-content: baseline; }
 .u-flex--justify--stretch { justify-content: stretch; }
 
+.u-flex--wrap { flex-wrap: wrap; }
+.u-flex--wrap-reverse { flex-wrap: wrap-reverse; }
+.u-no-flex-wrap { flex-wrap: nowrap; }
+
 .u-order--first { order: -1; }
 .u-order--1 { order: 1; }
 .u-order--2 { order: 2; }
@@ -85,6 +89,10 @@ Below is an example of the classes that are generated.
     .u-flex--justify--base\@sm { justify-content: baseline; }
     .u-flex--justify--stretch\@sm { justify-content: stretch; }
 
+    .u-flex--wrap\@sm { flex-wrap: wrap; }
+    .u-flex--wrap-reverse\@sm { flex-wrap: wrap-reverse; }
+    .u-no-flex-wrap\@sm { flex-wrap: nowrap; }
+
     .u-order--first\@sm { order: -1; }
     .u-order--1\@sm { order: 1; }
     .u-order--2\@sm { order: 2; }
@@ -117,4 +125,5 @@ Below is an example of the classes that are generated.
 - [MDN: flex](https://developer.mozilla.org/en/docs/Web/CSS/flex)
 - [MDN: flex-direction](https://developer.mozilla.org/en/docs/Web/CSS/flex-direction)
 - [MDN: justify-content](https://developer.mozilla.org/en/docs/Web/CSS/justify-content)
+- [MDN: flex-wrap](https://developer.mozilla.org/en/docs/Web/CSS/flex-wrap)
 - [MDN: order](https://developer.mozilla.org/en/docs/Web/CSS/order)
