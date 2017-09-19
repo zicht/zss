@@ -1,2 +1,8 @@
 
 .u-small-caps { font-variant: small-caps; }
+
+@each $breakpoint, $size in $zss--breakpoints {
+    @include media-from($breakpoint) {
+        .u-small-caps\@#{$breakpoint} { font-variant: small-caps; }
+    }
+}
