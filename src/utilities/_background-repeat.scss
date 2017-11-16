@@ -11,6 +11,6 @@
         .u-bg--repeat\@#{$breakpoint} { background-repeat: repeat; }
         .u-bg--repeat-x\@#{$breakpoint} { background-repeat: repeat-x; }
         .u-bg--repeat-y\@#{$breakpoint} { background-repeat: repeat-y; }
-        .u-bg--no-repeat\@#{$breakpoint} \@#{$breakpoint}{ background-repeat: no-repeat; }
+        .u-bg--no-repeat\@#{$breakpoint} { background-repeat: no-repeat; }
     }
 }
