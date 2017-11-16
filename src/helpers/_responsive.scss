@@ -1,7 +1,9 @@
 
 @mixin media-until($name, $breakpoints: $zss--breakpoints) {
     @if map-has-key($breakpoints, $name) == false {
-        @error "There is no breakpoint defined by the name `#{$name}`.";
+        @error
+            "There is no breakpoint defined by the name `#{$name}`.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/no-breakpoint.md";
     }
 
     @media (max-width: map-get($breakpoints, $name)) {
@@ -13,11 +15,15 @@
 
 @mixin media-between($min-name, $max-name, $breakpoints: $zss--breakpoints) {
     @if map-has-key($breakpoints, $min-name) == false {
-        @error "There is no breakpoint defined by the name `#{$min-name}`.";
+        @error
+            "There is no breakpoint defined by the name `#{$min-name}`.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/no-breakpoint.md";
     }
 
     @if map-has-key($breakpoints, $max-name) == false {
-        @error "There is no breakpoint defined by the name `#{$max-name}`.";
+        @error
+            "There is no breakpoint defined by the name `#{$max-name}`.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/no-breakpoint.md";
     }
 
     $min: map-get($breakpoints, $min-name);
@@ -32,7 +38,9 @@
 
 @mixin media-from($name, $breakpoints: $zss--breakpoints) {
     @if map-has-key($breakpoints, $name) == false {
-        @error "There is no breakpoint defined by the name `#{$name}`.";
+        @error
+            "There is no breakpoint defined by the name `#{$name}`.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/no-breakpoint.md";
     }
 
     @media (min-width: map-get($breakpoints, $name)) {

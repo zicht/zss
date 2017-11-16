@@ -1,7 +1,9 @@
 
 @function get-color($name) {
     @if map-has-key($zss--colors, $name) == false {
-        @error "There is no color named `#{$name}` in `$zss--colors`.";
+        @error
+            "There is no color named `#{$name}` in `$zss--colors`.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/no-color.md";
     }
 
     @return map-get($zss--colors, $name);
