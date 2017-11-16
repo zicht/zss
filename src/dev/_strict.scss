@@ -34,8 +34,8 @@
 //
 @if index($zss--spacing-scale, $zss--grid-gutter) == null {
     @error
-        "The grid gutter `$zss--grid-gutter` is not part of the spacing scale. \
-        Choose a value from `$zss--spacing-scale`.";
+        "The value of `$zss--grid-gutter` is not part of `$zss--spacing-scale`.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
 }
 
 
@@ -45,8 +45,9 @@
 //
 @if length($zss--spacing-scale) > 8 {
     @warn
-        "The spacing scale `$zss--spacing-scale` contains more than 8 values.\
-        This is a design smell that should probably be fixed.";
+        "`$zss--spacing-scale` contains more than 8 values.\
+        This is a design smell that should probably be fixed.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/too-many-values.md";
 }
 
 
@@ -56,7 +57,8 @@
 //
 @if is-scale-ordered($zss--spacing-scale) == false {
     @error
-        "The spacing scale `$zss--spacing-scale` is not sorted in an ascending order.";
+        "`$zss--spacing-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -66,8 +68,9 @@
 //
 @if length($zss--type-scale) > 8 {
     @warn
-        "The font scale `$zss--type-scale` contains more than 8 values.\
-        This is a design smell that should probably be fixed.";
+        "`$zss--type-scale` contains more than 8 values.\
+        This is a design smell that should probably be fixed.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/too-many-values.md";
 }
 
 
@@ -77,7 +80,8 @@
 //
 @if is-scale-ordered($zss--type-scale, $order: desc) == false {
     @error
-        "`$zss--type-scale` is not sorted in a descending order.";
+        "`$zss--type-scale` is not sorted in a descending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -87,8 +91,8 @@
 //
 @if index($zss--type-scale, $zss--base-font-size) == null {
     @error
-        "The base font size `$zss--base-font-size` is not part of the font scale.\
-        Choose a value from `$zss--type-scale`.";
+        "`$zss--base-font-size` is not part of the type scale.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-type-scale.md";
 }
 
 
@@ -98,8 +102,9 @@
 //
 @if length($zss--line-height-scale) > 5 {
     @warn
-        "The line height scale `$zss--line-height-scale` contains more than 5 values.\
-        This is a design smell that should probably be fixed.";
+        "`$zss--line-height-scale` contains more than 5 values.\
+        This is a design smell that should probably be fixed.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/too-many-values.md";
 }
 
 
@@ -109,7 +114,8 @@
 //
 @if is-scale-ordered($zss--line-height-scale) == false {
     @error
-        "The line height scale `$zss--line-height-scale` is not sorted in an ascending order.";
+        "`$zss--line-height-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -119,8 +125,8 @@
 //
 @if index($zss--line-height-scale, $zss--base-line-height) == null {
     @error
-        "The base line height `$zss--base-line-height` is not part of the line height scale.\
-        Choose a value from `$zss--line-height-scale`.";
+        "`$zss--base-line-height` is not part of the line height scale.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-line-height-scale.md";
 }
 
 
@@ -130,8 +136,9 @@
 //
 @if length($zss--border-radius-scale) > 5 {
     @warn
-        "The spacing scale `$zss--border-radius-scale` contains more than 5 values.\
-        This is a design smell that should probably be fixed.";
+        "$zss--border-radius-scale` contains more than 5 values.\
+        This is a design smell that should probably be fixed.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/too-many-values.md";
 }
 
 
@@ -141,8 +148,8 @@
 //
 @if is-scale-ordered($zss--border-radius-scale) == false {
     @error
-        "The border radius scale `$zss--border-radius-scale` is not sorted\
-        in an ascending order.";
+        "`$zss--border-radius-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -152,8 +159,9 @@
 //
 @if length($zss--border-width-scale) > 5 {
     @warn
-        "The spacing scale `$zss--border-width-scale` contains more than 5 values.\
-        This is a design smell that should probably be fixed.";
+        "`$zss--border-width-scale` contains more than 5 values.\
+        This is a design smell that should probably be fixed.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/too-many-values.md";
 }
 
 
@@ -163,8 +171,8 @@
 //
 @if is-scale-ordered($zss--border-width-scale) == false {
     @error
-        "The border width scale `$zss--border-width-scale` is not sorted in\
-        an ascending order.";
+        "`$zss--border-width-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -176,7 +184,8 @@
     @if map-has-key($zss--colors, $name) == false {
         @warn
             "The border color name `#{$name}` is not part of the color palette `$zss--colors`.\
-            Consider only using existing colors to generate border colors.";
+            Consider only using existing colors to generate border colors.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/borders-not-in-palette.md";
     }
 }
 
@@ -189,7 +198,8 @@
     @if index(map-values($zss--colors), $value) == null {
         @warn
             "The border color value `#{$value}` is not part of the color palette `$zss--colors`.\
-            Consider only using existing colors to generate border colors.";
+            Consider only using existing colors to generate border colors.\
+            More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/borders-not-in-palette.md";
     }
 }
 
@@ -200,8 +210,8 @@
 //
 @if index($zss--spacing-scale, $zss--media-margin) == null {
     @error
-        "The media object's margin `$zss--media-margin` is not part of the spacing scale.\
-        Choose a value from the scale `$zss--spacing-scale`.";
+        "`$zss--media-margin` is not part of the spacing scale.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
 }
 
 
@@ -211,7 +221,8 @@
 //
 @if is-scale-ordered($zss--width--scale) == false {
     @error
-        "The width scale `$zss--width--scale` is not sorted in an ascending order.";
+        "`$zss--width--scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -221,7 +232,8 @@
 //
 @if is-scale-ordered($zss--width--percentage-scale) == false {
     @error
-        "The width scale `$zss--width--percentage-scale` is not sorted in an ascending order.";
+        "`$zss--width--percentage-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -231,7 +243,8 @@
 //
 @if is-scale-ordered($zss--max-width--scale) == false {
     @error
-        "The width scale `$zss--max-width--scale` is not sorted in an ascending order.";
+        "`$zss--max-width--scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -241,7 +254,8 @@
 //
 @if is-scale-ordered($zss--height--scale) == false {
     @error
-        "The height scale `$zss--height--scale` is not sorted in an ascending order.";
+        "`$zss--height--scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
 
 
@@ -251,6 +265,6 @@
 //
 @if is-scale-ordered($zss--height--percentage-scale) == false {
     @error
-        "The height scale `$zss--height--percentage-scale` is not sorted in\
-        an ascending order.";
+        "`$zss--height--percentage-scale` is not sorted in an ascending order.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-sorted-correctly.md";
 }
