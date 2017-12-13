@@ -74,8 +74,8 @@ After that, import the files you need into your Sass stylesheet.
 
 ZSS uses namespaces, similar to the system [CSS Wizardry](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) wrote about.
 
-- `o-` suffix for abstract objects.
-- `u-` suffix for utility classes.
+- `o-` prefix for abstract objects.
+- `u-` prefix for utility classes.
 
 ### Source order
 
