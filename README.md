@@ -22,6 +22,8 @@ ZSS is a Sass framework that helps you build design systems with configurable de
   - [Base](#base)
   - [Abstract objects](#abstract-objects)
   - [Utility classes](#utility-classes)
+- [Add-ons and tools](#add-ons-and-tools)
+  - [Third party](#third-party)
 ---
 
 ## Background
@@ -186,3 +188,12 @@ Objects are classes that define the structure of a common UI pattern, like the p
 Utility classes have a single responsibility. In other words, they affect the value of just one single CSS property. (This
 construct is also known as functional CSS.) The most common CSS properties are available in ZSS and are listed
 in the [**property index** 📇](docs/property-index.md).
+
+## Add-ons and tools
+
+These tools and add-ons make working with ZSS even easier.
+
+### Third party
+
+- [**color-name**](https://github.com/joppe/color-name)   
+CLI that parses the output of http://www.color-blindness.com/color-name-hue/ for easy converting of a hexadecimal color value to a name that can be used in ZSS to generate class names (e.g. `u-yellow--tangerine`).
