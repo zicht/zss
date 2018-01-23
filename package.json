@@ -4,6 +4,7 @@
   "description": "Sass for design systems",
   "main": "./src/zss.scss",
   "devDependencies": {
+    "node-sass": "^4.7.2",
     "stylelint": "^7.10.1",
     "stylelint-config-zicht": "^0.1.0"
   },
@@ -11,7 +12,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint-css": "./node_modules/.bin/stylelint 'src/**/*.scss' --verbose"
+    "lint-css": "./node_modules/.bin/stylelint 'src/**/*.scss' --verbose",
+    "build": "node-sass src/zss.scss build/zss.css"
   },
   "repository": {
     "type": "git",

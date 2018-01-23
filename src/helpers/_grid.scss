@@ -2,11 +2,14 @@
 
 
 
-@mixin create-grid($gutter) {
+@mixin create-grid($grid-right-gap, $grid-left-gap, $column-gap, $row-gap) {
+    display: grid;
+    grid-column-gap: $column-gap;
+    grid-row-gap: $row-gap;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
+    padding-right: $grid-right-gap;
+    padding-left: $grid-left-gap;
 }
 
 
@@ -17,24 +20,6 @@
             max-width: map-get($max-widths, $breakpoint-name);
         }
     }
-}
-
-
-
-@mixin create-grid-row($gutter) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: $gutter / -2;
-    margin-left: $gutter / -2;
-}
-
-
-
-@mixin create-grid-column($gutter) {
-    position: relative;
-    min-height: 1px;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
 }
 
 

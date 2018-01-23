@@ -1,6 +1,6 @@
 
 .o-grid {
-    @include create-grid($zss--grid-gutter);
+    @include create-grid($zss--grid-right-gap, $zss--grid-left-gap, $zss--grid-column-gap, $zss--grid-row-gap);
 }
 
 .o-grid--fixed {
@@ -13,17 +13,6 @@
 
 
 
-.o-grid__row {
-    @include create-grid-row($zss--grid-gutter);
-}
-
-
-
 .o-grid__col {
-    @include create-grid-column($zss--grid-gutter);
     @include create-grid-column-sizes($zss--grid-columns, $zss--breakpoints);
-
-    .o-grid--flex-content & {
-        display: flex;
-    }
 }

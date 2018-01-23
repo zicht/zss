@@ -30,11 +30,44 @@
 
 
 //
-// Check if the grid gutter value is part of the spacing scale.
+// Check if the grid right gap is part of the spacing scale.
 //
-@if index($zss--spacing-scale, $zss--grid-gutter) == null {
+@if index($zss--spacing-scale, $zss--grid-right-gap) == null {
     @error
-        "The value of `$zss--grid-gutter` is not part of `$zss--spacing-scale`.\
+        "The value of `$zss--grid-right-gap` is not part of `$zss--spacing-scale`.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
+}
+
+
+
+//
+// Check if the grid left gap is part of the spacing scale.
+//
+@if index($zss--spacing-scale, $zss--grid-left-gap) == null {
+    @error
+            "The value of `$zss--grid-left-gap` is not part of `$zss--spacing-scale`.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
+}
+
+
+
+//
+// Check if the grid column gap is part of the spacing scale.
+//
+@if index($zss--spacing-scale, $zss--grid-column-gap) == null {
+    @error
+            "The value of `$zss--grid-column-gap` is not part of `$zss--spacing-scale`.\
+        More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
+}
+
+
+
+//
+// Check if the grid row gap is part of the spacing scale.
+//
+@if index($zss--spacing-scale, $zss--grid-row-gap) == null {
+    @error
+            "The value of `$zss--grid-row-gap` is not part of `$zss--spacing-scale`.\
         More details: https://github.com/zicht/zss/blob/release/2.1.x/errors/not-part-of-spacing-scale.md";
 }
 

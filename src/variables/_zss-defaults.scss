@@ -22,7 +22,10 @@ $zss--grid-max-widths: (
 ) !default;
 
 $zss--grid-columns: 12 !default;
-$zss--grid-gutter: 2rem !default;
+$zss--grid-right-gap: 1rem;
+$zss--grid-left-gap: $zss--grid-right-gap;
+$zss--grid-column-gap: 1rem;
+$zss--grid-row-gap: $zss--grid-column-gap;
 
 
 
