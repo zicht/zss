@@ -18,6 +18,7 @@ Below is an example of the generated z-index classes.
 
 ```sass
 .u-z--bottom { z-index: -1; }
+.u-z--0 { z-index: 0; }
 .u-z--1 { z-index: 1; }
 .u-z--2 { z-index: 2; }
 .u-z--3 { z-index: 3; }
@@ -26,6 +27,7 @@ Below is an example of the generated z-index classes.
 
 @media (min-width: 550px) {
     .u-z--bottom\@sm { z-index: -1; }
+    .u-z--0\@sm { z-index: 0; }
     .u-z--1\@sm { z-index: 1; }
     .u-z--2\@sm { z-index: 2; }
     .u-z--3\@sm { z-index: 3; }
