@@ -46,13 +46,24 @@
 //    NOTE: if we remove the max-width, the 'columns' in separate rows don't have the same width.
 //
 @mixin create-grid-column-sizes($column-count, $breakpoints) {
-    @each $breakpoint-name, $breakpoint-size in $breakpoints {
-        @include media-from($breakpoint-name, $breakpoints) {
-            @for $index from 1 through $column-count {
-                @at-root {
-                    #{&}--#{$index}\@#{$breakpoint-name} {
-                        flex: 0 0 percentage($index / $column-count);
-                        max-width: percentage($index / $column-count); // [1]
+    @if length($breakpoints) == 0 {
+        @for $index from 1 through $column-count {
+            @at-root {
+                #{&}--#{$index} {
+                    flex: 0 0 percentage($index / $column-count);
+                    max-width: percentage($index / $column-count); // [1]
+                }
+            }
+        }
+    } @else {
+        @each $breakpoint-name, $breakpoint-size in $breakpoints {
+            @include media-from($breakpoint-name, $breakpoints) {
+                @for $index from 1 through $column-count {
+                    @at-root {
+                        #{&}--#{$index}\@#{$breakpoint-name} {
+                            flex: 0 0 percentage($index / $column-count);
+                            max-width: percentage($index / $column-count); // [1]
+                        }
                     }
                 }
             }
@@ -63,13 +74,23 @@
 
 
 @mixin create-grid-offset($column-count, $breakpoints) {
-    @each $breakpoint, $size in $breakpoints {
-        @include media-from($breakpoint, $breakpoints) {
-            @for $index from 0 through $column-count - 1 {
-                @at-root {
-                    @if $size > 0 or $index > 0 {
-                        #{&}--#{$index}\@#{$breakpoint} {
-                            margin-left: percentage($index / $column-count);
+    @if length($breakpoints) == 0 {
+        @for $index from 0 through $column-count - 1 {
+            @at-root {
+                #{&}--#{$index} {
+                    margin-left: percentage($index / $column-count);
+                }
+            }
+        }
+    } @else {
+        @each $breakpoint, $size in $breakpoints {
+            @include media-from($breakpoint, $breakpoints) {
+                @for $index from 0 through $column-count - 1 {
+                    @at-root {
+                        @if $size > 0 or $index > 0 {
+                            #{&}--#{$index}\@#{$breakpoint} {
+                                margin-left: percentage($index / $column-count);
+                            }
                         }
                     }
                 }
