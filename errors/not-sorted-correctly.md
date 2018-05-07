@@ -1,12 +1,11 @@
-# Too many values
+# Not sorted correctly
 
 #### Why this error occurred
 
-Design scales should be limited in length, otherwise there is no point in using them.
-The error occures because a design scale variable is configured with too many values.
+The values of a design scale variable are not sorted properly. Design scales only make sense if
+they're sorted, otherwise the predictability of generated classes is lost.
 
 #### Possible ways to fix it
 
-The error message contains the name of the violating variable and the correct length, 
-so find the variable and remove as many values as is required. Find the violating
-design scale and shuffle the values around until they're sorted correctly.
+The error messages prescribes how the scale should be sorted, either descendingly or
+ascendingly.
