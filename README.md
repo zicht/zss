@@ -68,6 +68,13 @@ After that, import the files you need into your Sass stylesheet.
 @import "../node_modules/zss/src/utilities/background-color";
 ``` 
 
+ℹ️ Please note that some utility classes make use of the responsive helper mixins. To make sure ZSS compiles correctly import these before you import the utility classes:
+
+```sass
+@import "../node_modules/zss/src/helpers/responsive";
+@import "../node_modules/zss/src/utilities/margin";
+```
+
 ℹ️ You can use the accompanying file [`zss.scss`](src/zss.scss) as a starting point for your project's stylesheet. It imports all files that are available in ZSS.
 
 ## Structure
