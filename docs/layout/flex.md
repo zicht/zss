@@ -46,6 +46,13 @@ Below is an example of the classes that are generated.
 .u-flex--justify--center { justify-content: center; }
 .u-flex--justify--base { justify-content: baseline; }
 .u-flex--justify--stretch { justify-content: stretch; }
+.u-flex--justify--between { justify-content: space-between; }
+
+.u-flex--grow--1 { flex-grow: 1; }
+.u-flex--grow--0 { flex-grow: 0; }
+
+.u-flex--shrink--1 { flex-shrink: 1; }
+.u-flex--shrink--0 { flex-shrink: 0; }
 
 .u-flex--wrap { flex-wrap: wrap; }
 .u-flex--wrap-reverse { flex-wrap: wrap-reverse; }
@@ -88,6 +95,13 @@ Below is an example of the classes that are generated.
     .u-flex--justify--center\@sm { justify-content: center; }
     .u-flex--justify--base\@sm { justify-content: baseline; }
     .u-flex--justify--stretch\@sm { justify-content: stretch; }
+    .u-flex--justify--between\@#{$breakpoint} { justify-content: space-between; }
+
+    .u-flex--grow--1 { flex-grow: 1; }
+    .u-flex--grow--0 { flex-grow: 0; }
+
+    .u-flex--shrink--1 { flex-shrink: 1; }
+    .u-flex--shrink--0 { flex-shrink: 0; }
 
     .u-flex--wrap\@sm { flex-wrap: wrap; }
     .u-flex--wrap-reverse\@sm { flex-wrap: wrap-reverse; }

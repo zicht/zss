@@ -31,6 +31,12 @@
 .u-flex--justify--stretch { justify-content: stretch; }
 .u-flex--justify--between { justify-content: space-between; }
 
+.u-flex--grow--1 { flex-grow: 1; }
+.u-flex--grow--0 { flex-grow: 0; }
+
+.u-flex--shrink--1 { flex-shrink: 1; }
+.u-flex--shrink--0 { flex-shrink: 0; }
+
 .u-flex--wrap { flex-wrap: wrap; }
 .u-flex--wrap-reverse { flex-wrap: wrap-reverse; }
 .u-no-flex-wrap { flex-wrap: nowrap; }
@@ -77,6 +83,12 @@
         .u-flex--justify--base\@#{$breakpoint} { justify-content: baseline; }
         .u-flex--justify--stretch\@#{$breakpoint} { justify-content: stretch; }
         .u-flex--justify--between\@#{$breakpoint} { justify-content: space-between; }
+
+        .u-flex--grow--1\@#{$breakpoint} { flex-grow: 1; }
+        .u-flex--grow--0\@#{$breakpoint} { flex-grow: 0; }
+
+        .u-flex--shrink--1\@#{$breakpoint} { flex-shrink: 1; }
+        .u-flex--shrink--0\@#{$breakpoint} { flex-shrink: 0; }
 
         .u-flex--wrap\@#{$breakpoint} { flex-wrap: wrap; }
         .u-flex--wrap-reverse\@#{$breakpoint} { flex-wrap: wrap-reverse; }
