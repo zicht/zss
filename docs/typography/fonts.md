@@ -51,9 +51,11 @@ For each breakpoint in `$zss--breakpoints`, these classes are generated:
 
 ```css
 .u-italic { font-style: italic; }
+.u-normal { font-style: normal; }
 
 @media (min-width: 550px) {
     .u-italic\@sm { font-style: italic; }
+    .u-normal\@sm { font-style: normal; }
 }
 ```
 
