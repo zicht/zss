@@ -1,6 +1,10 @@
 
 @each $name, $value in $zss--border-colors {
     .u-bc--#{inspect($name)} { border-color: $value; }
+    
+    .u-bc-hover--#{inspect($name)} {
+        @include hover { border-color: $value; }
+    }
 }
 
 
@@ -9,6 +13,10 @@
     @include media-from($breakpoint) {
         @each $name, $value in $zss--border-colors {
             .u-bc--#{inspect($name)}\@#{$breakpoint} { border-color: $value; }
+        
+            .u-bc-hover--#{inspect($name)}\@#{$breakpoint} {
+                @include hover { border-color: $value; }
+            }
         }
     }
 }
