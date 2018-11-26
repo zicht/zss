@@ -38,6 +38,7 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `overflow` | `u-of--auto` | | [📜](layout/overflow.md) | [💻](../src/utilities/_overflow.scss)
 `order` | `u-order--1` | | [📜](layout/flex.md) | [💻](../src/utilities/_flex.scss)
 `padding` | `u-padding--1` | `$zss--spacing-scale` | [📜](layout/padding.md) | [💻](../src/utilities/_padding.scss)
+`pointer-events` | `u-events--none` | | [📜](interaction/pointer-events.md) | [💻](../src/utilities/_pointer-events.scss)
 `position` | `u-absolute` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `right` | `u-right--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `text-align` | `u-text--center` | | [📜](typography/text-align.md) | [💻](../src/utilities/_text-align.scss)
