@@ -5,17 +5,23 @@
 //
 // Provides a short-hand notation for defining hover states.
 //
-// 1. The `has-hover-propagation` is used to allow parent elements to trigger
+// 1. This mediaquery for hover is used to determine whether the hover can be used or not.
+//    This mainly solves the double tap issue on iOS. I.e. tapping once will play the hover on i.e. pseudo elements
+//    Tapping the second time will result in the actual forward action.
+//
+// 2. The `has-hover-propagation` is used to allow parent elements to trigger
 //    the current element's hover state without mixing their CSS.
 //
 @mixin hover($element: "") {
-    &:hover,
-    &:active,
-    &:focus,
-    #{$element}.has-hover-propagation:hover &, // [1]
-    #{$element}.has-hover-propagation:active &,
-    #{$element}.has-hover-propagation:focus & {
-        @content;
+    @media (hover) { // [1]
+        &:hover,
+        &:active,
+        &:focus,
+        #{$element}.has-hover-propagation:hover &, // [2]
+        #{$element}.has-hover-propagation:active &,
+        #{$element}.has-hover-propagation:focus & {
+            @content;
+        }
     }
 }
 /* stylelint-enable no-descending-specificity */
