@@ -1,6 +1,6 @@
 {
   "name": "zss",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Sass for design systems",
   "main": "./src/zss.scss",
   "devDependencies": {

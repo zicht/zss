@@ -47,6 +47,7 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `top` | `u-top--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
 `vertical-align` | `u-valign--middle` | | [📜](layout/vertical-align.md) | [💻](../src/utilities/_vertical-align.scss)
 `width` | `u-width--50` | `$zss--width--scale`<br>`$zss--width--percentage-scale` | [📜](layout/width.md) | [💻](../src/utilities/_width.scss)
+`word-break` | `u-break--word` |  | [📜](typography/word-break.md) | [💻](../src/utilities/_word-break.scss)
 `z-index` | `u-z--1` | | [📜](layout/z-index.md) | [💻](../src/utilities/_z-index.scss)
 
 <sup>1</sup> An indication of the name of the class that might be generated. This can be dependent on the configured values.
