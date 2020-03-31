@@ -10,11 +10,24 @@
 //
 @mixin hover($element: "") {
     &:hover,
+    #{$element}.has-hover-propagation:hover // [1] 
+    {
+        @content;
+    }
+}
+
+@mixin active($element: "") {
     &:active,
+    #{$element}.has-hover-propagation:active & // [1]
+    {
+        @content;
+    }
+}
+
+@mixin focus($element: "") {
     &:focus,
-    #{$element}.has-hover-propagation:hover &, // [1]
-    #{$element}.has-hover-propagation:active &,
-    #{$element}.has-hover-propagation:focus & {
+    #{$element}.has-hover-propagation:focus & // [1] 
+    {
         @content;
     }
 }

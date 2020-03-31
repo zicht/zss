@@ -5,6 +5,12 @@
     .u-hover--#{inspect($name)} {
         @include hover { color: $value; }
     }
+    .u-active--#{inspect($name)} {
+        @include active { color: $value; }
+    }
+    .u-focus--#{inspect($name)} {
+        @include active { color: $value; }
+    }
 }
 
 
@@ -16,6 +22,12 @@
 
             .u-hover--#{inspect($name)}\@#{$breakpoint} {
                 @include hover { color: $value; }
+            }
+            .u-active--#{inspect($name)}\@#{$breakpoint} {
+                @include active { color: $value; }
+            }
+            .u-focus--#{inspect($name)}\@#{$breakpoint} {
+                @include focus { color: $value; }
             }
         }
     }
