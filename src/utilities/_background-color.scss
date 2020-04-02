@@ -5,9 +5,11 @@
     .u-bg-hover--#{inspect($name)} {
         @include hover { background-color: $value; }
     }
+
     .u-bg-active--#{inspect($name)} {
         @include active { background-color: $value; }
     }
+
     .u-bg-focus--#{inspect($name)} {
         @include focus { background-color: $value; }
     }
@@ -23,9 +25,11 @@
             .u-bg-hover--#{inspect($name)}\@#{$breakpoint} {
                 @include hover { background-color: $value; }
             }
+
             .u-bg-active--#{inspect($name)}\@#{$breakpoint} {
                 @include active { background-color: $value; }
             }
+            
             .u-bg-focus--#{inspect($name)}\@#{$breakpoint} {
                 @include focus { background-color: $value; }
             }
