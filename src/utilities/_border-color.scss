@@ -1,22 +1,18 @@
 
 @each $name, $value in $zss--border-colors {
     .u-bc--#{inspect($name)} { border-color: $value; }
-
-    .u-bc-hover--#{inspect($name)} {
-        @include hover { border-color: $value; }
-    }
+    .u-bc-hover--#{inspect($name)} { @include hover { border-color: $value; } }
+    .u-bc-active--#{inspect($name)} { @include active { border-color: $value; } }
+    .u-bc-focus--#{inspect($name)} { @include focus { border-color: $value; } }
 }
-
-
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         @each $name, $value in $zss--border-colors {
             .u-bc--#{inspect($name)}\@#{$breakpoint} { border-color: $value; }
-
-            .u-bc-hover--#{inspect($name)}\@#{$breakpoint} {
-                @include hover { border-color: $value; }
-            }
+            .u-bc-hover--#{inspect($name)}\@#{$breakpoint} { @include hover { border-color: $value; } }
+            .u-bc-active--#{inspect($name)}\@#{$breakpoint} { @include active { border-color: $value; } }
+            .u-bc-focus--#{inspect($name)}\@#{$breakpoint} { @include focus { border-color: $value; } }
         }
     }
 }
