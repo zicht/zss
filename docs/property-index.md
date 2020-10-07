@@ -45,6 +45,7 @@ CSS property | ZSS class<sup>1</sup>  | Variable | Docs | Source file
 `text-decoration` | `u-underline` | | [📜](typography/text-decoration.md) | [💻](../src/utilities/_text-decoration.scss)
 `text-transform` | `u-upper` | | [📜](typography/text-transform.md) | [💻](../src/utilities/_text-transform.scss)
 `top` | `u-top--0` | | [📜](layout/position.md) | [💻](../src/utilities/_position.scss)
+`transition` | `u-trans--color` | | [📜](layout/transition.md) | [💻](../src/utilities/_transition.scss) 
 `vertical-align` | `u-valign--middle` | | [📜](layout/vertical-align.md) | [💻](../src/utilities/_vertical-align.scss)
 `width` | `u-width--50` | `$zss--width--scale`<br>`$zss--width--percentage-scale` | [📜](layout/width.md) | [💻](../src/utilities/_width.scss)
 `word-break` | `u-break--word` |  | [📜](typography/word-break.md) | [💻](../src/utilities/_word-break.scss)
