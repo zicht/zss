@@ -3,6 +3,7 @@
 ZSS is a Sass framework that helps you build design systems with configurable design scales.
 
 ---
+- [Documentation](#documentation)
 - [Background](#background)
   - [What it does](#what-it-does)
   - [What it doesn’t do](#what-it-doesnt-do)
@@ -25,6 +26,10 @@ ZSS is a Sass framework that helps you build design systems with configurable de
 - [Add-ons and tools](#add-ons-and-tools)
   - [Third party](#third-party)
 ---
+## Documentation
+
+This overview provides an in depth view of all of the available properties/classes in ZSS.
+- [Property-index](docs/property-index.md) 
 
 ## Background
 
@@ -53,7 +58,7 @@ ZSS is built on a few principles.
   All utility classes have responsive equivalents, so you can use different values on different screens.
 - **Design scales**   
   ZSS uses scales to limit the number of available values for certain properties, like `color` and `margin`.
-
+ 
 ## Setup
 
 Install:
