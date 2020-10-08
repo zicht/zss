@@ -58,7 +58,7 @@ ZSS is built on a few principles.
   All utility classes have responsive equivalents, so you can use different values on different screens.
 - **Design scales**   
   ZSS uses scales to limit the number of available values for certain properties, like `color` and `margin`.
- 
+
 ## Setup
 
 Install:
