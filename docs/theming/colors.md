@@ -45,11 +45,11 @@ Below is an example of the color classes that are generated for a single color, 
 
 ```sass
 .u-bg--black { background-color: #000 }
-.u-bg--hover--black:hover { background-color: #000 }
+.u-bg-hover--black:hover { background-color: #000 }
 
 @media (min-width: 550px) {
     .u-bg--black\@sm { background-color: #000 }
-    .u-bg--hover--black\@sm:hover { background-color: #000 }
+    .u-bg-hover--black\@sm:hover { background-color: #000 }
 }
 ```
 
