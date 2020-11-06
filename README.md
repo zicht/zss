@@ -209,3 +209,9 @@ These tools and add-ons make working with ZSS even easier.
 
 - [**color-name**](https://github.com/joppe/color-name)   
 CLI that parses the output of http://www.color-blindness.com/color-name-hue/ for easy converting of a hexadecimal color value to a name that can be used in ZSS to generate class names (e.g. `u-yellow--tangerine`).
+
+## Maintainer
+
+- Annemieke van der Hoek ([@avanderhoek](https://github.com/avanderhoek/)) – [Zicht](https://github.com/zicht)
+- Jurg Roessen ([@Hangloozz](https://github.com/Hangloozz/)) – [Zicht](https://github.com/zicht)
+
