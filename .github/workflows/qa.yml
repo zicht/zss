@@ -1,0 +1,28 @@
+name: QA
+
+on:
+    pull_request:
+        branches:
+            - master
+
+jobs:
+    qa:
+        runs-on: ubuntu-18.04
+        steps:
+            -   uses: actions/checkout@v2
+            -   uses: actions/setup-node@v1
+                with:
+                    always-auth: true
+                    node-version: '12'
+                    registry-url: https://registry.npmjs.org
+
+            # Skip post-install scripts here, as a malicious
+            # script could steal the security token.
+            -   run: npm install --ignore-scripts
+                env:
+                    NODE_AUTH_TOKEN: ${{ secrets.NPM_ZICHTONLINE_TOKEN }}
+
+            # `npm rebuild` will run all those post-install scripts for us.
+            -   run: npm rebuild && npm run prepare --if-present
+            -   if: always()
+                run: npm run lint-css
