@@ -10,7 +10,7 @@
 //
 @mixin hover($element: "") {
     &:hover,
-    #{$element}.has-hover-propagation:hover { // [1]
+    #{$element}.has-hover-propagation:hover & { // [1]
         @content;
     }
 }
