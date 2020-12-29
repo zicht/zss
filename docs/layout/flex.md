@@ -34,6 +34,8 @@ Below is an example of the classes that are generated.
 .u-flex--content--center { align-content: center; }
 .u-flex--content--base { align-content: baseline; }
 .u-flex--content--stretch { align-content: stretch; }
+.u-flex--content--between { align-content: space-between; }
+.u-flex--content--around { align-content: space-around; }
 
 .u-flex--self--start { align-self: flex-start; }
 .u-flex--self--end { align-self: flex-end; }
@@ -47,6 +49,8 @@ Below is an example of the classes that are generated.
 .u-flex--justify--base { justify-content: baseline; }
 .u-flex--justify--stretch { justify-content: stretch; }
 .u-flex--justify--between { justify-content: space-between; }
+.u-flex--justify--around { justify-content: space-around; }
+.u-flex--justify--evenly { justify-content: space-evenly; }
 
 .u-flex--grow--1 { flex-grow: 1; }
 .u-flex--grow--0 { flex-grow: 0; }
@@ -83,6 +87,8 @@ Below is an example of the classes that are generated.
     .u-flex--content--center\@sm { align-content: center; }
     .u-flex--content--base\@sm { align-content: baseline; }
     .u-flex--content--stretch\@sm { align-content: stretch; }
+    .u-flex--content--between\@sm { align-content: space-between; }
+    .u-flex--content--around\@sm { align-content: space-around; }
 
     .u-flex--self--start\@sm { align-self: flex-start; }
     .u-flex--self--end\@sm { align-self: flex-end; }
@@ -95,7 +101,9 @@ Below is an example of the classes that are generated.
     .u-flex--justify--center\@sm { justify-content: center; }
     .u-flex--justify--base\@sm { justify-content: baseline; }
     .u-flex--justify--stretch\@sm { justify-content: stretch; }
-    .u-flex--justify--between\@#{$breakpoint} { justify-content: space-between; }
+    .u-flex--justify--between\@sm { justify-content: space-between; }
+    .u-flex--justify--around\@sm { justify-content: space-around; }
+    .u-flex--justify--evenly\@sm { justify-content: space-evenly; }
 
     .u-flex--grow--1 { flex-grow: 1; }
     .u-flex--grow--0 { flex-grow: 0; }

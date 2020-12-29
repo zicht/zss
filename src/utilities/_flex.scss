@@ -17,6 +17,7 @@
 .u-flex--content--base { align-content: baseline; }
 .u-flex--content--stretch { align-content: stretch; }
 .u-flex--content--between { align-content: space-between; }
+.u-flex--content--around { align-content: space-around; }
 
 .u-flex--self--start { align-self: flex-start; }
 .u-flex--self--end { align-self: flex-end; }
@@ -30,6 +31,8 @@
 .u-flex--justify--base { justify-content: baseline; }
 .u-flex--justify--stretch { justify-content: stretch; }
 .u-flex--justify--between { justify-content: space-between; }
+.u-flex--justify--around { justify-content: space-around; }
+.u-flex--justify--evenly { justify-content: space-evenly; }
 
 .u-flex--grow--1 { flex-grow: 1; }
 .u-flex--grow--0 { flex-grow: 0; }
@@ -70,6 +73,7 @@
         .u-flex--content--base\@#{$breakpoint} { align-content: baseline; }
         .u-flex--content--stretch\@#{$breakpoint} { align-content: stretch; }
         .u-flex--content--between\@#{$breakpoint} { align-content: space-between; }
+        .u-flex--content--around\@#{$breakpoint} { align-content: space-around; }
 
         .u-flex--self--start\@#{$breakpoint} { align-self: flex-start; }
         .u-flex--self--end\@#{$breakpoint} { align-self: flex-end; }
@@ -83,6 +87,8 @@
         .u-flex--justify--base\@#{$breakpoint} { justify-content: baseline; }
         .u-flex--justify--stretch\@#{$breakpoint} { justify-content: stretch; }
         .u-flex--justify--between\@#{$breakpoint} { justify-content: space-between; }
+        .u-flex--justify--around\@#{$breakpoint} { justify-content: space-around; }
+        .u-flex--justify--evenly\@#{$breakpoint} { justify-content: space-evenly; }
 
         .u-flex--grow--1\@#{$breakpoint} { flex-grow: 1; }
         .u-flex--grow--0\@#{$breakpoint} { flex-grow: 0; }
