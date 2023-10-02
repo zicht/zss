@@ -1,10 +1,12 @@
 
 .u-height--m100 { min-height: 100%; }
+.u-height--m100v { min-height: 100vh; }
 
 
 
 @each $breakpoint, $size in $zss--breakpoints {
     @include media-from($breakpoint) {
         .u-height--m100\@#{$breakpoint} { min-height: 100%; }
+        .u-height--m100v\@#{$breakpoint} { min-height: 100vh; }
     }
 }
