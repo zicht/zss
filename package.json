@@ -1,10 +1,10 @@
 {
   "name": "zss",
-  "version": "2.1.8",
+  "version": "3.0.0",
   "description": "Sass for design systems",
   "main": "./src/zss.scss",
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "sass": "^1.78.0",
     "stylelint": "^7.13.0",
     "stylelint-config-zicht": "^0.1.5"
   },
@@ -12,8 +12,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node-sass src/zss.scss build/zss.css",
-    "lint-css": "./node_modules/.bin/stylelint 'src/**/*.scss' --verbose"
+    "build": "sass src/zss.scss build/zss.css",
+    "lint-css": "stylelint 'src/**/*.scss' --verbose"
   },
   "repository": {
     "type": "git",
@@ -44,5 +44,6 @@
       },
       "selector-no-combinator": null
     }
-  }
+  },
+  "dependencies": {}
 }

@@ -9,12 +9,14 @@ jobs:
     qa:
         runs-on: ubuntu-22.04
         steps:
-            -   uses: actions/checkout@v2
-            -   uses: actions/setup-node@v1
+            -   uses: actions/checkout@v4
+            -   uses: actions/setup-node@v4
                 with:
                     always-auth: true
                     node-version: '12'
                     registry-url: https://registry.npmjs.org
+                    cache: 'npm'
+                    cache-dependency-path: ./package.json
 
             # Skip post-install scripts here, as a malicious
             # script could steal the security token.

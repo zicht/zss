@@ -5,8 +5,8 @@
 @mixin create-grid($gutter) {
     margin-right: auto;
     margin-left: auto;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
+    padding-right: calc($gutter / 2);
+    padding-left: calc($gutter / 2);
 }
 
 
@@ -24,8 +24,8 @@
 @mixin create-grid-row($gutter) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: $gutter / -2;
-    margin-left: $gutter / -2;
+    margin-right: calc($gutter / -2);
+    margin-left: calc($gutter / -2);
 }
 
 
@@ -33,8 +33,8 @@
 @mixin create-grid-column($gutter) {
     position: relative;
     min-height: 1px;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
+    padding-right: calc($gutter / 2);
+    padding-left: calc($gutter / 2);
 }
 
 
@@ -50,8 +50,8 @@
         @for $index from 1 through $column-count {
             @at-root {
                 #{&}--#{$index} {
-                    flex: 0 0 percentage($index / $column-count);
-                    max-width: percentage($index / $column-count); // [1]
+                    flex: 0 0 percentage(calc($index / $column-count));
+                    max-width: percentage(calc($index / $column-count)); // [1]
                 }
             }
         }
@@ -61,8 +61,8 @@
                 @for $index from 1 through $column-count {
                     @at-root {
                         #{&}--#{$index}\@#{$breakpoint-name} {
-                            flex: 0 0 percentage($index / $column-count);
-                            max-width: percentage($index / $column-count); // [1]
+                            flex: 0 0 percentage(calc($index / $column-count));
+                            max-width: percentage(calc($index / $column-count)); // [1]
                         }
                     }
                 }
@@ -89,7 +89,7 @@
                     @at-root {
                         @if $size > 0 or $index > 0 {
                             #{&}--#{$index}\@#{$breakpoint} {
-                                margin-left: percentage($index / $column-count);
+                                margin-left: percentage(calc($index / $column-count));
                             }
                         }
                     }
