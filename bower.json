@@ -23,7 +23,6 @@
     "tests"
   ],
   "devDependencies": {
-    "zicht-scss-lint": "latest"
   },
   "repository": {
     "type": "git",
